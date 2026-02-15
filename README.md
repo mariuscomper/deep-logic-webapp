@@ -2,6 +2,22 @@
 
 Long-form editorial webpage built as a static site and published with GitHub Pages.
 
+## Essay overview
+
+This essay analyzes why harmful body-modification practices aimed at women can persist across generations, even when they are enforced by women themselves. It focuses on the social and strategic logic behind:
+
+- Foot binding
+- Female genital cutting (FGC/FGM)
+- Breast ironing
+
+The central argument is that these practices are sustained by overlapping forces:
+
+- Male reproductive and lineage interests
+- Maternal strategy under constrained social systems
+- Coordination traps in marriage markets and community norms
+
+It also compares these dynamics with hazing, then explains why individual awareness campaigns often fail and why coordinated abandonment works better.
+
 ## Live site
 
 - Public URL: https://mariuscomper.github.io/deep-logic-webapp/
@@ -39,36 +55,6 @@ At runtime, JavaScript converts that markdown into HTML and:
 2. Wraps sections for animation and spacing
 3. Builds the table of contents automatically
 4. Computes and displays read time
-
-## Run locally
-
-### Option 1: open directly
-
-Open `index.html` in your browser.
-
-### Option 2: local HTTP server (recommended)
-
-```bash
-cd github-pages-site
-python3 -m http.server 8080
-```
-
-Then open: http://localhost:8080
-
-## Deployment (GitHub Pages)
-
-This repository is configured to publish from:
-
-- Branch: `main`
-- Folder: `/` (root)
-
-Any push to `main` triggers a GitHub Pages build and updates the public site.
-
-## Customization notes
-
-- Update hero subtitle text in `index.html` under `id="heroSubtitle"`.
-- Replace article content by editing the markdown block (`markdown-source`).
-- If you want to remove CDN dependency, pre-render markdown into static HTML and remove the `marked` script.
 
 ## License
 
