@@ -58,4 +58,6 @@ At runtime, JavaScript converts that markdown into HTML and:
 
 ## License
 
-No explicit license has been added yet. If this repo is intended for reuse, add a license file (for example, MIT).
+This project is licensed under the MIT License.
+
+See the full text in `LICENSE`.
