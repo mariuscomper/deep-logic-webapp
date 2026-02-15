@@ -411,7 +411,7 @@
         <div class="hero-content">
             <div class="hero-label">Evolutionary Psychology • Anthropology • Sociology • Game Theory</div>
             <h1 id="heroTitle">The Deep Logic of Male-Imposed Body Modification on Women</h1>
-            <p class="subtitle" id="heroSubtitle">A structural analysis of why harmful practices persist through female enforcement, strategic maternal behavior, and coordination-trap dynamics.</p>
+            <p class="subtitle" id="heroSubtitle">How body-control systems persist through maternal strategy, social convention, and coordination traps.</p>
             <div class="hero-meta">
                 <span>Interdisciplinary analysis</span>
                 <span id="readTime">~0 min read</span>
@@ -432,7 +432,6 @@
 
     <footer class="footer">
         <p class="footer-title">The Deep Logic of Male-Imposed Body Modification on Women</p>
-        <p>Rendered as an editorial long-form page in the same visual style as the attached model.</p>
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
@@ -698,15 +697,6 @@ The deepest insight may be this: **patriarchy's most effective technology is not
             const titleLine = lines.find((line) => line.startsWith('# '));
             const title = titleLine ? titleLine.replace(/^#\s+/, '').trim() : 'Long-form analysis';
             document.getElementById('heroTitle').textContent = title;
-
-            const contentWithoutMainTitle = markdown.replace(/^#\s+.*\n+/, '');
-            const firstParagraph = contentWithoutMainTitle
-                .split('\n')
-                .find((line) => line.trim() && !line.startsWith('#') && !line.startsWith('---'));
-
-            if (firstParagraph) {
-                document.getElementById('heroSubtitle').textContent = firstParagraph.trim();
-            }
 
             const words = markdown.split(/\s+/).filter(Boolean).length;
             const minutes = Math.max(1, Math.round(words / 220));
