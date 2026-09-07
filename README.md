@@ -1,4 +1,4 @@
-# The Deep Logic of Male-Imposed Body Modification on Women
+# The deep logic of body modification imposed on women
 
 Long-form editorial webpage built as a static site and published with GitHub Pages.
 
@@ -39,11 +39,13 @@ This project presents a long-form analytical essay in a magazine-style reading e
 - Single-page static HTML (`index.html`)
 - CSS custom properties for theme and typography
 - Vanilla JavaScript for rendering and UI behavior
-- `marked` (loaded from CDN) to render embedded markdown content
+- Local, dependency-free Markdown renderer (`markdown-parser.js`)
+- Light and dark themes with reduced-motion support
 
 ## File structure
 
 - `index.html`: full app (layout, styles, JS, and embedded markdown source)
+- `markdown-parser.js`: local Markdown renderer used by the page
 - `README.md`: project documentation
 
 ## How content works

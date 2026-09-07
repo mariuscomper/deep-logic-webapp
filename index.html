@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Deep Logic of Male-Imposed Body Modification on Women</title>
+    <title>The deep logic of body modification imposed on women | social conventions and coordination traps</title>
+
+    <meta name="description" content="An interdisciplinary essay on why harmful body-modification practices persist through social conventions, maternal strategy, and coordination traps.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://mariuscomper.github.io/deep-logic-webapp/">
 
     <meta property="og:title" content="The Deep Logic of Male-Imposed Body Modification on Women">
     <meta property="og:description" content="An interdisciplinary analysis of social conventions, reproductive strategy, and coordination traps.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <meta property="og:url" content="https://mariuscomper.github.io/deep-logic-webapp/">
+    <meta name="twitter:card" content="summary">
 
     <style>
         :root {
@@ -31,9 +35,21 @@
             --shadow: 0 2px 20px rgba(26, 26, 46, 0.06);
             --shadow-lg: 0 8px 40px rgba(26, 26, 46, 0.1);
             --max-width: 760px;
-            --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
+            --font-serif: Georgia, 'Times New Roman', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --bg-card: #182438;
+            --text-primary: #f4f7fb;
+            --text-secondary: #d0d7e2;
+            --text-muted: #aeb8c7;
+            --border: #334155;
+            --shadow: 0 2px 20px rgba(0, 0, 0, 0.24);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.34);
         }
 
         * {
@@ -74,6 +90,28 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1100;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            padding: 0.55rem 0.85rem;
+            background: var(--bg-dark);
+            color: #fff;
+            cursor: pointer;
+            font: 600 0.72rem var(--font-sans);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .theme-toggle:focus-visible,
+        .back-to-top:focus-visible,
+        .toc a:focus-visible {
+            outline: 3px solid var(--accent-gold-light);
+            outline-offset: 3px;
         }
 
         .hero::before {
@@ -357,6 +395,17 @@
             transform: translateY(0);
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .fade-in { opacity: 1; transform: none; }
+        }
+
         @media (max-width: 700px) {
             html {
                 font-size: 16px;
@@ -406,6 +455,7 @@
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Change colour theme" aria-pressed="false">Dark theme</button>
 
     <header class="hero">
         <div class="hero-content">
@@ -428,6 +478,11 @@
 
     <main class="content">
         <article id="article" aria-live="polite"></article>
+        <noscript>
+            <div class="highlight-box">
+                <p>This essay needs JavaScript to format its embedded Markdown content. The page is self-contained and does not require an internet connection; enable JavaScript and reload to read the full article.</p>
+            </div>
+        </noscript>
     </main>
 
     <footer class="footer">
@@ -585,7 +640,7 @@ The evo-psych "benefit" isn't to women — it's to male inclusive fitness, and s
 The deepest insight may be this: **patriarchy's most effective technology is not male violence — it's the structural arrangement of incentives such that women's own love for their daughters becomes the enforcement mechanism of male reproductive control.** That is a system of breathtaking, terrible elegance.
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./markdown-parser.js"></script>
     <script>
         const progressBar = document.getElementById('progressBar');
         const backToTop = document.getElementById('backToTop');
@@ -680,6 +735,11 @@ The deepest insight may be this: **patriarchy's most effective technology is not
 
         function setupFadeIn() {
             const fadeEls = document.querySelectorAll('.fade-in');
+            const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+            if (reduceMotion || !('IntersectionObserver' in window)) {
+                fadeEls.forEach((el) => el.classList.add('visible'));
+                return;
+            }
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
@@ -705,7 +765,7 @@ The deepest insight may be this: **patriarchy's most effective technology is not
 
         function renderMarkdown() {
             if (!window.marked) {
-                article.innerHTML = '<div class="highlight-box"><p>Could not load markdown renderer. Check network access and refresh.</p></div>';
+                article.innerHTML = '<div class="highlight-box"><p>The local Markdown renderer could not be loaded. Check that <code>markdown-parser.js</code> is present and reload the page.</p></div>';
                 return;
             }
 
@@ -731,8 +791,32 @@ The deepest insight may be this: **patriarchy's most effective technology is not
 
         window.addEventListener('scroll', updateProgress, { passive: true });
         window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        const themeToggle = document.getElementById('themeToggle');
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        const savedTheme = (() => {
+            try { return localStorage.getItem('deep-logic-theme'); } catch (error) { return null; }
+        })();
+        const initialTheme = savedTheme === 'dark' || savedTheme === 'light'
+            ? savedTheme
+            : (window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        function applyTheme(theme) {
+            document.documentElement.dataset.theme = theme;
+            const dark = theme === 'dark';
+            themeToggle.textContent = dark ? 'Light theme' : 'Dark theme';
+            themeToggle.setAttribute('aria-pressed', String(dark));
+            if (themeColorMeta) themeColorMeta.content = dark ? '#111827' : '#1a1a2e';
+        }
+
+        applyTheme(initialTheme);
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+            applyTheme(nextTheme);
+            try { localStorage.setItem('deep-logic-theme', nextTheme); } catch (error) { /* private browsing */ }
+        });
         backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+            window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
         });
 
         renderMarkdown();
