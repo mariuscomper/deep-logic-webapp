@@ -58,6 +58,16 @@ At runtime, JavaScript converts that markdown into HTML and:
 3. Builds the table of contents automatically
 4. Computes and displays read time
 
+## Viking Journeys map
+
+`viking-journeys.html` is a second, independent page on this site: an interactive dark-mode map of the Viking Age (793-1066), built with [Leaflet](https://leafletjs.com/) and a CARTO dark basemap.
+
+It plots raids and conquest in Britain and Francia, the North Atlantic exploration route to Iceland, Greenland and Vinland, and the eastern river routes from the Baltic to Byzantium and along the Volga to the Abbasid Caliphate. Each route and settlement has its own popup, a category legend lets you toggle layers on and off, and a timeline slider (with a play button) reveals events chronologically.
+
+- `viking-journeys.html`: page markup, styles, and map/timeline logic
+- `viking-journeys-data.js`: the journeys and trading-hub dataset the map renders
+- `vendor/leaflet/`: a vendored copy of the Leaflet library (no CDN dependency for the library itself; map tiles still load from CARTO/OpenStreetMap over the network)
+
 ## License
 
 This project is licensed under the MIT License.
