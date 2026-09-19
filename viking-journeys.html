@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viking Journeys | Raids, Trade and Exploration Across the Known World</title>
+
+    <meta name="description" content="An interactive map of the Viking Age: raids and settlement across Western Europe, exploration across the North Atlantic to Greenland and Vinland, and the eastern river routes to Byzantium and Baghdad.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b1622">
+    <meta name="color-scheme" content="dark">
+    <link rel="canonical" href="https://mariuscomper.github.io/deep-logic-webapp/viking-journeys.html">
+
+    <meta property="og:title" content="Viking Journeys: Raids, Trade and Exploration Across the Known World">
+    <meta property="og:description" content="An interactive map of where the Norse actually went — Western Europe, the North Atlantic, and the river routes east to Byzantium and Baghdad.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://mariuscomper.github.io/deep-logic-webapp/viking-journeys.html">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
+
+    <style>
+        :root {
+            --bg-deep: #0b1622;
+            --bg-panel: #101f30;
+            --bg-card: #142438;
+            --text-primary: #eef2f6;
+            --text-secondary: #b9c4d1;
+            --text-muted: #7d8ea1;
+            --border: rgba(255, 255, 255, 0.12);
+            --accent-gold: #c9a227;
+            --accent-gold-light: #e2c14d;
+            --accent-ice: #5fb8c9;
+            --accent-raid: #b3432d;
+            --accent-settlement: #8a6bbf;
+            --shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.5);
+            --font-display: 'Cinzel', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            background: var(--bg-deep);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--accent-gold-light); }
+
+        .hero {
+            padding: 4.5rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 25% 20%, rgba(95, 184, 201, 0.14) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 30%, rgba(201, 162, 39, 0.12) 0%, transparent 55%);
+        }
+
+        .hero-label {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--accent-ice);
+            margin-bottom: 1.4rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(1.9rem, 4.4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+            color: var(--accent-gold-light);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.02rem;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 1.6rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .home-link:hover { color: var(--accent-ice); border-bottom-color: var(--accent-ice); }
+
+        .app {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.2rem 3.5rem;
+        }
+
+        .panel {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 1.2rem;
+            align-items: start;
+        }
+
+        .sidebar {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.4rem 1.4rem 1.6rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 1rem;
+        }
+
+        .sidebar h2 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .legend-row {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .legend-row input { accent-color: var(--accent-gold); width: 15px; height: 15px; cursor: pointer; }
+
+        .swatch {
+            width: 22px;
+            height: 4px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .swatch.dotted { height: 0; border-top: 3px dotted currentColor; }
+        .swatch.dashed { height: 0; border-top: 3px dashed currentColor; }
+        .swatch.dot { width: 10px; height: 10px; border-radius: 50%; margin: 0 6px; }
+
+        .legend-text { font-size: 0.86rem; color: var(--text-secondary); }
+        .legend-text strong { color: var(--text-primary); font-weight: 600; }
+
+        .timeline-block {
+            margin-top: 1.4rem;
+            padding-top: 1.3rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .timeline-year {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--accent-gold-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-year .fixed { font-size: 0.68rem; color: var(--text-muted); font-family: var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 0.3rem; }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent-gold);
+            cursor: pointer;
+        }
+
+        .timeline-controls {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 0.9rem;
+        }
+
+        .btn {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 0.5rem 0.9rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .btn:hover { border-color: var(--accent-gold); }
+        .btn.primary { background: linear-gradient(135deg, var(--accent-gold), #a8811f); color: #1a1408; border: none; }
+        .btn.primary:hover { filter: brightness(1.08); }
+
+        #map {
+            height: 70vh;
+            min-height: 460px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+            background: #060c14;
+        }
+
+        .leaflet-popup-content-wrapper {
+            background: var(--bg-panel);
+            color: var(--text-primary);
+            border-radius: 10px;
+        }
+
+        .leaflet-popup-tip { background: var(--bg-panel); }
+
+        .popup-title {
+            font-family: var(--font-display);
+            font-size: 0.98rem;
+            color: var(--accent-gold-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .popup-years {
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--accent-ice);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .popup-summary { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+        .credits {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            margin-top: 0.6rem;
+            text-align: right;
+        }
+
+        .cards-section { margin-top: 2.6rem; }
+
+        .cards-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--accent-gold-light);
+            margin-bottom: 1.6rem;
+            text-align: center;
+        }
+
+        .category-group { margin-bottom: 2.2rem; }
+
+        .category-group h3 {
+            font-family: var(--font-sans);
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.9rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            cursor: pointer;
+            transition: transform 0.18s, border-color 0.18s;
+        }
+
+        .card:hover { transform: translateY(-2px); border-color: var(--accent-gold); }
+
+        .card h4 {
+            font-family: var(--font-display);
+            font-size: 0.98rem;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .card .years { font-size: 0.7rem; color: var(--accent-ice); letter-spacing: 0.04em; margin-bottom: 0.55rem; display: block; }
+        .card p { font-size: 0.82rem; color: var(--text-secondary); }
+
+        .footer-note {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            padding: 1.4rem 1.6rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        @media (max-width: 860px) {
+            .panel { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            #map { height: 56vh; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-label">793 &ndash; 1066 &bull; Scandinavia, Europe, the North Atlantic, and the road east</div>
+        <h1>Viking Journeys Across the Known World</h1>
+        <p>Everyone knows about the raid on Lindisfarne. Fewer know the same restless energy carried Norse ships to Baghdad's markets, Constantinople's walls, Newfoundland's shores, and a Duchy of their own in France. This map traces where they actually went.</p>
+        <a class="home-link" href="./index.html">&larr; Back to the essay index</a>
+    </header>
+
+    <main class="app">
+        <div class="panel">
+            <aside class="sidebar" aria-label="Map legend and timeline controls">
+                <h2>Layers</h2>
+                <label class="legend-row">
+                    <input type="checkbox" data-category="raid" checked>
+                    <span class="swatch" style="background:var(--accent-raid)"></span>
+                    <span class="legend-text"><strong>Raids &amp; conquest</strong></span>
+                </label>
+                <label class="legend-row">
+                    <input type="checkbox" data-category="trade" checked>
+                    <span class="swatch dashed" style="color:var(--accent-gold)"></span>
+                    <span class="legend-text"><strong>Trade &amp; the eastern rivers</strong></span>
+                </label>
+                <label class="legend-row">
+                    <input type="checkbox" data-category="exploration" checked>
+                    <span class="swatch dotted" style="color:var(--accent-ice)"></span>
+                    <span class="legend-text"><strong>Exploration &amp; the North Atlantic</strong></span>
+                </label>
+                <label class="legend-row">
+                    <input type="checkbox" data-category="settlement" checked>
+                    <span class="swatch dot" style="background:var(--accent-settlement)"></span>
+                    <span class="legend-text"><strong>Settlements &amp; new realms</strong></span>
+                </label>
+                <label class="legend-row">
+                    <input type="checkbox" data-category="hub" checked>
+                    <span class="swatch dot" style="background:#cfcfcf"></span>
+                    <span class="legend-text"><strong>Trading towns</strong></span>
+                </label>
+
+                <div class="timeline-block">
+                    <div class="timeline-year">
+                        <span class="fixed">Showing events up to</span>
+                        <span id="yearLabel">1100</span>
+                    </div>
+                    <input type="range" id="yearSlider" min="790" max="1100" step="1" value="1100" aria-label="Timeline year">
+                    <div class="timeline-controls">
+                        <button class="btn primary" id="playBtn" type="button">&#9654; Play</button>
+                        <button class="btn" id="resetBtn" type="button">Show all</button>
+                    </div>
+                </div>
+            </aside>
+
+            <div>
+                <div id="map" aria-label="Interactive map of Viking Age journeys"></div>
+                <div class="credits">Basemap &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a></div>
+            </div>
+        </div>
+
+        <section class="cards-section" id="cards" aria-label="Journey reference list"></section>
+
+        <p class="footer-note">Dates follow the mainstream consensus of Viking Age historiography (the Anglo-Saxon Chronicle, the Russian Primary Chronicle, the Vinland sagas, and Ibn Fadlan's travel account). A few — Iceland in 874, Rurik at Novgorod in 862 — are the traditional dates given by later chronicles rather than independently verified events, and are noted as such above.</p>
+    </main>
+
+    <script src="./vendor/leaflet/leaflet.js"></script>
+    <script src="./viking-journeys-data.js"></script>
+    <script>
+        (function () {
+            const CATEGORY_META = {
+                raid: { color: '#b3432d', weight: 4, dashArray: null },
+                trade: { color: '#c9a227', weight: 3, dashArray: '2,8' },
+                exploration: { color: '#5fb8c9', weight: 3, dashArray: '1,7' },
+                settlement: { color: '#8a6bbf', weight: 3, dashArray: null },
+                hub: { color: '#cfcfcf', weight: 2, dashArray: null }
+            };
+
+            const CATEGORY_LABEL = {
+                raid: 'Raids & Conquest',
+                trade: 'Trade & the Eastern Rivers',
+                exploration: 'Exploration & the North Atlantic',
+                settlement: 'Settlements & New Realms',
+                hub: 'Trading Towns'
+            };
+
+            const { HUBS, JOURNEYS } = window.VIKING_DATA;
+
+            const map = L.map('map', {
+                center: [52, 10],
+                zoom: 4,
+                minZoom: 2,
+                maxZoom: 8,
+                worldCopyJump: true
+            });
+
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(map);
+
+            function yearRangeLabel(years) {
+                if (years[0] === years[1]) return String(years[0]);
+                return years[0] + ' – ' + years[1];
+            }
+
+            function popupHtml(title, years, summary) {
+                return '<div class="popup-title">' + title + '</div>' +
+                    '<span class="popup-years">' + yearRangeLabel(years) + '</span>' +
+                    '<p class="popup-summary">' + summary + '</p>';
+            }
+
+            const entries = [];
+
+            JOURNEYS.forEach((j) => {
+                const meta = CATEGORY_META[j.category];
+                let layer;
+                if (j.path.length === 1) {
+                    layer = L.circleMarker(j.path[0], {
+                        radius: 7,
+                        color: meta.color,
+                        fillColor: meta.color,
+                        fillOpacity: 0.85,
+                        weight: 2
+                    });
+                } else {
+                    layer = L.polyline(j.path, {
+                        color: meta.color,
+                        weight: meta.weight,
+                        dashArray: meta.dashArray,
+                        opacity: 0.9,
+                        lineJoin: 'round'
+                    });
+                }
+                layer.bindPopup(popupHtml(j.title, j.years, j.summary));
+                layer.addTo(map);
+                entries.push({ data: j, layer, categoryOn: true, yearOn: true });
+            });
+
+            const hubEntries = HUBS.map((h) => {
+                const layer = L.circleMarker(h.coords, {
+                    radius: 5,
+                    color: '#cfcfcf',
+                    fillColor: '#cfcfcf',
+                    fillOpacity: 0.9,
+                    weight: 1.5
+                });
+                layer.bindPopup('<div class="popup-title">' + h.title + '</div><p class="popup-summary">' + h.summary + '</p>');
+                layer.addTo(map);
+                return { data: h, layer, categoryOn: true, yearOn: true };
+            });
+
+            function applyVisibility(entry) {
+                const visible = entry.categoryOn && entry.yearOn;
+                const isLine = entry.data.path && entry.data.path.length > 1;
+                entry.layer.setStyle({
+                    opacity: visible ? (isLine ? 0.9 : 1) : 0.06,
+                    fillOpacity: visible ? 0.85 : 0.06
+                });
+            }
+
+            function updateCategoryFilter() {
+                const checkboxes = document.querySelectorAll('.legend-row input[type="checkbox"]');
+                const enabled = {};
+                checkboxes.forEach((cb) => { enabled[cb.dataset.category] = cb.checked; });
+
+                entries.forEach((entry) => {
+                    entry.categoryOn = !!enabled[entry.data.category];
+                    applyVisibility(entry);
+                });
+                hubEntries.forEach((entry) => {
+                    entry.categoryOn = !!enabled.hub;
+                    applyVisibility(entry);
+                });
+            }
+
+            function updateYearFilter(year) {
+                entries.forEach((entry) => {
+                    entry.yearOn = entry.data.years[0] <= year;
+                    applyVisibility(entry);
+                });
+                hubEntries.forEach((entry) => { entry.yearOn = true; applyVisibility(entry); });
+            }
+
+            document.querySelectorAll('.legend-row input[type="checkbox"]').forEach((cb) => {
+                cb.addEventListener('change', updateCategoryFilter);
+            });
+
+            const yearSlider = document.getElementById('yearSlider');
+            const yearLabel = document.getElementById('yearLabel');
+
+            yearSlider.addEventListener('input', () => {
+                yearLabel.textContent = yearSlider.value;
+                updateYearFilter(Number(yearSlider.value));
+            });
+
+            document.getElementById('resetBtn').addEventListener('click', () => {
+                yearSlider.value = 1100;
+                yearLabel.textContent = '1100';
+                updateYearFilter(1100);
+            });
+
+            let playTimer = null;
+            const playBtn = document.getElementById('playBtn');
+
+            function stopPlay() {
+                if (playTimer) { clearInterval(playTimer); playTimer = null; }
+                playBtn.innerHTML = '&#9654; Play';
+            }
+
+            playBtn.addEventListener('click', () => {
+                if (playTimer) { stopPlay(); return; }
+                yearSlider.value = 790;
+                yearLabel.textContent = '790';
+                updateYearFilter(790);
+                playBtn.innerHTML = '&#10074;&#10074; Pause';
+                playTimer = setInterval(() => {
+                    const next = Number(yearSlider.value) + 3;
+                    if (next >= 1100) {
+                        yearSlider.value = 1100;
+                        yearLabel.textContent = '1100';
+                        updateYearFilter(1100);
+                        stopPlay();
+                        return;
+                    }
+                    yearSlider.value = next;
+                    yearLabel.textContent = String(next);
+                    updateYearFilter(next);
+                }, 110);
+            });
+
+            function boundsFor(path) {
+                if (path.length === 1) return L.latLngBounds(path[0], path[0]).pad(2);
+                return L.latLngBounds(path);
+            }
+
+            function buildCards() {
+                const container = document.getElementById('cards');
+                const heading = document.createElement('h2');
+                heading.textContent = 'Every journey, at a glance';
+                container.appendChild(heading);
+
+                const order = ['raid', 'trade', 'exploration', 'settlement'];
+                order.forEach((category) => {
+                    const items = JOURNEYS.filter((j) => j.category === category);
+                    if (!items.length) return;
+
+                    const group = document.createElement('div');
+                    group.className = 'category-group';
+                    const h3 = document.createElement('h3');
+                    h3.textContent = CATEGORY_LABEL[category];
+                    group.appendChild(h3);
+
+                    const grid = document.createElement('div');
+                    grid.className = 'card-grid';
+
+                    items.forEach((j) => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        card.innerHTML = '<h4>' + j.title + '</h4>' +
+                            '<span class="years">' + yearRangeLabel(j.years) + '</span>' +
+                            '<p>' + j.summary + '</p>';
+                        card.addEventListener('click', () => {
+                            map.flyToBounds(boundsFor(j.path), { maxZoom: 6, duration: 0.9 });
+                            const entry = entries.find((e) => e.data.id === j.id);
+                            if (entry) setTimeout(() => entry.layer.openPopup(entry.layer.getBounds ? entry.layer.getBounds().getCenter() : j.path[0]), 950);
+                        });
+                        grid.appendChild(card);
+                    });
+
+                    group.appendChild(grid);
+                    container.appendChild(group);
+                });
+            }
+
+            buildCards();
+        }());
+    </script>
+</body>
+</html>
