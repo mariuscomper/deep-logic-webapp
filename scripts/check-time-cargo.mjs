@@ -254,6 +254,36 @@ const pairs = [
     ok(ratio(t.t0, t.raise) < 3, `${name}: lowest terrain stop must sit close to the card colour or the surface looks noisy`);
 });
 
+/* ---------- 5b. share pages and posters ---------- */
+section('5b. Share pages and posters');
+function pngSize(file) { const b = fs.readFileSync(file); return [b.readUInt32BE(16), b.readUInt32BE(20)]; }
+let shareOk = 0;
+['en', 'ro'].forEach((lang) => D.ITEMS.forEach((it) => D.ERAS.forEach((era) => {
+    const base = `share/${lang}/${it.id}-${era.id}`;
+    const page = path.join(root, base + '.html'), img = path.join(root, base + '.png');
+    if (!fs.existsSync(page) || !fs.existsSync(img)) return fail(`${base}: missing page or image`);
+    const [w, h] = pngSize(img);
+    if (w !== 1200 || h !== 630) return fail(`${base}.png is ${w}x${h}, expected 1200x630`);
+    const html = fs.readFileSync(page, 'utf8');
+    const main = lang === 'en' ? 'time-cargo.html' : 'time-cargo-ro.html';
+    const good = html.includes('<meta name="robots" content="noindex">')
+        && html.includes(`<link rel="canonical" href="https://mariuscomper.github.io/deep-logic-webapp/${main}">`)
+        && html.includes(`<meta property="og:url" content="https://mariuscomper.github.io/deep-logic-webapp/${base}.html">`)
+        && html.includes(`<meta property="og:image" content="https://mariuscomper.github.io/deep-logic-webapp/${base}.png">`)
+        && html.includes('og:image:width" content="1200"') && html.includes('og:image:height" content="630"')
+        && html.includes(`url=../../${main}#land/${it.id}/${era.id}`);
+    if (!good) return fail(`${base}.html: og tags, canonical or redirect wrong`);
+    // the preview names the score the page will show
+    const score = Math.round(M.landing(it, era.id).score);
+    if (!html.includes(`<title>`) || !new RegExp(`\\b${score}\\b`).test(html.match(/<title>([^<]*)<\/title>/)[1])) return fail(`${base}.html: title must carry the score ${score}`);
+    shareOk++;
+})));
+ok(shareOk === 360, `all 360 share pages and pictures must be valid (got ${shareOk})`);
+['time-cargo-og.png', 'time-cargo-og-ro.png'].forEach((f) => { ok(fs.existsSync(path.join(root, f)) && pngSize(path.join(root, f)).join('x') === '1200x630', `${f} must exist at 1200x630`); });
+const shareBytes = fs.readdirSync(path.join(root, 'share/en')).concat(fs.readdirSync(path.join(root, 'share/ro'))).reduce((n, f) => n, 0);
+const totalImg = ['en', 'ro'].flatMap((l) => fs.readdirSync(path.join(root, 'share', l)).filter((f) => f.endsWith('.png')).map((f) => fs.statSync(path.join(root, 'share', l, f)).size));
+ok(Math.max(...totalImg) < 60000, `a share picture is too large (${Math.max(...totalImg)} bytes)`);
+
 /* ---------- 6. the built pages are current ---------- */
 section('6. Built pages are current');
 const before = ['time-cargo.html', 'time-cargo-ro.html'].map((f) => read(f));

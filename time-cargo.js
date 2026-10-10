@@ -13,6 +13,7 @@
     const ERA_BY_ID = Object.fromEntries(D.ERAS.map((e) => [e.id, e]));
     const ITEM = M.byId;
     const STORE_KEY = 'timeCargo.v1';
+    const CARD_URL = 'mariuscomper.github.io/deep-logic-webapp/time-cargo' + (LANG === 'ro' ? '-ro' : '') + '.html';
     const N_ITEMS = D.ITEMS.length;
     const N_ERAS = D.ERAS.length;
     const TOTAL = N_ITEMS * N_ERAS;
@@ -75,8 +76,15 @@
     }
     function eraName(id) { return C.eras[id].name; }
     function safe(fn, fallback) { try { return fn(); } catch (e) { return fallback; } }
+    // On a phone the picture is pinned under the top bar; anything we scroll to must land below it.
+    function stickyH() {
+        if (window.innerWidth > 860) return 0;
+        const t = document.querySelector('.terrain-col');
+        return t ? Math.round(t.getBoundingClientRect().height) : 0;
+    }
+    function syncStickyVar() { document.documentElement.style.setProperty('--sticky-h', stickyH() + 'px'); }
     function scrollToEl(node, opts) {
-        const top = node.getBoundingClientRect().top + window.scrollY - (opts && opts.offset != null ? opts.offset : 70);
+        const top = node.getBoundingClientRect().top + window.scrollY - (opts && opts.offset != null ? opts.offset : 70) - stickyH();
         window.scrollTo({ top: Math.max(0, top), behavior: REDUCED.matches ? 'auto' : 'smooth' });
     }
 
@@ -696,9 +704,8 @@
         const ctx = cv.getContext('2d');
         const W = 1200, H = 630;
         const { it, eraId, L, year, place } = passInfo();
-        const g = ctx.createLinearGradient(0, 0, W, H);
-        g.addColorStop(0, '#0b1220'); g.addColorStop(1, '#17264a');
-        ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+        // flat colours keep the picture small enough to ship one per landing
+        ctx.fillStyle = '#0f1930'; ctx.fillRect(0, 0, W, H);
         ctx.strokeStyle = 'rgba(240,195,90,0.55)'; ctx.lineWidth = 3; ctx.setLineDash([10, 8]);
         ctx.strokeRect(24, 24, W - 48, H - 48); ctx.setLineDash([]);
         // perforation
@@ -706,21 +713,23 @@
         ctx.beginPath(); ctx.moveTo(700, 40); ctx.lineTo(700, H - 40); ctx.stroke(); ctx.setLineDash([]);
         ctx.textBaseline = 'alphabetic';
         ctx.fillStyle = '#86d6e3'; ctx.font = '700 22px system-ui, sans-serif';
-        ctx.fillText(C.pass.head, 60, 80);
-        ctx.font = '120px system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
+        ctx.fillText(C.pass.head, 60, 76);
+        ctx.font = '92px system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
         ctx.fillStyle = '#f1f4f9';
-        ctx.fillText(it.emoji, 56, 215);
-        ctx.font = '700 22px system-ui, sans-serif'; ctx.fillStyle = '#a3b3ca';
-        ctx.fillText(C.pass.carrying, 60, 275);
-        ctx.font = '700 40px Georgia, "Iowan Old Style", serif'; ctx.fillStyle = '#f1f4f9';
-        const nh = wrapText(ctx, tx(it, 'name'), 60, 322, 600, 46, 2);
-        const y2 = 322 + nh + 30;
-        ctx.font = '700 22px system-ui, sans-serif'; ctx.fillStyle = '#a3b3ca';
+        ctx.fillText(it.emoji, 56, 178);
+        ctx.font = '700 20px system-ui, sans-serif'; ctx.fillStyle = '#a3b3ca';
+        ctx.fillText(C.pass.carrying, 60, 224);
+        ctx.font = '700 38px Georgia, "Iowan Old Style", serif'; ctx.fillStyle = '#f1f4f9';
+        const nh = wrapText(ctx, tx(it, 'name'), 60, 266, 600, 44, 2);
+        const y2 = 266 + nh + 22;
+        ctx.font = '700 20px system-ui, sans-serif'; ctx.fillStyle = '#a3b3ca';
         ctx.fillText(C.pass.landed, 60, y2);
-        ctx.font = '700 92px Georgia, "Iowan Old Style", serif'; ctx.fillStyle = '#f0c35a';
-        ctx.fillText(fmtYear(year), 56, y2 + 90);
-        ctx.font = '26px system-ui, sans-serif'; ctx.fillStyle = '#c9d3e2';
-        wrapText(ctx, place + ' · ' + eraName(eraId), 60, y2 + 132, 600, 32, 2);
+        ctx.font = '700 76px Georgia, "Iowan Old Style", serif'; ctx.fillStyle = '#f0c35a';
+        ctx.fillText(fmtYear(year), 56, y2 + 70);
+        ctx.font = '25px system-ui, sans-serif'; ctx.fillStyle = '#f1f4f9';
+        const ph = wrapText(ctx, place, 60, y2 + 108, 600, 30, 2);
+        ctx.font = '21px system-ui, sans-serif'; ctx.fillStyle = '#a3b3ca';
+        ctx.fillText(eraName(eraId), 60, y2 + 108 + ph + 2);
         // right side
         ctx.font = '700 22px system-ui, sans-serif'; ctx.fillStyle = '#a3b3ca';
         ctx.fillText(C.pass.delta, 740, 100);
@@ -740,7 +749,9 @@
             if (e.id === eraId) { ctx.strokeStyle = '#f1f4f9'; ctx.lineWidth = 3; ctx.strokeRect(bx + i * (bw + gapx) - 2, by - h - 2, bw + 4, h + 4); }
         });
         ctx.font = '18px system-ui, sans-serif'; ctx.fillStyle = '#a3b3ca';
-        ctx.fillText(location.host + location.pathname.replace(/\/$/, ''), 60, H - 52);
+        ctx.textAlign = 'right';
+        ctx.fillText(CARD_URL, W - 60, H - 44);
+        ctx.textAlign = 'left';
         cv.setAttribute('aria-label', fill(C.result.shareText, { item: tx(it, 'name'), era: eraName(eraId), year: fmtYear(year), n: fmt(Math.round(L.score)) }));
     }
     // The link people send is the landing's own preview page (share/<lang>/<item>-<era>.html):
@@ -1100,13 +1111,20 @@
         });
         // address bar follows the reader
         let ticking = false;
+        let lastY = window.scrollY;
         const born = performance.now();
         function onScroll() {
             if (ticking) return;
             ticking = true;
             requestAnimationFrame(() => {
                 ticking = false;
-                top.hidden = window.scrollY < window.innerHeight;
+                // the button shows once the reader is more than a screen down and is heading back up,
+                // so it never sits on top of text they are still reading downwards
+                const y = window.scrollY;
+                if (y < window.innerHeight) top.hidden = true;
+                else if (y < lastY - 4) top.hidden = false;
+                else if (y > lastY + 4) top.hidden = true;
+                lastY = y;
                 if (performance.now() - born < 700) return;
                 const line = window.innerHeight * 0.34;
                 const rect = (id) => $(id).getBoundingClientRect();
@@ -1131,6 +1149,9 @@
             });
         }
         window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', syncStickyVar);
+        syncStickyVar();
+        if ('ResizeObserver' in window) new ResizeObserver(syncStickyVar).observe(document.querySelector('.terrain-col'));
         onScroll();
     }
 
@@ -1203,8 +1224,29 @@
         $('#clear-all-2').textContent = C.terrain.clear;
     }
 
+    // Suggest the other edition when the browser's languages point to it. Never redirects.
+    function langSuggestion() {
+        const target = C.suggest.for;
+        const langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).map((l) => String(l).toLowerCase().slice(0, 2));
+        const wants = langs.includes(target) && !langs.slice(0, langs.indexOf(target)).includes(LANG);
+        const dismissed = safe(() => localStorage.getItem('timeCargo.suggestDismissed') === target, false);
+        if (!wants || dismissed) return;
+        const box = $('#lang-suggest');
+        $('#suggest-text').textContent = C.suggest.text;
+        const a = $('#suggest-open');
+        a.textContent = C.suggest.open;
+        a.setAttribute('lang', target);
+        a.href = $('#lang-other').getAttribute('data-base');
+        $('#suggest-close').textContent = C.suggest.dismiss;
+        $('#suggest-close').addEventListener('click', () => { box.hidden = true; safe(() => localStorage.setItem('timeCargo.suggestDismissed', target)); });
+        box.hidden = false;
+        window.addEventListener('hashchange', () => { a.href = $('#lang-other').href; });
+        a.addEventListener('click', () => { a.href = $('#lang-other').href; });
+    }
+
     function init() {
         loadStore();
+        langSuggestion();
         staticText();
         initChrome();
         renderChoose();

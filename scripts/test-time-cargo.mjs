@@ -37,7 +37,7 @@ const browser = await chromium.launch();
 async function open(opts) {
     const ctx = await browser.newContext({
         viewport: { width: opts.w, height: opts.h }, deviceScaleFactor: opts.mobile ? 2 : 1, isMobile: !!opts.mobile, hasTouch: !!opts.mobile,
-        colorScheme: opts.theme || 'dark', reducedMotion: opts.reduced ? 'reduce' : 'no-preference', locale: opts.lang === 'ro' ? 'ro-RO' : 'en-GB'
+        colorScheme: opts.theme || 'dark', reducedMotion: opts.reduced ? 'reduce' : 'no-preference', locale: opts.locale || (opts.lang === 'ro' ? 'ro-RO' : 'en-GB')
     });
     if (opts.noStorage) await ctx.addInitScript(() => { Object.defineProperty(window, 'localStorage', { get() { throw new Error('blocked'); } }); });
     const page = await ctx.newPage();
@@ -97,6 +97,11 @@ async function scenario(name, opts) {
     const yr = (await page.textContent('#journey-title')).trim();
     ok(yr === '1862', `${name}: WD-40 lands in 1862 (got ${yr})`);
     ok(await hidden(page, '#result'), `${name}: result must wait for the beats`);
+    if (opts.w <= 860) {
+        await page.waitForTimeout(1600);
+        const g = await page.evaluate(() => ({ t: document.getElementById('journey-title').getBoundingClientRect().top, b: document.querySelector('.terrain-col').getBoundingClientRect().bottom }));
+        ok(g.t >= g.b - 2, `${name}: the landing year must sit below the pinned picture (year top ${Math.round(g.t)}, picture bottom ${Math.round(g.b)})`);
+    }
     for (let i = 0; i < 3; i++) { await page.click('#next-btn'); }
     await page.click('#next-btn'); // "see your score"
     await page.waitForSelector('#result:not([hidden])');
@@ -176,7 +181,10 @@ async function scenario(name, opts) {
     // return paths: top button and clear
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight / 2));
     await page.waitForTimeout(250);
-    ok(await visible(page, '#to-top'), `${name}: the top button appears after a screen of scrolling`);
+    ok(await hidden(page, '#to-top'), `${name}: the top button stays out of the way while the reader scrolls down`);
+    await page.evaluate(() => window.scrollBy(0, -200));
+    await page.waitForTimeout(250);
+    ok(await visible(page, '#to-top'), `${name}: the top button appears when the reader scrolls back up`);
     await page.click('#clear-all');
     await page.waitForFunction(() => { const y = window.scrollY; return new Promise((res) => setTimeout(() => res(window.scrollY === y), 150)); }, null, { timeout: 5000 });
     await page.waitForTimeout(300);
@@ -207,6 +215,22 @@ async function deepLinks(lang) {
     await t.ctx.close();
     t = await open({ w: 1280, h: 800, lang, hash: '#land/nonsense/w1' });
     ok(await visible(t.page, '#step-choose'), 'a malformed hash falls back to the first step');
+    await t.ctx.close();
+}
+
+async function suggestion() {
+    console.log('\nLanguage suggestion');
+    let t = await open({ w: 1280, h: 800, lang: 'en', locale: 'ro-RO' });
+    ok(await visible(t.page, '#lang-suggest'), 'a Romanian browser is offered the Romanian edition');
+    ok((await t.page.evaluate(() => document.documentElement.lang)) === 'en', 'the page itself is not redirected');
+    ok((await t.page.getAttribute('#suggest-open', 'href')).includes('time-cargo-ro.html'), 'the suggestion links to the Romanian page');
+    await t.page.click('#suggest-close');
+    ok(await hidden(t.page, '#lang-suggest'), 'the suggestion can be dismissed');
+    await t.page.reload(); await t.page.waitForSelector('html[data-ready="true"]');
+    ok(await hidden(t.page, '#lang-suggest'), 'a dismissed suggestion stays dismissed');
+    await t.ctx.close();
+    t = await open({ w: 1280, h: 800, lang: 'en', locale: 'en-GB' });
+    ok(await hidden(t.page, '#lang-suggest'), 'an English browser sees no suggestion on the English page');
     await t.ctx.close();
 }
 
@@ -289,6 +313,7 @@ async function themeSwitch() {
 await scenario('EN desktop dark', { w: 1280, h: 800, theme: 'dark', lang: 'en' });
 await scenario('EN phone light', { w: 375, h: 812, mobile: true, theme: 'light', lang: 'en' });
 await deepLinks('en');
+await suggestion();
 await resilience();
 await themeSwitch();
 await layout('en');

@@ -121,8 +121,7 @@ for (const lang of ['en', 'ro']) {
         const D = window.TIME_CARGO, M = window.TimeCargoModel;
         const c = document.getElementById('c'), x = c.getContext('2d');
         const W = 1200, H = 630;
-        const g = x.createLinearGradient(0, 0, W, H); g.addColorStop(0, '#0b1220'); g.addColorStop(1, '#16254a');
-        x.fillStyle = g; x.fillRect(0, 0, W, H);
+        x.fillStyle = '#0f1930'; x.fillRect(0, 0, W, H);
         const RAMP = [[22, 35, 63], [29, 95, 124], [59, 169, 162], [220, 194, 90], [255, 243, 196]];
         const col = (v) => { const t = Math.max(0, Math.min(100, v)) / 100 * 4, i = Math.min(3, Math.floor(t)), f = t - i, a = RAMP[i], b = RAMP[i + 1]; return 'rgb(' + [0, 1, 2].map((k) => Math.round(a[k] + (b[k] - a[k]) * f)).join(',') + ')'; };
         // the surface, sorted by Delta, on the right
@@ -164,7 +163,7 @@ from PIL import Image
 pairs = json.load(open(sys.argv[1]))
 for src, dst in pairs:
     im = Image.open(src).convert('RGB')
-    q = im.quantize(colors=64, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
+    q = im.quantize(colors=40, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
     q.save(dst, optimize=True)
 `;
 const listFile = path.join(tmp, 'pairs.json');

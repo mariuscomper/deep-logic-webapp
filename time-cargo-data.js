@@ -77,7 +77,7 @@
             id: 'potato', emoji: '🥔', dims: { need: 10, copy: 10, trust: 6, ripple: 9 }, sweet: 'w4',
             name: 'Ten sprouting potatoes', sub: 'A mix of colours and varieties · about 1 kg',
             tagline: 'The most boring thing in your kitchen.',
-            briefing: 'Not a gadget but a small living factory. Potatoes were bred in the Andes and were unknown to the Old World until the 1500s. They thrive in cool, wet summers and poor soil, and give roughly two to four times the calories per acre that grain does.',
+            briefing: 'Not a gadget but a small living factory. Potatoes were bred in the Andes and were unknown to the Old World until the 1500s. They thrive in cool, wet summers and poor soil, and in 18th-century English farm data gave about three times the calories per acre that wheat, barley or oats did.',
             hint: 'Look for a world one bad summer from starvation.',
             tags: ['Copies itself'],
             best: {
@@ -86,7 +86,7 @@
                     ['Arrival', 'Spring 1314. A growing population is pressing on every marginal field, and the harvest has no margin. Nobody here knows that the rain starts next year.'],
                     ['The move', 'You don’t preach. You borrow a patch of poor, wet ground, plant your tubers, and wait. By autumn you dig up many times what you planted, from soil that would barely grow oats. You keep the best back and give seed away. A grower may also value a crop that stays underground, out of sight of soldiers and tax collectors.'],
                     ['The ripple', 'In 1315 the rains come and don’t stop. Wheat and barley rot in the fields, and the Great Famine lasts until the 1317 harvest, among the worst in European history. Potatoes like cool, wet summers. In real history the crop reaches Europe only in the 1570s, by way of the Canaries and Spain. A study by Nunn and Qian credits it, once adopted, with up to a quarter of Old World population and urban growth from 1700 to 1900; a critical review would accept one-sixth to one-quarter.'],
-                    ['The catch', 'Monoculture. In the 1840s Ireland’s poorest third depended on a single potato clone, blight struck, and about a million people died. That is why you brought many varieties, not one. Green skin and sprouts are toxic, so you must teach what is safe. And a stranger handing out earth-apples in a famine will be called many things.']
+                    ['The catch', 'Monoculture. In the 1840s much of Ireland relied heavily on one variety, the Lumper, blight struck, and about a million people died. That is why you brought many varieties, not one. Green skin and sprouts are toxic, so you must teach what is safe. And a stranger handing out earth-apples in a famine will be called many things.']
                 ]
             },
             early: 'Potatoes need fields, people and enough hunger to try something new. Before cities and open-field farming there is little pressure and few fields: one lucky village eats well, and that is all that changes.',
@@ -110,9 +110,9 @@
                 year: 1831, place: 'Sunderland, England',
                 beats: [
                     ['Arrival', 'October 1831, the docks of Sunderland. Cholera has reached Britain, and a keelman has just died a few days after falling ill, blue and shrunken. The doctors bleed, purge and prescribe calomel, which drains patients who are already draining.'],
-                    ['The move', 'You dissolve a sachet in a litre of boiled water and show a nurse how to give it to the next patient, a sip at a time. Then you teach the home version everyone can copy: roughly six level teaspoons of sugar and half a teaspoon of salt in a litre of clean water (the WHO home version; other sources give slightly different amounts). Nothing to buy, no needle, no permission.'],
-                    ['The ripple', 'Untreated, severe cholera can kill up to half its victims; with fluids the death rate falls to about one in a hundred or less. Tens of thousands die in Britain in 1831–32 (estimates run from about 32,000 to 52,000). The next year Thomas Latta in Leith gives intravenous salt water to dying patients, with some recoveries, and is largely ignored. Yours is the version that needs no surgeon and no authority, only a mother with a spoon.'],
-                    ['The catch', 'Nobody can explain why it works. The water-borne cause is argued from 1849 and made persuasive only in 1854; the bacterium is isolated by Koch in 1883–84. You will win on results and lose the argument. Professional caution and mixed results held Latta back; here the people who matter are the nurses, sailors and mothers who simply do it.']
+                    ['The move', 'You dissolve a sachet in a litre of boiled water and show a nurse how to give it to the next patient, a sip at a time. Then you teach the home version everyone can copy: roughly six level teaspoons of sugar and half a teaspoon of salt in a litre of clean water (the Rehydration Project’s home version; official amounts have varied). Nothing to buy, no needle, no permission.'],
+                    ['The ripple', 'Severe cholera can kill up to half its victims in an unprepared community; with fluids given early the death rate falls to about one in a hundred or less. Tens of thousands die in Britain in 1831–32 (about 32,000 by some counts; the registered figure for England and Wales is lower). The next year Thomas Latta in Leith gives intravenous salt water to dying patients, with some recoveries, and his method is not widely taken up; he dies in 1833. Yours is the version that needs no surgeon and no authority, only a mother with a spoon.'],
+                    ['The catch', 'Nobody can explain why it works. The water-borne cause is argued from 1849 and made persuasive only in 1854; the bacterium is isolated by Koch in 1883–84. You will win on results and lose the argument. Professional caution and mixed results slowed Latta’s method; here the people who matter are the nurses, sailors and mothers who simply do it.']
                 ]
             },
             early: 'Without the pandemic, a sachet of salts is a curiosity. Diarrhoeal disease is everywhere but unnamed and unremarkable, and you save the people around you, and no one else.',
@@ -120,7 +120,7 @@
             verdict: 'The best gram-for-gram pick on the list: the sachets are only proof, and the real payload is a recipe a child can follow. It scores {copy} on Copy and {trust} on Trust because the effect shows within hours. It loses to the potato only because hunger is a bigger and older enemy than one pandemic. The raters scored its Ripple lower than I did.',
             sources: [
                 { label: 'The Lancet 1978 editorial, quoted by rehydrate.org', url: 'https://rehydrate.org/professional/index.html' },
-                { label: 'WHO fact sheet on cholera', url: 'https://www.who.int/news-room/fact-sheets/detail/cholera' },
+                { label: 'WHO on cholera case-fatality rates (Health Policy Watch)', url: 'https://healthpolicy-watch.news/who-warns-of-the-unacceptable-death-toll-in-global-cholera-outbreaks/' },
                 { label: 'Newcastle University cholera archive: the spread of the 1831 outbreak', url: 'https://cholera.ncl.ac.uk/the-spread' },
                 { label: 'Hektoen International: Thomas Latta in Leith', url: 'https://hekint.org/leith-in-the-time-of-cholera-the-story-of-thomas-latta/' }
             ]
@@ -135,10 +135,10 @@
             best: {
                 year: 1285, place: 'Bologna, Italy',
                 beats: [
-                    ['Arrival', 'Bologna, 1285. The university copies its textbooks by renting out approved texts in loose sections (peciae) so that many students can copy them by hand at once. Paper, newly made in the mills at Fabriano, is cheap enough to fill the shops. The demand is here. What is missing is the idea.'],
+                    ['Arrival', 'Bologna, 1285. The university copies its textbooks by renting out approved texts in loose sections (peciae) so that many students can copy them by hand at once. Paper, made in the mills at Fabriano, is cheap enough to fill the shops. The demand is here. What is missing is the idea.'],
                     ['The move', 'You show a goldsmith the set. He already cuts steel punches for coin dies and seals. In a week he strikes a letter into a soft matrix and casts it in a lead-tin alloy (Gutenberg’s later added antimony); in a month, a page. You pass on one thing Gutenberg’s printers later relied on: an oil-based ink, because watery ink beads up on metal.'],
-                    ['The ripple', 'A printed page costs a fraction of a copied one, and every copy is identical, which means tables, maps and diagrams stop degrading each time they are transcribed. The real start, around 1450, was followed by somewhere between ten and twenty million books across Europe by 1500. You have moved the clock back about 165 years. Dante, then twenty, is a generation away from writing the Divine Comedy.'],
-                    ['The catch', 'Guilds of scribes, universities and the Church all had a stake in controlling copying, and printing spreads propaganda as fast as scripture; the Reformation was largely printed. And in real history, the sack of Mainz in 1462 helped scatter the printers, though printing had already begun to spread. Diffusion can be slow without a shock.']
+                    ['The ripple', 'A printed page costs a fraction of a copied one, and every copy is identical, which means tables, maps and diagrams stop degrading each time they are transcribed. The real start, around 1450, was followed by millions of books across Europe by 1500 (estimates range from about eight million to more than twenty million). You have moved the clock back about 165 years. Dante, then twenty, is a generation away from writing the Divine Comedy.'],
+                    ['The catch', 'Guilds of scribes, universities and the Church all had a stake in controlling copying, and printing spreads propaganda as fast as scripture; the Reformation was largely printed. And in real history, the sack of Mainz in 1462 is traditionally said to have scattered the printers, though historians doubt how much and printing had already begun to spread. Diffusion can be slow without a shock.']
                 ]
             },
             early: 'Before paper, a large book costs a herd’s worth of skins, and before the rise of towns and universities there are few readers. Movable type on parchment is a gimmick nobody can afford to run.',
@@ -188,7 +188,7 @@
                 year: -240, place: 'Alexandria, Egypt',
                 beats: [
                     ['Arrival', 'Alexandria, about 240 BCE. The Library and its Mouseion gather the largest community of scholars in the world; Eratosthenes, soon to measure the circumference of the Earth, is the chief librarian. Many of the senior scholars are past forty, and the writing is small on papyrus rolls.'],
-                    ['The move', 'You hand out the glasses and watch faces change. Then you show a glassworker how a clear bead or a ground rock-crystal disc does the same thing. Magnifying crystals were known (the Nimrud crystal, from the eighth century BCE, is an object once taken for a lens), and Seneca will note three centuries later that letters look bigger through a glass globe of water. You show a simple wire frame that rests on the nose.'],
+                    ['The move', 'You hand out the glasses and watch faces change. Then you show a glassworker how a clear bead or a ground rock-crystal disc does the same thing. Polished rock-crystal pieces existed (the Nimrud crystal, from the eighth century BCE, was long thought a lens but may be an inlay), and Seneca will note three centuries later that letters look bigger through a glass globe of water. You show a simple wire frame that rests on the nose.'],
                     ['The ripple', 'A longer working life for every scribe, engraver, weaver and instrument-maker past forty, in a world where experience took decades to build. And a trade in lens-grinding that would otherwise start in the 1280s. The telescope appears in the Netherlands in 1608 and the compound microscope soon after (traditionally about 1590, though that date is doubtful); with a lens-making craft in place for over a thousand years, optical science could start far earlier.'],
                     ['The catch', 'Everything depends on the glass. Hellenistic glass was usually tinted and bubbly; truly clear glass came in Roman times and became standard with Venetian cristallo about 1450. The first copies will be weak and cloudy, and you are betting on rock crystal and patience. A longer working life is also not the same thing as a scientific revolution.']
                 ]
@@ -196,7 +196,7 @@
             early: 'Before the Hellenistic world there are too few literate scholars to miss close reading, and too little glass-working skill to copy lenses. The glasses stay a curiosity, and when they break the gift is gone.',
             late: 'By the 1290s spectacles are appearing in Italy, and within a generation they are widely sold. After that, you are just one more man with a tray of lenses.',
             alt: {
-                w3: { mult: 0.7, text: 'Baghdad and Cairo, around 1000. Ibn al-Haytham is working on his Book of Optics (older accounts date it to 1021, recent scholarship to 1028–38), the best treatment of how lenses bend light, and the glassmakers are skilled. Spectacles still aren’t made, so you bring them close to three centuries early. That is a real head start, but the Alexandrian scholars you most wanted to help are a thousand years gone.' }
+                w3: { mult: 0.7, text: 'Baghdad and Cairo, around 1000. Ibn al-Haytham is working on his Book of Optics (older accounts date it to 1011–21, recent scholarship to 1028–38), the best treatment of how light bends in glass, and the glassmakers are skilled. Spectacles still aren’t made, so you bring them close to three centuries early. That is a real head start, but the Alexandrian scholars you most wanted to help are a thousand years gone.' }
             },
             verdict: 'Trust {trust}: nobody argues with being able to read again, which is the best instant demonstration on the list. Ripple {ripple} comes from lenses compounding into the microscope and telescope. It sits below the potato and the salts because a longer career is a gentler problem than famine or cholera, and the glass of the era limits the copies.',
             sources: [
@@ -210,14 +210,14 @@
             id: 'vitc', emoji: '🍋', dims: { need: 9, copy: 7, trust: 7, ripple: 7 }, sweet: 'w5',
             name: 'Vitamin C tablets', sub: '100 × 1,000 mg · 150 g',
             tagline: 'The pill that wasn’t there.',
-            briefing: 'For about three centuries of ocean travel, a mysterious disease is estimated to have killed more sailors than storms, battles and all other diseases combined. Gums swelled, old wounds reopened, men grew weak and died. The cause was the lack of vitamin C: about 10 mg a day prevents it, so a single 1,000 mg tablet is a hundred days’ worth.',
+            briefing: 'For about three centuries of ocean travel, a mysterious disease is estimated to have killed around two million sailors, more than storms and shipwreck combined. Gums swelled, old wounds reopened, men grew weak and died. The cause was the lack of vitamin C: about 10 mg a day prevents it, so a single 1,000 mg tablet is a hundred days’ worth.',
             hint: 'Who went months without fresh food?',
             tags: ['Knowledge matters more than pills'],
             best: {
                 year: 1498, place: 'The Indian Ocean, aboard Vasco da Gama’s fleet',
                 beats: [
-                    ['Arrival', 'August 1498, leaving Calicut for home. Ahead lie four months of calms and no landfall, and the men’s gums are already starting to swell. The fleet left Lisbon the year before with about 170 men (sources vary); only 54 or 55 will see Portugal again, and scurvy will take many of those who die.'],
-                    ['The move', 'The arithmetic is humbling. 100 tablets is 100 g, and 170 men at the 10 mg-a-day minimum for the 132-day crossing would need more than double that. So the bottle is a rescue kit: you give the sickest thirty to a hundred times the minimum (300 to 1,000 mg a day) and watch gums firm within days. Then you teach the lesson that costs nothing: fresh fruit, citrus above all, and greens, at every landfall.'],
+                    ['Arrival', 'August 1498, leaving Calicut for home. Ahead lie about four months of calms and no landfall (sources give 100 to 132 days), and the men’s gums are already starting to swell. The fleet left Lisbon the year before with about 170 men (sources vary); only 54 or 55 will see Portugal again, and scurvy will take many of those who die.'],
+                    ['The move', 'The arithmetic is humbling. 100 tablets is 100 g, and 170 men at the 10 mg-a-day minimum for a crossing of up to 132 days would need more than double that. So the bottle is a rescue kit: you give the sickest thirty to a hundred times the minimum (300 to 1,000 mg a day) and watch gums firm within days. Then you teach the lesson that costs nothing: fresh fruit, citrus above all, and greens, at every landfall.'],
                     ['The ripple', 'A visible recovery is the best argument there is. Portugal runs the longest, deadliest sea route on Earth and has a state apparatus to enforce a rule. Instead of waiting for James Lind’s trial in 1747 and the Royal Navy’s lemon-juice ration in 1795, the knowledge goes into every later voyage: Magellan in 1519 (roughly 240 to 270 men set out in five ships; one ship and 18 men completed the circuit) and Anson in 1740 (roughly 1,300 of about 1,900 dead, mostly of scurvy).'],
                     ['The catch', 'The cure had been found and lost before. In the winter of 1535–36 Jacques Cartier’s crew were healed by a tea of conifer bark and needles, probably white cedar, and the knowledge decayed anyway. Knowledge in a bottle fades unless an institution keeps it, and a bottle of tablets runs out in a week.']
                 ]
@@ -236,16 +236,16 @@
             id: 'manual', emoji: '📖', dims: { need: 8, copy: 8, trust: 5, ripple: 8 }, sweet: 'w6',
             name: 'A rebuild-the-world paperback', sub: 'Something like Lewis Dartnell’s The Knowledge · 1 kg',
             tagline: 'Paper. No battery. Written for exactly this.',
-            briefing: 'Not an encyclopedia but a guide to restarting civilisation: how to purify water, grow food, make soap and glass, work metals, make penicillin, communicate, and much more. Its sibling, Where There Is No Doctor, is written for people with no doctor nearby.',
+            briefing: 'Not an encyclopedia but a guide to restarting civilisation: how to purify water, grow food, make soap and glass, work metals, make penicillin, communicate, and much more. A different book, Where There Is No Doctor, is written for people with no doctor nearby.',
             hint: 'Where would readers of modern English exist, with workshops and a way to share?',
             tags: ['Beats the e-reader'],
             best: {
                 year: 1665, place: 'London, England',
                 beats: [
-                    ['Arrival', 'London, summer 1665. The Royal Society is five years old and has just begun the Philosophical Transactions. Boyle, Hooke and Wren are at work; Newton has gone home to Woolsthorpe because the plague has closed Cambridge. The Great Plague will kill perhaps a fifth of the city.'],
+                    ['Arrival', 'London, spring 1665. The Royal Society is five years old and has just begun the Philosophical Transactions. Boyle, Hooke and Wren are at work. The plague is spreading and will scatter the Society, and Newton will go home to Woolsthorpe when it closes Cambridge. The Great Plague will kill perhaps a fifth of the city.'],
                     ['The move', 'You don’t hand it to a genius; you let it be copied. Hooke reads the chapters on glass, optics and clocks, Boyle the chemistry of gases, and Henry Oldenburg, the Society’s secretary, writes to half of Europe. You are lending a map of the order of discovery: which dead ends to skip, and what each step needs next.'],
                     ['The ripple', 'The Society has the minds, the instruments and a way to publish. What it lacks is a map of the road, and a book that explains what fire and rust are, says fever is carried by something small and shows how to build a steam engine turns decades of experiments into years. Plausible gains are decades, perhaps a century, on sanitation, industrial chemistry and steam.'],
-                    ['The catch', 'A manual assumes you know what is missing, and practical know-how still needs workshops, tolerances and metals the age can’t yet make. And being found with a book that describes the future is dangerous: England still has a law that allows heretics to be burned and a witchcraft statute on the books. Nobody fully trusts the stranger with the book.']
+                    ['The catch', 'A manual assumes you know what is missing, and practical know-how still needs workshops, tolerances and metals the age can’t yet make. And being found with a book that describes the future is dangerous: the writ for burning heretics is not abolished until 1677, and a witchcraft statute is on the books. Nobody fully trusts the stranger with the book.']
                 ]
             },
             early: 'In a world without readers of English, or any reader who can follow the diagrams, the manual is a stack of strange pages. Even translated, it has no audience: no institution to read, test and pass it on.',
@@ -273,7 +273,7 @@
                     ['The catch', 'A twist: in real history, after 1846, ether gave surgeons the nerve to attempt bigger operations, and until Lister’s antiseptic method (1867) infections are often said to have climbed. Painless surgery came first; safe surgery came later. Ether is also flammable and its vapour heavy, and dosing it without training can kill. You bring the idea, not a supply.']
                 ]
             },
-            early: 'There is no documented ether before about 1540, and no tradition of organised army surgeons exists to spread the lesson. You help one patient, and a sceptical village remembers it as sorcery.',
+            early: 'There is no securely documented ether before about 1540, and no tradition of organised army surgeons exists to spread the lesson. You help one patient, and a sceptical village remembers it as sorcery.',
             late: 'In October 1846 the Boston dentist William Morton demonstrates ether in public, and the news crosses the Atlantic within weeks. You would have to be in the room that day to matter.',
             verdict: 'Need {need}: every operation in history had a screaming patient. Copy {copy}: distil alcohol with an acid; apothecaries could do it. Ripple is only {ripple} because painless surgery without clean surgery produced a nasty interlude. The raters rated it more highly than I did, and all three would land it earlier.',
             sources: [
@@ -293,15 +293,15 @@
             best: {
                 year: 1854, place: 'Broad Street, Soho, London',
                 beats: [
-                    ['Arrival', '3 September 1854. Since the night of 31 August, 127 residents of Broad Street have died. Within ten days there will be nearly 500 fatal attacks, and most counts reach about 600. Medical opinion says miasma. A local doctor called John Snow suspects the water from the Broad Street pump.'],
+                    ['Arrival', '3 September 1854. Since the night of 31 August, popular accounts count 127 residents of Broad Street dead (registrar figures for the first days are lower). Within ten days Snow counts upwards of 500 fatal attacks, and totals run from about 420 to 700, with 616 the usual figure. Medical opinion says miasma. A local doctor called John Snow suspects the water from the Broad Street pump.'],
                     ['The move', 'You treat the pump’s water, and the cases among those who drink it stop. It is a controlled experiment of the kind Snow can only argue for. Snow needed the Board of Guardians to remove the pump handle on 8 September; your tablets give him evidence they cannot dismiss.'],
-                    ['The ripple', 'The first emergency chlorination of a public supply was at Maidstone in 1897, and the first continuous one in the United States at Jersey City in 1908; cholera and typhoid killed in every city until then. If “an invisible poison in water” is accepted in 1854 rather than the 1880s, sewers (Bazalgette’s London system began in 1859) and treatment are built for the right reason, thirty years sooner.'],
+                    ['The ripple', 'One of the first emergency chlorinations of a public supply was at Maidstone in 1897, and the first continuous one in the United States at Jersey City in 1908; cholera and typhoid killed in cities everywhere until then. If “an invisible poison in water” is accepted in 1854 rather than the 1880s, sewers (Bazalgette’s London system began in 1859) and treatment are built for the right reason, thirty years sooner.'],
                     ['The catch', 'One outbreak, one pump. Snow’s argument still faces a profession wedded to miasma until Koch’s work in 1883–84, and for some time after, and the Soho outbreak was already waning when the handle came off, so your gain is persuasion, not the lives of that street. Your hundred tablets run out. The delta is in the speed of belief.']
                 ]
             },
             early: 'Before cholera reaches Europe in the 1830s, there is no public demand for an invisible, waterborne cause. The tablets purify your own water, and nobody else’s.',
             late: 'After 1883 Koch has identified the cholera bacterium, and chlorination appears at the end of the 1890s. The proof you bring has already been won in the laboratory.',
-            verdict: 'A rare case where the object is evidence rather than medicine. Trust is only {trust} because the miasma theory was deeply entrenched; Need {need} and Copy {copy}, since chlorine chemistry matured within decades. It is a speed-up of an inevitable discovery, which is why it is a solid pick rather than a great one. The raters would land it a window earlier than I did.',
+            verdict: 'A rare case where the object is evidence rather than medicine. Trust is only {trust} because the miasma theory was deeply entrenched; Need {need} and Copy {copy}, since chloride of lime was already a common industrial chemical by 1854. It is a speed-up of an inevitable discovery, which is why it is a solid pick rather than a great one. The raters would land it a window earlier than I did.',
             sources: [
                 { label: 'John Snow’s Broad Street data (Michigan State University)', url: 'https://johnsnow.matrix.msu.edu/work.php/id=15-78-82/' },
                 { label: 'The Broad Street outbreak (UCLA Department of Epidemiology)', url: 'https://epi-snow.ph.ucla.edu/Stream2_BSPoutbreak_d.html' },
@@ -313,20 +313,20 @@
             id: 'compass', emoji: '🧭', dims: { need: 6, copy: 9, trust: 6, ripple: 7 }, sweet: 'w2',
             name: 'A baseplate compass', sub: '40 g',
             tagline: 'A needle that always points at the same thing.',
-            briefing: 'Magnetised needles floated on water are described in China by 1088 and used at sea by about 1110; Europe has them by about 1190. Later Roman writers such as Vegetius call the Mediterranean “closed” from 11 November to 10 March, citing cloud, darkness and storms.',
+            briefing: 'Magnetised needles floated on water are described in China by 1088 and used at sea by about 1111–17; Europe has them by about 1190. Later Roman writers such as Vegetius call the Mediterranean “closed” from 11 November to 10 March, citing bad weather.',
             hint: 'Whose supply chain closed every winter?',
             tags: ['Idea in a box'],
             best: {
-                year: -30, place: 'Ostia, the port of Rome',
+                year: -30, place: 'Puteoli, on the Bay of Naples',
                 beats: [
-                    ['Arrival', 'Ostia, 30 BCE. Octavian has just taken Egypt, whose granaries will feed Rome for roughly a third of the year (Josephus’s later figure). Grain ships sail from Alexandria in the good months; later writers will call the sea closed in winter, and whether or not that is a rule, winter overcast makes every voyage a gamble.'],
+                    ['Arrival', 'Puteoli, 30 BCE, where the Alexandria grain ships unload before the grain goes on to Rome. Octavian has just taken Egypt, whose granaries will feed Rome for roughly a third of the year (Josephus’s later figure). The ships sail from Alexandria in the good months; later writers will call the sea closed in winter, and whether or not that is a rule, winter overcast makes every voyage a gamble.'],
                     ['The move', 'You show a shipowner the needle in a bowl of water, and how to magnetise a plain needle by stroking it with a lodestone. Roman writers like Lucretius already knew that lodestones attract iron. He gets the point in an afternoon.'],
                     ['The ripple', 'Year-round shipping, fewer wrecks and faster trade. The winter closure that froze Mediterranean commerce for months loosens. Rome already has the world’s largest network of ports and roads, so the effect compounds on an empire at its most connected. You have given sailors a direction about twelve centuries before Europe adopted it.'],
                     ['The catch', 'A compass tells you the way, not where you are. You still need latitude, charts and a ship built for winter gales, and magnetic declination wanders. You’ve widened the sailing window, not abolished the risk.']
                 ]
             },
             early: 'Phoenician and Greek captains already range far by coast and star, and before large-scale sea trade, direction isn’t the bottleneck. It gives a modest edge to a few voyages.',
-            late: 'By about 1190 Europe has the compass, and it is widespread in Mediterranean shipping by 1300. The idea has already travelled from China.',
+            late: 'By about 1190 Europe has the compass, and it is widespread in Mediterranean shipping by 1300. The idea may already have travelled from China.',
             verdict: 'Copy {copy}: a needle and a lodestone. But Need is only {need} because the Mediterranean worked tolerably without it for centuries, and a compass doesn’t tell you where you are. A good pick, a minor revolution, and the cheapest item on the list to lose.',
             sources: [
                 { label: 'History of the compass', url: 'https://en.wikipedia.org/wiki/History_of_the_compass' },
@@ -338,16 +338,16 @@
             id: 'foldscope', emoji: '🔬', dims: { need: 7, copy: 4, trust: 7, ripple: 9 }, sweet: 'w3',
             name: 'A Foldscope', sub: 'A paper microscope · about 8 g',
             tagline: 'A laboratory you can fold into your pocket.',
-            briefing: 'Described by a Stanford lab in 2014: a printed sheet of paper folded into a working microscope around a tiny ball lens. In its standard form it magnifies about 140 times and resolves about 2 micrometres, and it costs under a dollar in parts at scale. Higher-power lenses in the original paper go much further.',
+            briefing: 'Described by a Stanford lab in 2014: a printed sheet of paper folded into a working microscope around a tiny ball lens. In its standard form it magnifies about 140 times and resolves about 2 micrometres, and it costs under a dollar in parts at scale, excluding assembly. Higher-power lenses in the original paper go much further.',
             hint: 'Who was already suspecting the invisible, and could read what they saw?',
             tags: ['Idea in a box'],
             best: {
                 year: 1020, place: 'Persia, in the circle of Ibn Sina',
                 beats: [
-                    ['Arrival', 'Persia, about 1020. Ibn Sina (Avicenna), physician and philosopher, is writing the Canon of Medicine, which will teach doctors for six hundred years. He argues that some illnesses, tuberculosis among them, pass between people, and that water and soil can carry disease. In Cairo, Ibn al-Haytham is at work on the Book of Optics (older accounts date it to 1021, recent scholarship to 1028–38), the best explanation of lenses on Earth.'],
-                    ['The move', 'You let him look. A drop of pond water becomes a crowd of moving specks; Leeuwenhoek will describe such “little animals” (animalcules, in the English version) in 1676. Ibn Sina has a theory ready for what he is seeing, and a reputation across the eastern Islamic world.'],
+                    ['Arrival', 'Persia, about 1020. Ibn Sina (Avicenna), physician and philosopher, is writing the Canon of Medicine, which will teach doctors for six hundred years. He argues that some illnesses, tuberculosis among them, pass between people, and that water and soil can carry disease. In Cairo, Ibn al-Haytham is at work on the Book of Optics (older accounts date it to 1011–21, recent scholarship to 1028–38), the best account of light, vision and refraction on Earth.'],
+                    ['The move', 'You let him look. A drop of pond water becomes a crowd of moving specks; Leeuwenhoek will describe such “little animals” in 1676 (they were later called animalcules). Ibn Sina has a theory ready for what he is seeing, and a reputation across the eastern Islamic world.'],
                     ['The ripple', 'Science at the moment is theory-rich and instrument-poor, and a microscope tips the balance towards observation, six hundred years early. The best case is something like a germ theory argued seriously in the eleventh century, and a lens-making trade serving it, in a civilisation with a hospital system to test it.'],
-                    ['The catch', 'A Foldscope’s resolution is at the edge of seeing bacteria: you would see protozoa and blood cells clearly, and bacteria only as faint specks. Seeing is not understanding; Leeuwenhoek saw bacteria in the 1670s and it took two centuries to link them to disease. And you have exactly one, and it’s made of paper.']
+                    ['The catch', 'A Foldscope’s resolution is at the edge of seeing bacteria: you would see protozoa and blood cells clearly, and bacteria only as faint specks. Seeing is not understanding; Leeuwenhoek saw what were probably bacteria in 1676 and it took two centuries to link them to disease. And you have exactly one, and it’s made of paper.']
                 ]
             },
             early: 'Before lens-literate cultures, nobody can interpret what the “little animals” mean. You amaze a village, and a month later the paper has rotted.',
@@ -364,20 +364,20 @@
             id: 'bednet', emoji: '🦟', dims: { need: 7, copy: 7, trust: 4, ripple: 6 }, sweet: 'w2',
             name: 'An insecticide-treated bed net', sub: '300 g',
             tagline: 'Rome already had mosquito nets. It didn’t know why they mattered.',
-            briefing: 'Malaria has been one of history’s great killers. The link with mosquitoes was demonstrated only in 1897–98 (Ross in India, Grassi in Italy), and the disease’s name is Italian: mal aria, “bad air”. Nets are old technology; knowing what they are for is the new part.',
+            briefing: 'Malaria has been one of history’s great killers. The link with mosquitoes was worked out only in 1897–98 (Ross’s bird-malaria work in India, Grassi’s human experiments in Italy), and the disease’s name is Italian: mal aria, “bad air”. Nets are old technology; knowing what they are for is the new part.',
             hint: 'Find the empire whose heartland was a malarial marsh.',
             tags: ['Knowledge in cloth'],
             best: {
                 year: 110, place: 'The Pontine Marshes, south of Rome',
                 beats: [
-                    ['Arrival', 'Latium, around 110 CE. Rome brings water in on ten aqueducts, builds sewers and drains marshes, and still the fever returns each summer in the Pontine Marshes and the Campagna. Most Romans blame bad air, though a few farming writers already distrust the marshes’ tiny creatures. Romans do sleep under gauze canopies (the Greek word is kōnōpeion, Latin conopeum) borrowed from Egypt.'],
-                    ['The move', 'You show them the whole life of the mosquito: the wrigglers in standing water, the bite, the fever. The Dalmatian chrysanthemum, whose flowers make a natural insecticide, grows within the empire, and Roman linen and engineers do the rest. The Romans love a drainage project, and they have already tried the marshes more than once.'],
-                    ['The ripple', 'Drain the breeding water, net the beds. The Campagna becomes habitable many centuries before Mussolini’s drainage of the 1930s, and malaria’s long shadow over Italian history (armies, popes, Dante, who probably died of malaria in 1321) lifts. A healthier core is a more stable empire.'],
+                    ['Arrival', 'Latium, around 110 CE. Rome brings water in on ten aqueducts, builds sewers and drains marshes, and still the fever returns each summer in the Pontine Marshes and the Campagna. Most Romans blame bad air, though a few farming writers, Varro among them, already distrust the marshes’ tiny creatures. Romans do sleep under gauze canopies (the Greek word is kōnōpeion, Latin conopeum) borrowed from Egypt.'],
+                    ['The move', 'You show them the whole life of the mosquito: the wrigglers in standing water, the bite, the fever. You also show them a natural insecticide, the flowers of the Dalmatian chrysanthemum, which grows within the empire though nobody there is known to have used it against insects. Roman linen and engineers do the rest. The Romans love a drainage project, and they have already tried the marshes more than once.'],
+                    ['The ripple', 'Drain the breeding water, net the beds. The Campagna becomes habitable many centuries before Mussolini’s drainage of the 1930s, and malaria’s long shadow over Italian history (armies, popes, Dante, who is traditionally thought to have died of malaria in 1321) lifts. A healthier core is a more stable empire.'],
                     ['The catch', 'Roman scepticism. You are claiming that tiny insects, not bad air, cause fever, and without a microscope you cannot show the parasite. You can show the effect, but only after a season, and the Antonine and Cyprianic plagues were not malaria, so no net would touch them.']
                 ]
             },
             early: 'In a world of mobile hunter-gatherers, malaria is a smaller burden: it grew with farming and settled villages beside standing water. The need is still there, but there are few to protect.',
-            late: 'By 1897–98 Ross and Grassi have traced the parasite through the mosquito, and by the early 1900s drainage and nets are public policy (the Panama Canal was built with mosquito control). You are no longer ahead of anyone.',
+            late: 'By 1897–98 Ross and Grassi have worked out the mosquito’s part, and by the early 1900s drainage and nets are public policy (the Panama Canal was built with mosquito control). You are no longer ahead of anyone.',
             verdict: 'Great Need and a decent Copy ({copy}: linen, flowers and drains), but Trust is the lowest of the top twelve at {trust}: “a tiny insect gave you fever” is a hard claim to make in 110 CE. It illustrates a general rule on this list: an object that carries a hard-to-believe idea is worth less than one that proves itself.',
             sources: [
                 { label: 'Frontinus and the Roman aqueducts', url: 'https://en.wikipedia.org/wiki/Frontinus' },
@@ -397,19 +397,19 @@
                 year: 1707, place: 'HMS Association, off the Isles of Scilly',
                 beats: [
                     ['Arrival', 'October 1707, aboard Admiral Sir Cloudesley Shovell’s flagship, returning from Toulon. Days of cloud and rough weather have blotted out the sun. The pilots disagree about where the fleet is, and Shovell goes with the majority. On the night of the 22nd they are about to run onto the rocks off the Isles of Scilly.'],
-                    ['The move', 'Your watch shows Greenwich time (which is also UTC). At noon you take the sun’s height and note the watch: every four minutes of difference between local noon and Greenwich noon is one degree of longitude. The fleet is farther north than the pilots think, and the turn they are planning is straight at the rocks.'],
-                    ['The ripple', 'Four ships and somewhere between 1,400 and 2,000 men (counts vary) are saved, in one of the worst disasters in Royal Navy history. And you know what happened next: Parliament passed the Longitude Act in 1714, offering up to £20,000 for a method accurate to half a degree, roughly 3 seconds a day over a long voyage (lesser sums for lesser accuracy). Harrison’s H4 was ready by about 1760 and proved itself on a sea trial in 1761–62. The target specification arrives fifty years early.'],
-                    ['The catch', 'You have one watch, and it can’t be copied: a quartz oscillator is two centuries beyond the metalworkers of 1707. The Admiralty would want a method others could reproduce, not a miracle, and Harrison still has to build his clocks. You save a fleet and a few decades, not the whole age.']
+                    ['The move', 'Your watch shows Greenwich time (effectively UTC). At noon you take the sun’s height and note the watch: every four minutes of difference between local noon and Greenwich noon is one degree of longitude. The fleet is much nearer the Scillies than the pilots think, and the turn they are planning is straight at the rocks.'],
+                    ['The ripple', 'Four ships and somewhere between 1,400 and 2,000 men (counts vary) are saved, in one of the worst disasters in Royal Navy history. And you know what happened next: Parliament passed the Longitude Act in 1714, offering up to £20,000 for a method accurate to half a degree, roughly 3 seconds a day over a six-week voyage (lesser sums for lesser accuracy). Harrison’s H4 was ready by about 1760 and proved itself on a sea trial in 1761–62. The target specification arrives more than fifty years early.'],
+                    ['The catch', 'You have one watch, and it can’t be copied: a quartz oscillator is more than two centuries beyond the metalworkers of 1707. The Admiralty would want a method others could reproduce, not a miracle, and Harrison still has to build his clocks. You save a fleet and a few decades, not the whole age.']
                 ]
             },
             early: 'Before the age of long ocean crossings, longitude isn’t a life-or-death problem. A coastal pilot’s eyes and a lead line beat any watch.',
-            late: 'After Harrison’s H4 and the chronometers of Arnold and Earnshaw in the 1780s, affordable chronometers begin to reach the Navy. Your watch is a gadget with a backlight.',
+            late: 'After Harrison’s H4 and the chronometers of Arnold and Earnshaw (patents of 1782–83), chronometers reach the Navy in the 1790s and 1800s, though still at a high price. Your watch is a gadget with a backlight.',
             verdict: 'A single, perfect rescue with a limited ripple: Copy {copy} sinks it, since a quartz watch can’t be manufactured in the 1700s. Trust {trust} because a very accurate clock is easy to demonstrate. Fantastic for the crew of the Association, modest for history, and the raters scored its Ripple lower than I did.',
             sources: [
                 { label: 'The Longitude rewards', url: 'https://en.wikipedia.org/wiki/Longitude_rewards' },
                 { label: 'Board of Longitude', url: 'https://en.wikipedia.org/wiki/Board_of_Longitude' },
                 { label: 'Scilly naval disaster of 1707', url: 'https://en.wikipedia.org/wiki/Scilly_naval_disaster_of_1707' },
-                { label: 'Casio F-91W', url: 'https://en.wikipedia.com/wiki/Casio_F91W' }
+                { label: 'Casio F-91W', url: 'https://en.wikipedia.org/wiki/Casio_F-91W' }
             ]
         },
         {
@@ -417,13 +417,13 @@
             name: 'A solar e-reader with offline Wikipedia', sub: '250 g plus a panel · about 100 GB',
             tagline: 'The one everyone picks first.',
             briefing: 'All of human knowledge in your hands: the obvious choice, and the one most likely to disappoint. Information is not power unless someone can use it, in a language they can read, with the materials to act on it.',
-            hint: 'Where do people want a universal encyclopedia, and have the workshops to act on it?',
+            hint: 'Where do people want a universal encyclopaedia, and have the workshops to act on it?',
             tags: ['Overrated', 'Bandwidth-limited'],
             best: {
                 year: 1750, place: 'Paris, France',
                 beats: [
                     ['Arrival', 'Paris, 1750. Denis Diderot and Jean d’Alembert have just issued the prospectus for the Encyclopédie (the first volume follows in 1751), a project to gather the knowledge scattered across the earth. Their problem is collecting, checking, and getting past the censors.'],
-                    ['The move', 'You show Diderot the screen. The book he is trying to write has been assembled. The trouble is the interface, which is you. Reading French you can translate by hand at a few pages an hour. The Encyclopédie took about twenty-one years, more than 130 named contributors and roughly 20 million words; English Wikipedia is more than two hundred times larger.'],
+                    ['The move', 'You show Diderot the screen. The book he is trying to write has been assembled. The trouble is the interface, which is you. Reading French you can translate by hand at a few pages an hour. The Encyclopédie took about twenty-one years, more than 130 named contributors and roughly 21 million words; English Wikipedia is roughly two hundred times larger.'],
                     ['The ripple', 'A well-chosen few hundred entries (germ theory, thermodynamics, electromagnetism, organic chemistry, antibiotics) hand-copied by you and distributed through Diderot’s network could put the Enlightenment on fast-forward by perhaps a decade or two. Your bandwidth and the battery’s life are the ceiling.'],
                     ['The catch', 'Knowledge is not capability. Most of Wikipedia presupposes materials, machine tools and pure reagents that don’t exist. And a glowing slab is an object the censors will want: the Encyclopédie’s first two volumes were suppressed in 1752 and the whole work was condemned by the Pope in 1759. The slab could be confiscated, and then it is gone.']
                 ]
@@ -448,8 +448,8 @@
             best: {
                 year: 1862, place: 'The oil region of Pennsylvania',
                 beats: [
-                    ['Arrival', '1862, three years after Drake drilled the first oil well near Titusville. Refiners boil crude oil to make kerosene for lamps, and the lightest fraction, naphtha, is a dangerous embarrassment that is often burned off or dumped. Meanwhile every railway shop, mill and gun is seizing up with rust and gummy tallow; the best lubricants are still whale oil, lard and tallow.'],
-                    ['The move', 'You don’t sell a can; you stage a show. A rusted bolt on a locomotive that three men couldn’t shift turns in seconds. Then you tell the refiners the thing no one knows: bottle the waste, thin it with a lighter oil and sell it as a penetrating, water-driving oil. The aerosol can is decades away (the Norwegian Erik Rotheim patented the principle in the late 1920s, with a US patent in 1931), but the idea of the mix doesn’t need pressure.'],
+                    ['Arrival', '1862, three years after Drake drilled the first oil well near Titusville. Refiners boil crude oil to make kerosene for lamps, and the lightest fraction, naphtha, is a dangerous embarrassment that is often burned off or dumped. Meanwhile every railway shop, mill and gun is seizing up with rust and gummy tallow; the lubricants on offer are still mostly animal and vegetable oils, with petroleum ones only just appearing.'],
+                    ['The move', 'You don’t sell a can; you stage a show. A rusted bolt on a locomotive that three men couldn’t shift turns in seconds. Then you tell the refiners the thing no one knows: blend the waste with a heavier lubricating oil and sell it as a penetrating, water-driving product. The aerosol can is decades away (the Norwegian Erik Rotheim filed for the principle in the 1920s, with a US patent granted in 1931), but the idea of the mix doesn’t need pressure.'],
                     ['The ripple', 'A decade or two sooner for penetrating oils, and less downtime for railways and mills. This is a win in maintenance, not in invention, and you shouldn’t pretend otherwise. But the demonstration buys you something the others can’t: instant credibility with every engineer in the room, in the time it takes to spray a bolt. No other object on this list has more trust per gram.'],
                     ['The catch', 'You can’t copy the can: the pressurised aerosol and its valve belong to the twentieth century. The can covers about one locomotive’s worth of seized parts, and the contents are very flammable (lighting the spray makes a short blowtorch; don’t). And 3-in-One oil is only thirty-odd years away: you are early to a market that was about to appear on its own.']
                 ]
@@ -497,7 +497,7 @@
             id: 'coffee', emoji: '☕', dims: { need: 3, copy: 3, trust: 6, ripple: 5 }, sweet: 'w5',
             name: 'A kilo of green coffee beans', sub: '1 kg and a hand grinder',
             tagline: 'Was the Enlightenment a caffeine side-effect?',
-            briefing: 'Medieval and early-modern Europe drank a lot of weak beer and watered wine, and the popular story says water was too dangerous to drink (historians doubt this). Coffee and tea arrived in the seventeenth century, swapping alcohol for caffeine. Writers such as Tom Standage argue this helped power the age of reason, a thesis other historians treat with caution. The coffeehouses were nicknamed “penny universities”, a traditional label, and Lloyd’s of London began in one.',
+            briefing: 'Medieval and early-modern Europe drank a lot of weak beer and watered wine, and the popular story says water was too dangerous to drink (historians doubt this). Coffee and tea arrived in the seventeenth century, swapping alcohol for caffeine. Writers such as Tom Standage argue this helped power the age of reason, a thesis that is contested. The coffeehouses were nicknamed “penny universities”, a traditional label, and Lloyd’s of London began in one.',
             hint: 'The plant can’t grow in Europe. Where did the trade routes meet?',
             tags: ['Speculative'],
             best: {
@@ -505,7 +505,7 @@
                 beats: [
                     ['Arrival', 'Venice, 1480, the hub of European trade with the Mamluk Sultanate of Egypt. Sufis in Yemen have been drinking coffee for a few decades, and the wider Islamic world is only beginning to hear of it; Europe has not. In Venice, as across Europe, the day’s drink is wine or small beer.'],
                     ['The move', 'You roast a handful on a merchant’s fire and grind it by hand. A bitter, hot drink that makes a man alert by evening. The merchants have the capital and the ships; you tell them where the plant grows.'],
-                    ['The ripple', 'Coffeehouses appear about 170 years early (London’s first, in 1652, is well documented; the usual date for Venice is 1645). The sober, caffeinated clerk is a plausible engine of the Enlightenment, and news, insurance and science all lived in the café. This is the theory; it’s fashionable and contested.'],
+                    ['The ripple', 'Coffeehouses appear about 165 to 170 years early (London’s first, in 1652, is well documented; the usual date for Venice is 1645). The sober, caffeinated clerk is a plausible engine of the Enlightenment, and news, insurance and science all lived in the café. This is the theory; it’s fashionable and contested.'],
                     ['The catch', 'The weakest causal chain here. Coffee is a tropical plant, so you can’t grow it in Europe; the whole thing depends on a long trade chain and on a weakly evidenced theory. And one kilo lasts a few weeks. You would be a trendsetter, not a revolution.']
                 ]
             },
@@ -523,7 +523,7 @@
             id: 'magnets', emoji: '🧲', dims: { need: 3, copy: 2, trust: 8, ripple: 4 }, sweet: 'w6',
             name: 'Neodymium magnets', sub: 'Six N52 discs · 100 g',
             tagline: 'The party trick that beat the philosopher.',
-            briefing: 'Neodymium magnets, invented independently by General Motors and Sumitomo in 1982, are the strongest commercially available permanent magnets: a coin-sized one will lift many kilos. Before the twentieth century the strongest magnet anyone had was a lump of naturally magnetised lodestone.',
+            briefing: 'Neodymium magnets, invented independently by General Motors and Sumitomo in 1982, are the strongest commercially available permanent magnets: a coin-sized one will lift many kilos. In 1600 the strongest magnet anyone had was a lump of naturally magnetised lodestone.',
             hint: 'Find the man who wrote the book on magnets.',
             tags: ['Wow factor'],
             best: {
@@ -532,11 +532,11 @@
                     ['Arrival', 'England, 1600. William Gilbert, a leading London physician and soon to be physician to Queen Elizabeth, has just published De Magnete, which argues that the Earth itself is a giant magnet. His experiments use lodestones shaped into balls (terrellae).'],
                     ['The move', 'You give him six discs that grip far harder than any lodestone. He can build a better terrella, test how the needle dips, and see what heat does to magnetism, with far cleaner results.'],
                     ['The ripple', 'A better magnet makes better experiments, and the principle that the Earth is magnetic is firmed up. But electromagnetism needs a current source (Volta’s battery, 1800), so you speed up a science whose next step is two centuries away. Delightful; limited.'],
-                    ['The catch', 'Neodymium magnets are brittle, corrode in damp air unless coated, can’t be copied (rare-earth refining only begins around 1800, and neodymium itself was not isolated until 1885), and can pinch fingers badly. And in 1600 a magnet that grips iron through a table is a miracle that could get you accused of sorcery.']
+                    ['The catch', 'Neodymium magnets are brittle, corrode in damp air unless coated, can’t be copied (rare-earth refining only begins around 1800, and neodymium itself was separated from didymium only in 1885), and can pinch fingers badly. And in 1600 a magnet that grips iron through a table is a miracle that could get you accused of sorcery.']
                 ]
             },
             early: 'Before magnetism is understood as a force, a super-magnet is taken for sorcery, and nobody has the context to be impressed in a useful way.',
-            late: 'After Faraday’s 1831 discoveries, electromagnets already do the job, and yours is a very strong toy.',
+            late: 'After the electromagnets of the 1820s and 1830s (Sturgeon, Henry), a permanent magnet is no longer the strongest thing on the bench, and yours is a very strong toy.',
             verdict: 'Sells itself in a minute (Trust {trust}) and nothing else. Copy {copy}: it needs rare-earth refining, two centuries after the era. Ripple {ripple}: the science that matters is gated by something else, a current source. Everything about it is dazzling and shallow.',
             sources: [
                 { label: 'The men who made the magnet that made the modern world (IEEE Spectrum)', url: 'https://spectrum.ieee.org/the-men-who-made-the-magnet-that-made-the-modern-world' },
@@ -555,20 +555,20 @@
             best: {
                 year: 1450, place: 'Mainz, Germany',
                 beats: [
-                    ['Arrival', 'Mainz, 1450. Johannes Gutenberg has a press, a punch-cutter’s skill and an idea, and no money. He borrows 800 guilders from the financier Johann Fust in 1450 and another 800 in 1452. In 1455 Fust sues, wins, and takes the Bibles and much of the equipment.'],
-                    ['The move', 'A kilo of gold covers nearly half of that first loan. You quietly lend it to Gutenberg without interest, or go into partnership with him, and his press survives the lawsuit.'],
-                    ['The ripple', 'Gutenberg is spared ruin and prints with more freedom. But printing may well have happened anyway, and it spread in part because Mainz was sacked in 1462 and its printers scattered; by 1500, roughly 250 towns had presses (counts range from about 220 to 282). The real beneficiary is one man.'],
+                    ['Arrival', 'Mainz, 1450. Johannes Gutenberg has a press, a punch-cutter’s skill and an idea, and no money. He gets 800 guilders from the financier Johann Fust in 1450 and another 800 in 1452. In 1455 Fust sues, wins, and takes the type and at least some of the equipment.'],
+                    ['The move', 'A kilo of gold covers roughly half of that first sum. You quietly lend it to Gutenberg without interest, or go into partnership with him, and his press survives the lawsuit.'],
+                    ['The ripple', 'Gutenberg is spared ruin and prints with more freedom. But printing may well have happened anyway, and it spread in part because Mainz was sacked in 1462 and its printers scattered; by 1500, roughly 250 towns had presses (counts range from about 200 to 282). The real beneficiary is one man.'],
                     ['The catch', 'Gold’s value depends on era and danger: arriving with a kilo is arriving with a considerable fortune, which attracts murder and the attention of the Archbishop’s men. And the most important lesson: money cannot buy what doesn’t exist yet.']
                 ]
             },
             early: 'In 9500 BCE gold is a shiny stone. In the ancient world, wealth is plentiful and capital is rarely the bottleneck; you would be rich in a world where being rich fixes little.',
-            late: 'From the 1500s American silver, and some gold, floods Europe and inflation shrinks your kilo. By 1900 it buys a few years’ wages for a labourer.',
+            late: 'From the 1500s American silver, and some gold, floods Europe and inflation shrinks your kilo. By 1900 it buys a year or two of a labourer’s wages.',
             verdict: 'A wish, not a plan. Gold works in every century and changes nothing in any of them: Trust {trust}, Copy {copy}. Capital is rarely the bottleneck of history; belief, skill and readiness are. It ranks near the bottom because the money has no idea what to buy.',
             sources: [
                 { label: 'Johann Fust (Britannica)', url: 'https://www.britannica.com/biography/Johann-Fust' },
                 { label: 'The Helmasperger notarial instrument (Britannica)', url: 'https://www.britannica.com/topic/Helmaspergersches-Notariatsinstrument' },
                 { label: 'The Rhenish gulden', url: 'https://en.wikipedia.org/wiki/Rhenish_gulden' },
-                { label: '282 cities with presses by 1500 (History of Information)', url: 'https://historyofinformation.com/detail.php?entryid=36' }
+                { label: '282 cities with presses by 1500 (History of Information)', url: 'https://historyofinformation.com/detail.php?id=27' }
             ]
         },
         {
@@ -581,14 +581,14 @@
             best: {
                 year: 1812, place: 'The Smolensk road, Russia',
                 beats: [
-                    ['Arrival', 'November 1812, the Grande Armée’s retreat from Moscow. Temperatures fall to −20 °C or lower. Men die of cold, hunger, disease and Cossack attacks, and wet wood, snow and numb fingers make lighting a camp-fire with flint and steel a slow, desperate task.'],
+                    ['Arrival', 'November 1812, the Grande Armée’s retreat from Moscow. Temperatures fall well below freezing (around −15 °C by 9 November, colder later). Men die of cold, hunger, disease and Cossack attacks, and wet wood, snow and numb fingers make lighting a camp-fire with flint and steel a slow, desperate task.'],
                     ['The move', 'You give lighters to squad leaders. A fire in a flick: the same fuel, lit in seconds instead of minutes.'],
-                    ['The ripple', 'A few more bivouac fires get lit in time, and a few thousand more men survive a night. It is a gift, and it is also tiny against the scale: an army about 100,000 strong when it left Moscow loses most of its men. Warmth was never mainly a lighting problem. It was food, shelter and boots.'],
-                    ['The catch', 'Butane boils at about −0.5 °C, so a standard lighter struggles in deep cold unless you warm it in a pocket. The gift is most unreliable at the exact moment it is needed. The lighters also run out, and they cannot be copied.']
+                    ['The ripple', 'A few more bivouac fires get lit in time, and a few thousand more men survive a night. It is a gift, and it is also tiny against the scale: an army of about 100,000 to 115,000 when it left Moscow loses most of its men. Warmth was never mainly a lighting problem. It was food, shelter and boots.'],
+                    ['The catch', 'BIC says its lighters use isobutane, which boils at about −12 °C, so in deep cold they struggle to light unless you warm them in a pocket. The gift is most unreliable at the exact moment it is needed. The lighters also run out, and they cannot be copied.']
                 ]
             },
             early: 'Fire is not scarce in any century: every household can make it, and in the earliest eras the people who matter are masters of it. You would be a person with a trick, and perhaps a person who gets burned.',
-            late: 'After John Walker’s friction match (1826) and the safety match (1844), matches spread through the nineteenth century; the disposable lighter itself is a twentieth-century product. The novelty is gone and so is the edge.',
+            late: 'After John Walker’s friction match (1826) and the safety match (1850s), matches spread through the nineteenth century; the disposable lighter itself is a twentieth-century product. The novelty is gone and so is the edge.',
             verdict: 'The film-prop pick: low Need ({need}, since people have always made fire), Copy {copy}, Ripple {ripple}. It scores {trust} on Trust only because a flame from nothing is theatre. The last place isn’t an insult but a lesson: the first thing you think of is the thing the era already has.',
             sources: [
                 { label: 'John Walker and the friction match: a timeline (Phillumeny)', url: 'https://phillumeny.com/johnwalker/on-line-exhibit-timeline/' },

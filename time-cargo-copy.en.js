@@ -27,6 +27,7 @@
         toTop: 'Top',
         toTopLabel: 'Back to the top',
         skip: 'Skip to the content',
+        suggest: { for: 'ro', text: 'Această pagină există și în română.', open: 'Deschide în română', dismiss: 'Închide' },
 
         dims: {
             need: ['Need', 'How big and how old is the problem?'],
@@ -42,7 +43,7 @@
             w4: { name: 'The High Middle Ages', span: '1100 – 1347', place: 'Paris, Bologna, Flanders, Florence', crisis: 'Universities, cathedrals, crowded cities, and a food supply with no margin for a bad summer.' },
             w5: { name: 'Plague and Renaissance', span: '1347 – 1500', place: 'Venice, Mainz, Lisbon', crisis: 'A third or more of Europe buried, then rebuilt. Presses, Atlantic ships, banking houses, and nobody knows what scurvy is.' },
             w6: { name: 'The Scientific Revolution', span: '1500 – 1700', place: 'Prague, London, Padua', crisis: 'Kepler, Galileo, Newton, the Royal Society. Genius held back by arithmetic and by instruments.' },
-            w7: { name: 'Enlightenment and sail', span: '1700 – 1789', place: 'Paris, London, the Western Approaches', crisis: 'Encyclopedias and empires. Whole fleets are lost to bad charts and worse clocks.' },
+            w7: { name: 'Enlightenment and sail', span: '1700 – 1789', place: 'Paris, London, the Western Approaches', crisis: 'Encyclopaedias and empires. Whole fleets are lost to bad charts and worse clocks.' },
             w8: { name: 'Revolutions and Napoleon', span: '1789 – 1850', place: 'Europe, battlefields, new industrial towns', crisis: 'Steam, cholera, and surgery done in seconds, fully awake. Cities outgrow their sewers.' },
             w9: { name: 'The Victorian machine age', span: '1850 – 1914', place: 'Britain, the oil regions, the railways', crisis: 'Railways, kerosene, rust everywhere, and germ theory fighting for acceptance against “bad air”.' }
         },
