@@ -24,7 +24,7 @@
     function fmt(n, d) {
         const k = d || 0;
         if (!numFmt[k]) numFmt[k] = new Intl.NumberFormat(C.locale, { minimumFractionDigits: k, maximumFractionDigits: k });
-        return numFmt[k].format(n);
+        return numFmt[k].format(n).replace(/^-/, '\u2212');
     }
     function fill(str, vars) {
         return String(str).replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
@@ -743,8 +743,11 @@
         ctx.fillText(location.host + location.pathname.replace(/\/$/, ''), 60, H - 52);
         cv.setAttribute('aria-label', fill(C.result.shareText, { item: tx(it, 'name'), era: eraName(eraId), year: fmtYear(year), n: fmt(Math.round(L.score)) }));
     }
+    // The link people send is the landing's own preview page (share/<lang>/<item>-<era>.html):
+    // chat apps read og:image from static HTML and ignore the #hash, and the page then
+    // sends the reader on to the main page with this landing selected.
     function shareUrl() {
-        return location.origin + location.pathname + '#land/' + state.itemId + '/' + state.eraId;
+        return new URL('share/' + LANG + '/' + state.itemId + '-' + state.eraId + '.html', location.href).href;
     }
     function shareText() {
         const { it, eraId, L, year } = passInfo();
@@ -872,7 +875,8 @@
             aw.appendChild(el('div', { class: 'award' }, [
                 el('span', { class: 'ic', text: a.icon, 'aria-hidden': 'true' }),
                 el('b', { text: t }),
-                el('span', { text: shortCap(a.itemId) + ': ' + fill(n, it.dims) })
+                el('span', { class: 'aw-item', text: it.emoji + ' ' + shortCap(a.itemId) }),
+                el('span', { text: fill(n, it.dims) })
             ]));
         });
         // scorer toggle

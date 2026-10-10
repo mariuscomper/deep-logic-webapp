@@ -68,6 +68,33 @@ It plots raids and conquest in Britain and Francia, the North Atlantic explorati
 - `viking-journeys-data.js`: the journeys and trading-hub dataset the map renders
 - `vendor/leaflet/`: a vendored copy of the Leaflet library (no CDN dependency for the library itself; map tiles still load from CARTO/OpenStreetMap over the network)
 
+## Time cargo: what to take back in time
+
+`time-cargo.html` (English) and `time-cargo-ro.html` (Romanian) are a third, independent page: twenty objects (WD-40, seed potatoes, a slide rule, reading glasses, oral rehydration salts and more) that a time traveller could carry, nine historical windows to land them in, and a ranking of how much good each does at its best landing.
+
+The reader picks one object and one era, travels there, and is scored. The picture beside the text is the model's own surface (20 objects by 9 eras): its rows stay unnamed until the reader lands them, and the ranking is revealed on request.
+
+How the numbers are made and tested:
+
+- Each object has four judgement scores (Need, Copy, Trust, Ripple), combined into a Delta from 0 to 100. The scores were written first and are not edited after seeing the tests.
+- Test 1: the ranking is re-computed under 5,000 random weightings (seeded, so the page and the check agree).
+- Test 2: three raters that never saw the scores (separate model contexts given only a neutral description) scored the same objects. Their raw answers are stored in `time-cargo-data.js` and the page prints how far they differ.
+- The main finding printed on the page (Copy predicts the ranking, Trust does not) is asserted by the release check, not typed.
+
+Files:
+
+- `time-cargo-data.js`: objects, scores, sources, the raters' raw answers, English item text
+- `time-cargo-copy.en.js`, `time-cargo-copy.ro.js`: interface copy and Romanian item text
+- `time-cargo-model.js`: the scoring model, run identically in the browser and in Node
+- `time-cargo.js`, `time-cargo.css`: the page
+- `scripts/build-time-cargo.mjs`: builds the two HTML pages from `scripts/templates/`
+- `scripts/build-time-cargo-cards.mjs`: draws the social posters and one preview page per landing in `share/` (chat apps ignore `#hash`, so each landing has its own page and picture)
+- `scripts/check-time-cargo.mjs`: release check (data, claims in the prose against the numbers, Romanian parity, contrast in both themes, text lint)
+- `scripts/test-time-cargo.mjs`: behaviour tests in Chromium (needs Playwright)
+- `docs/time-cargo-brief.md`: the finding, the tests, what failed
+
+After a content change: `node scripts/build-time-cargo.mjs && node scripts/build-time-cargo-cards.mjs && node scripts/check-time-cargo.mjs && node scripts/test-time-cargo.mjs`.
+
 ## License
 
 This project is licensed under the MIT License.

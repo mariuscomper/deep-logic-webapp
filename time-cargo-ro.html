@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ce duci înapoi în timp: 20 de obiecte și epoca în care fiecare face cel mai mult bine</title>
+    <meta name="description" content="Alegi un obiect, îl duci înapoi în timp și vezi cât bine face: WD-40, cartofi, riglă de calcul, ochelari și alte 16. Clasate după patru criterii, apoi repunctate de trei evaluatori în orb.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="color-scheme" content="dark light">
+    <link rel="canonical" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-ro.html">
+    <link rel="alternate" hreflang="en" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo.html">
+    <link rel="alternate" hreflang="ro" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-ro.html">
+    <link rel="alternate" hreflang="x-default" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ce duci înapoi">
+    <meta property="og:locale" content="ro_RO">
+    <meta property="og:title" content="Ce duci înapoi în timp: 20 de obiecte și epoca în care fiecare face cel mai mult bine">
+    <meta property="og:description" content="Alegi un obiect, îl duci înapoi în timp și vezi cât bine face: WD-40, cartofi, riglă de calcul, ochelari și alte 16. Clasate după patru criterii, apoi repunctate de trei evaluatori în orb.">
+    <meta property="og:url" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-ro.html">
+    <meta property="og:image" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og-ro.png">
+    <meta property="og:image:secure_url" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og-ro.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="O grilă de 20 de obiecte pe nouă epoci, fiecare celulă colorată după cât bine face aterizarea respectivă.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ce duci înapoi în timp: 20 de obiecte și epoca în care fiecare face cel mai mult bine">
+    <meta name="twitter:description" content="Alegi un obiect, îl duci înapoi în timp și vezi cât bine face: WD-40, cartofi, riglă de calcul, ochelari și alte 16. Clasate după patru criterii, apoi repunctate de trei evaluatori în orb.">
+    <meta name="twitter:image" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og-ro.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"20 de lucruri de dus înapoi în timp și epoca în care fiecare face cel mai mult bine","description":"Alegi un obiect, îl duci înapoi în timp și vezi cât bine face: WD-40, cartofi, riglă de calcul, ochelari și alte 16. Clasate după patru criterii, apoi repunctate de trei evaluatori în orb.","inLanguage":"ro","datePublished":"2026-10-10","mainEntityOfPage":"https://mariuscomper.github.io/deep-logic-webapp/time-cargo-ro.html","image":"https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og-ro.png"}</script>
+
+    <link rel="stylesheet" href="./time-cargo.css">
+</head>
+<body>
+    <a class="skip" href="#play">Sari la conținut</a>
+
+    <header class="topbar">
+        <a class="brand" href="#top">Ce duci înapoi</a>
+        <nav aria-label="Secțiuni">
+            <a class="nav-link" href="#play" data-target="play">Alege</a>
+            <a class="nav-link" href="#ranking" data-target="ranking">Clasament</a>
+            <a class="nav-link" href="#method" data-target="method">Metodă</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Limba">
+            <a href="./time-cargo.html"  lang="en" hreflang="en" id="lang-other" data-base="./time-cargo.html">EN</a>
+            <a href="#top" aria-current="true" lang="ro" hreflang="ro" >RO</a>
+        </div>
+        <button class="tb-btn" id="theme-btn" type="button" aria-label="Treci la tema luminoasă">
+            <svg id="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg id="icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+        </button>
+    </header>
+
+    <main id="top">
+        <div class="workbench">
+            <aside class="terrain-col">
+                <div class="terrain-card">
+                    <div class="terrain-title" id="terrain-title">Delta pe obiecte și epoci</div>
+                    <div class="terrain-stage">
+                        <canvas id="terrain" role="img" aria-label="Hartă termică a {n} de obiecte pe {m} epoci. Fiecare celulă este Delta, de la 0 la 100, a aterizării acelui obiect în acea epocă. Un rând își primește numele după prima ta aterizare cu acel obiect."></canvas>
+                        <div id="terrain-tip" class="terrain-tip" hidden></div>
+                    </div>
+                    <div class="terrain-legend"><span id="legend-low">puțin bine</span><span class="ramp" aria-hidden="true"></span><span id="legend-high">mult bine</span></div>
+                    <div class="terrain-status" id="terrain-status" role="status">Fiecare rând este un obiect, iar fiecare coloană o epocă. Un rând își primește numele după prima ta aterizare cu acel obiect.</div>
+                    <button class="btn small quiet" id="clear-all" type="button" hidden>↺ Șterge aterizările mele</button>
+                </div>
+            </aside>
+
+            <div class="content-col">
+                <section class="hero">
+                    <div class="kicker">Un experiment de gândire · 9500 î.Hr. – 1914</div>
+                    <h1 id="h1">20 de lucruri de dus înapoi în timp și epoca în care fiecare face cel mai mult bine</h1>
+                    <p class="deck">Poți duce prin timp un singur obiect. Alege-l, alege epoca în care ajunge și vezi cât bine face acolo. Apoi vezi cum le-am clasat pe toate cele 20 și unde trei evaluatori în orb nu au fost de acord cu mine.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" id="cta-choose" href="#play">Alege ce iei cu tine</a>
+                        <a class="btn quiet" id="cta-rank" href="#ranking">Citește mai întâi clasamentul</a>
+                    </div>
+                </section>
+                <section id="play" aria-labelledby="choose-h">
+                    <div class="step" id="step-choose">
+                        <h2 id="choose-h">Alege obiectul pe care îl duci cu tine</h2>
+                        <p class="lede">Sunt 20 de obiecte, fiecare destul de mic cât să încapă într-o geantă. Ai dreptul la unul. Alege-l pe cel care crezi că ar schimba cel mai mult, apoi hotărăște în ce moment al istoriei ajunge.</p>
+                        <div class="cargo-grid" id="cargo-grid"><ul class="ssr-list" style="list-style:none;display:contents"><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🔥</span><span class="nm">O cutie de brichete BIC</span><span class="sb">50 de brichete · 1 kg</span><span class="tg">Foc dintr-un gest. Prima alegere din orice film.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧂</span><span class="nm">Săruri de rehidratare orală</span><span class="sb">10 plicuri · aproximativ 205 g</span><span class="tg">O țâră de sare, o țâră de zahăr.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🛢️</span><span class="nm">WD-40</span><span class="sb">O cutie de 400 ml · 350 g</span><span class="tg">L-ai folosit. Nu te-ai întrebat niciodată ce este.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">👓</span><span class="nm">O duzină de ochelari de citit</span><span class="sb">De la +1,0 la +3,5 · 250 g</span><span class="tg">Ieftini, urâți și cu aproximativ 1.500 de ani prea devreme.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🪙</span><span class="nm">Un kilogram de aur</span><span class="sb">Un lingou</span><span class="tg">Cel mai vechi cod de trișare.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🥔</span><span class="nm">10 cartofi încolțiți</span><span class="sb">Un amestec de culori și soiuri · aproximativ 1 kg</span><span class="tg">Cel mai banal lucru din bucătăria ta.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">📖</span><span class="nm">O carte broșată pentru reconstruirea lumii</span><span class="sb">Ceva asemănător cu The Knowledge de Lewis Dartnell · 1 kg</span><span class="tg">Hârtie. Fără baterie. Scrisă tocmai pentru asta.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧲</span><span class="nm">Magneți de neodim</span><span class="sb">Șase discuri N52 · 100 g</span><span class="tg">Trucul de petrecere care l-a învins pe filosof.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧪</span><span class="nm">O fiolă cu eter</span><span class="sb">100 ml și o cârpă · 150 g</span><span class="tg">Chirurgie fără durere, cu 34 de ani mai devreme.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧭</span><span class="nm">O busolă cu placă</span><span class="sb">40 g</span><span class="tg">Un ac care arată mereu spre același lucru.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🔤</span><span class="nm">Un set de ștampile cu alfabetul pentru copii</span><span class="sb">26 de litere și o tușieră cu cerneală pigmentată · 200 g</span><span class="tg">O jucărie, până când îți dai seama ce este de fapt.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">💊</span><span class="nm">O cură de antibiotic cu spectru larg</span><span class="sb">O cură de 10 zile · 20 g</span><span class="tg">O viață. Poate chiar a unui rege.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">📱</span><span class="nm">Un cititor electronic solar cu Wikipedia offline</span><span class="sb">250 g plus un panou · aproximativ 100 GB</span><span class="tg">Cel pe care îl alege toată lumea primul.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🍋</span><span class="nm">Tablete de vitamina C</span><span class="sb">100 × 1.000 mg · 150 g</span><span class="tg">Pastila care nu exista.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">⌚</span><span class="nm">Un Casio F-91W</span><span class="sb">Un ceas digital de 15 de lire sterline · 21 g</span><span class="tg">Mai ieftin decât prânzul. Destul de bun pentru Premiul Longitudinii.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🔬</span><span class="nm">Un Foldscope</span><span class="sb">Un microscop de hârtie · aproximativ 8 g</span><span class="tg">Un laborator pe care îl poți plia în buzunar.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">☕</span><span class="nm">Un kilogram de boabe de cafea verde</span><span class="sb">1 kg și o râșniță manuală</span><span class="tg">Iluminismul, un efect secundar al cafeinei?</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">💧</span><span class="nm">Tablete pentru purificarea apei</span><span class="sb">100 de tablete de clor · 60 g</span><span class="tg">Mânerul pompei, în buzunar.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🦟</span><span class="nm">O plasă de pat tratată cu insecticid</span><span class="sb">300 g</span><span class="tg">Roma avea deja plase contra țânțarilor. Nu știa de ce contau.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">📏</span><span class="nm">O riglă de calcul din aluminiu</span><span class="sb">30 cm · 120 g</span><span class="tg">Calculatorul care nu trebuie încărcat niciodată.</span></li></ul></div>
+                    </div>
+
+                    <div class="step" id="step-brief" hidden>
+                        <button class="btn small quiet" id="back-choose" type="button">← Alte obiecte</button>
+                        <div class="brief-head" style="margin-top:.9rem">
+                            <span class="emoji" id="brief-emoji" aria-hidden="true"></span>
+                            <div><h2 id="brief-name"></h2><div class="sb" id="brief-sub"></div></div>
+                        </div>
+                        <p class="briefing" id="brief-text"></p>
+                        <div class="tags" id="brief-tags"></div>
+                        <div class="hint"><button class="btn small quiet" id="hint-btn" type="button">Vrei un indiciu?</button><p class="hint-text" id="hint-text" hidden></p></div>
+                        <h3 class="section-h" style="font-size:1.3rem">Unde în istorie aterizează?</h3>
+                        <p class="lede">Nouă ferestre de istorie, fiecare cu problema ei. Punctajul depinde de cât de bine se potrivește obiectul cu problema.</p>
+                        <ul class="era-list" id="era-list"></ul>
+                    </div>
+
+                    <div class="step" id="step-journey" hidden>
+                        <div class="landing-head">
+                            <div class="when" id="journey-title" tabindex="-1"></div>
+                            <div class="where" id="journey-where"></div>
+                            <div class="where" id="journey-item"></div>
+                        </div>
+                        <div class="beats" id="beats" aria-live="polite"></div>
+                        <div class="next-row" id="next-row" hidden>
+                            <button class="btn primary" id="next-btn" type="button"></button>
+                            <button class="btn quiet" id="rest-btn" type="button"></button>
+                        </div>
+                        <div class="result" id="result" hidden>
+                            <div class="meter-row">
+                                <div class="big-num" id="res-num">0<small id="res-of"></small></div>
+                                <h3 class="verdict-line" id="res-heading" tabindex="-1"><span id="res-verdict"></span></h3>
+                                <div class="meter"><i id="meter-fill"></i><b id="meter-mark"></b></div>
+                                <div class="meter-key" id="meter-key"></div>
+                            </div>
+                            <p id="best-was" hidden></p>
+                            <h3 class="section-h" style="font-size:1.1rem;margin-top:1.2rem">Acest obiect în fiecare epocă</h3>
+                            <div class="era-bars" id="era-bars"></div>
+                            <div class="era-bars-lab" id="era-bars-lab"></div>
+                            <p class="meter-key" style="margin-top:.4rem">Fiecare bară este Delta aterizării în acea fereastră. A ta este conturată.</p>
+                            <div class="pass-wrap">
+                                <h3 class="section-h" style="font-size:1.1rem;margin-bottom:.6rem">Cartea ta de îmbarcare</h3>
+                                <canvas id="pass" width="1200" height="630" role="img"></canvas>
+                                <div class="share-row">
+                                    <span class="share-label">Trimite</span>
+                                    <a class="icon-btn" id="sh-wa" href="#" target="_blank" rel="noopener" aria-label="Distribuie pe WhatsApp" title="Distribuie pe WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-.8.7a4 4 0 0 1-1.6-1.6l.7-.8-1-2L9 8.5z" fill="currentColor"/></svg></a>
+                                    <a class="icon-btn" id="sh-fb" href="#" target="_blank" rel="noopener" aria-label="Distribuie pe Facebook" title="Distribuie pe Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V8.8c0-.5.2-.8.5-.8z" fill="currentColor"/></svg></a>
+                                    <a class="icon-btn" id="sh-x" href="#" target="_blank" rel="noopener" aria-label="Distribuie pe X" title="Distribuie pe X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a>
+                                    <button class="icon-btn" id="sh-copy" type="button" aria-label="Copiază linkul" title="Copiază linkul"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                                    <button class="icon-btn" id="sh-save" type="button" aria-label="Salvează cardul ca imagine" title="Salvează cardul ca imagine"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    <button class="icon-btn" id="sh-native" type="button" aria-label="Distribuie cardul" title="Distribuie cardul" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2.4" fill="currentColor"/><circle cx="17" cy="6" r="2.4" fill="currentColor"/><circle cx="17" cy="18" r="2.4" fill="currentColor"/><path d="M8 11l7-4M8 13l7 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+                                    <span class="status" id="share-status" role="status"></span>
+                                </div>
+                            </div>
+                            <div class="after-actions">
+                                <button class="btn" id="again-btn" type="button">Încearcă altă epocă cu acest obiect</button>
+                                <button class="btn" id="other-btn" type="button">Alege alt obiect</button>
+                                <button class="btn primary" id="rank-btn" type="button">Vezi clasamentul complet</button>
+                                <button class="btn quiet" id="clear-all-2" type="button">↺ Șterge aterizările mele</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="ranking" class="section-band" aria-labelledby="ranking-h">
+                    <h2 class="section-h" id="ranking-h">Cum le-am clasat pe toate cele 20</h2>
+                    <div class="lock-card" id="ranking-lock">
+                        <p>Clasamentul arată cea mai bună aterizare pentru fiecare obiect, deci dă răspunsurile pe față. Îl poți citi acum sau după prima ta aterizare.</p>
+                        <p style="margin-top:.8rem"><button class="btn" id="lock-btn" type="button">Arată-l oricum</button></p>
+                    </div>
+                    <div id="ranking-body" hidden>
+                        <h3 class="section-h" style="font-size:1.15rem">Ce arată clasamentul</h3>
+                        <div class="finding" id="finding"></div>
+                        <h3 class="section-h" style="font-size:1.15rem">Șase superlative</h3>
+                        <div class="awards" id="awards"></div>
+                        <div class="scorer"><span id="scorer-label">Ale cui punctaje?</span>
+                            <span class="seg" id="scorer" role="group" aria-labelledby="scorer-label">
+                                <button type="button" data-mode="mine" aria-pressed="true">Ale mele</button><button type="button" data-mode="panel" aria-pressed="false">Evaluatorii în orb</button><button type="button" data-mode="all" aria-pressed="false">Toți patru</button>
+                            </span>
+                            <span id="scorer-note"></span>
+                        </div>
+                        <ol class="rank-list" id="rank-list" style="list-style:none"><li class="rank-row" style="padding:.65rem .9rem"><b>1. 🥔 10 cartofi încolțiți</b> — Delta 90. 1314, Un sat din apropiere de Ypres, în Flandra (Evul Mediu central).</li><li class="rank-row" style="padding:.65rem .9rem"><b>2. 🧂 Săruri de rehidratare orală</b> — Delta 85. 1831, Sunderland, Anglia (Revoluții și Napoleon).</li><li class="rank-row" style="padding:.65rem .9rem"><b>3. 🔤 Un set de ștampile cu alfabetul pentru copii</b> — Delta 85. 1285, Bologna, Italia (Evul Mediu central).</li><li class="rank-row" style="padding:.65rem .9rem"><b>4. 📏 O riglă de calcul din aluminiu</b> — Delta 81. 1600, Boemia (Revoluția științifică).</li><li class="rank-row" style="padding:.65rem .9rem"><b>5. 👓 O duzină de ochelari de citit</b> — Delta 79. 240 î.Hr., Alexandria, Egipt (Lumea clasică).</li><li class="rank-row" style="padding:.65rem .9rem"><b>6. 🍋 Tablete de vitamina C</b> — Delta 76. 1498, Oceanul Indian, la bordul flotei lui Vasco da Gama (Ciuma și Renașterea).</li><li class="rank-row" style="padding:.65rem .9rem"><b>7. 📖 O carte broșată pentru reconstruirea lumii</b> — Delta 74. 1665, Londra, Anglia (Revoluția științifică).</li><li class="rank-row" style="padding:.65rem .9rem"><b>8. 🧪 O fiolă cu eter</b> — Delta 73. 1812, Borodino, Rusia (Revoluții și Napoleon).</li><li class="rank-row" style="padding:.65rem .9rem"><b>9. 💧 Tablete pentru purificarea apei</b> — Delta 71. 1854, Broad Street, Soho, Londra (Epoca victoriană a mașinilor).</li><li class="rank-row" style="padding:.65rem .9rem"><b>10. 🧭 O busolă cu placă</b> — Delta 70. 30 î.Hr., Ostia, portul Romei (Lumea clasică).</li><li class="rank-row" style="padding:.65rem .9rem"><b>11. 🔬 Un Foldscope</b> — Delta 68. 1020, Persia, în cercul lui Ibn Sina (Califate și castele).</li><li class="rank-row" style="padding:.65rem .9rem"><b>12. 🦟 O plasă de pat tratată cu insecticid</b> — Delta 62. 110, Mlaștinile Pontine, la sud de Roma (Lumea clasică).</li><li class="rank-row" style="padding:.65rem .9rem"><b>13. ⌚ Un Casio F-91W</b> — Delta 60. 1707, HMS Association, în dreptul Insulelor Scilly (Iluminism și navigație cu pânze).</li><li class="rank-row" style="padding:.65rem .9rem"><b>14. 📱 Un cititor electronic solar cu Wikipedia offline</b> — Delta 59. 1750, Paris, Franța (Iluminism și navigație cu pânze).</li><li class="rank-row" style="padding:.65rem .9rem"><b>15. 🛢️ WD-40</b> — Delta 51. 1862, Regiunea petrolieră din Pennsylvania (Epoca victoriană a mașinilor).</li><li class="rank-row" style="padding:.65rem .9rem"><b>16. 💊 O cură de antibiotic cu spectru larg</b> — Delta 46. 323 î.Hr., Babilon (Lumea clasică).</li><li class="rank-row" style="padding:.65rem .9rem"><b>17. ☕ Un kilogram de boabe de cafea verde</b> — Delta 41. 1480, Veneția (Ciuma și Renașterea).</li><li class="rank-row" style="padding:.65rem .9rem"><b>18. 🧲 Magneți de neodim</b> — Delta 40. 1600, Londra, Anglia (Revoluția științifică).</li><li class="rank-row" style="padding:.65rem .9rem"><b>19. 🪙 Un kilogram de aur</b> — Delta 36. 1450, Mainz, Germania (Ciuma și Renașterea).</li><li class="rank-row" style="padding:.65rem .9rem"><b>20. 🔥 O cutie de brichete BIC</b> — Delta 30. 1812, Drumul Smolenskului, Rusia (Revoluții și Napoleon).</li></ol>
+                    </div>
+                </section>
+
+                <section id="method" class="section-band method" aria-labelledby="method-h">
+                    <h2 class="section-h" id="method-h">Cum a fost punctat și cât de mult poate greși</h2>
+                    <div id="method-body"><p>Delta este un punctaj de la 0 la 100 care arată cât bine face un obiect la cea mai bună aterizare a lui. Combină patru punctaje de la 0 la 10, scrise de mine: Nevoie (30%), Copiere (25%), Încredere (20%) și Efect în lanț (25%). Ponderile le-am ales tot eu.</p></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Datele și numerele provin din sursele indicate sub fiecare obiect. Punctajele sunt judecăți, iar pagina arată cât de bine au rezistat.</p>
+        <p style="margin-top:.5rem"><a href="./index.html">← Înapoi la eseu</a> · Publicat sub licența MIT.</p>
+    </footer>
+
+    <button class="totop" id="to-top" type="button" aria-label="Înapoi sus" hidden>Sus</button>
+
+    <div class="warp" id="warp" role="dialog" aria-modal="true" aria-label="Călătorie prin timp" hidden>
+        <canvas id="warp-canvas" aria-hidden="true"></canvas>
+        <div>
+            <div class="warp-year" id="warp-year" aria-live="off"></div>
+            <div class="warp-sub" id="warp-sub"></div>
+        </div>
+        <button class="btn warp-skip" id="warp-skip" type="button">Sari</button>
+    </div>
+
+    <script src="./time-cargo-data.js"></script>
+    <script src="./time-cargo-copy.en.js"></script>
+    <script src="./time-cargo-copy.ro.js"></script>
+    <script src="./time-cargo-model.js"></script>
+    <script src="./time-cargo.js"></script>
+</body>
+</html>

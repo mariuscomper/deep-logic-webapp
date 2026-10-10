@@ -34,13 +34,13 @@
     --raise-2: #f0e9d9;
     --ink: #17202f;
     --ink-2: #364256;
-    --ink-3: #4f5c71;
+    --ink-3: #3f4a5d;
     --line: #d6cdb9;
-    --accent: #7a4b00;
+    --accent: #664000;
     --accent-ink: #fffaf0;
-    --ice: #0a5d6c;
-    --warn: #a33a14;
-    --good: #14683a;
+    --ice: #074d5c;
+    --warn: #8a2d0b;
+    --good: #0c552e;
     --t0: #efe6d2;
     --t1: #c9cfa9;
     --t2: #78b0a2;
@@ -58,13 +58,13 @@
         --raise-2: #f0e9d9;
         --ink: #17202f;
         --ink-2: #364256;
-        --ink-3: #4f5c71;
+        --ink-3: #3f4a5d;
         --line: #d6cdb9;
-        --accent: #7a4b00;
+        --accent: #664000;
         --accent-ink: #fffaf0;
-        --ice: #0a5d6c;
-        --warn: #a33a14;
-        --good: #14683a;
+        --ice: #074d5c;
+        --warn: #8a2d0b;
+        --good: #0c552e;
         --t0: #efe6d2;
         --t1: #c9cfa9;
         --t2: #78b0a2;
@@ -134,14 +134,14 @@ a:hover { text-decoration-thickness: 2px; }
 .topbar nav a, .tb-btn {
     font-size: 0.82rem; font-weight: 600; color: var(--ink-2);
     text-decoration: none; padding: 0.55rem 0.7rem; border-radius: 8px;
-    min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap;
+    min-height: 44px; min-width: 44px; justify-content: center; display: inline-flex; align-items: center; white-space: nowrap;
     background: none; border: 0; cursor: pointer; font-family: inherit;
 }
 .topbar nav a:hover, .tb-btn:hover { background: var(--raise-2); color: var(--ink); }
 .topbar nav a[aria-current="true"] { color: var(--accent); }
 .tb-btn svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-.lang-switch a { min-height: 44px; padding: 0 0.7rem; display: inline-flex; align-items: center; font-size: 0.78rem; font-weight: 700; color: var(--ink-2); text-decoration: none; }
+.lang-switch a { min-height: 44px; min-width: 44px; justify-content: center; padding: 0 0.7rem; display: inline-flex; align-items: center; font-size: 0.78rem; font-weight: 700; color: var(--ink-2); text-decoration: none; }
 .lang-switch a[aria-current="true"] { background: var(--accent); color: var(--accent-ink); }
 
 /* ---- Hero ---- */
@@ -302,6 +302,7 @@ a:hover { text-decoration-thickness: 2px; }
 .award { background: var(--raise); border: 1px solid var(--line); border-radius: 10px; padding: 0.65rem 0.8rem; font-size: 0.82rem; color: var(--ink-2); }
 .award b { display: block; color: var(--ink); font-size: 0.86rem; }
 .award .ic { font-size: 1.25rem; }
+.award .aw-item { display: block; color: var(--accent); font-weight: 700; margin: 0.1rem 0 0.2rem; }
 .scorer { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.9rem; font-size: 0.86rem; color: var(--ink-2); }
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .seg button { font: inherit; font-size: 0.82rem; font-weight: 700; min-height: 44px; padding: 0 0.85rem; border: 0; background: var(--raise); color: var(--ink-2); cursor: pointer; }
@@ -364,8 +365,8 @@ footer a { color: var(--ink-2); }
     .content-col { grid-column: 1; grid-row: 2; }
     .terrain-card { padding: 0.5rem 0.6rem 0.4rem; box-shadow: none; border-radius: 10px; }
     .terrain-title, .terrain-legend { display: none; }
-    #terrain { height: clamp(150px, 30svh, 250px); }
-    .terrain-status { margin-top: 0.2rem; font-size: 0.74rem; min-height: 1.2em; }
+    #terrain { height: clamp(120px, 19svh, 190px); }
+    .terrain-status { margin-top: 0.2rem; font-size: 0.72rem; line-height: 1.35; min-height: 1.2em; }
     .content-col { position: relative; z-index: 1; }
     .era { grid-template-columns: 4.6rem minmax(0, 1fr); }
     .era .go { display: none; }

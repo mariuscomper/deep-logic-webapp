@@ -11,11 +11,12 @@
         locale: 'en-GB',
         brand: 'What to take back',
         title: 'What to take back in time: 20 objects and the era where each does the most good',
+        ogLine: '{n} objects · {m} eras · the ranking tested against {r} raters',
         ogAlt: 'A grid of twenty objects by nine eras, each cell coloured by how much good that landing does.',
-        description: 'Take one object back in time and choose where it lands: WD-40, potatoes, a slide rule, reading glasses and sixteen more. Ranked on need, copyability, trust and ripple, then re-scored by three blind raters.',
+        description: 'Take one object back in time and pick where it lands: WD-40, potatoes, a slide rule, reading glasses and 16 more, ranked on need, copyability, trust and ripple, then re-scored by three blind raters.',
         kicker: 'A thought experiment · 9500 BCE to 1914',
         h1: 'Twenty things to take back in time, and the era where each does the most good',
-        deck: 'You can carry one object through time. Choose it, choose the era where it lands, and see how much good it does there. Then see how I ranked all twenty, and where three blind raters disagreed with me.',
+        deck: 'You can carry one object through time. Choose it, choose the era where it lands, and see how much good it does there. Then see how I ranked all twenty, and where three raters who never saw my scores disagreed with me.',
         ctaChoose: 'Choose what to carry',
         ctaRank: 'Read the ranking first',
         nav: { choose: 'Choose', ranking: 'Ranking', method: 'Method' },
@@ -52,7 +53,7 @@
             ariaAll: 'Heat map of {n} objects against {m} eras. Each cell is the Delta, from 0 to 100, of landing that object in that era.',
             low: 'little good',
             high: 'a lot of good',
-            statusStart: 'Each row is one object and each column an era. A row gets its name when you land it.',
+            statusStart: 'Rows are objects, columns are eras, and brighter means more good. A row is named when you land it.',
             status: '{n} of {total} landings explored',
             statusAll: 'All {total} landings shown',
             tipHidden: '{item} · {era}: not explored yet',
@@ -63,7 +64,7 @@
 
         choose: {
             h: 'Choose the one object you carry',
-            p: 'Twenty objects, each small enough for a bag. You get one. Pick the one you think would change the most, then decide where in history to land it.',
+            p: 'Twenty objects, each small enough for a bag. You get one. Pick the one you think would change the most, then decide where in history to land it. Each landing is scored from 0 to 100; I call the score Delta.',
             delta: 'Delta {n}',
             doneAria: 'You have landed this object. Best Delta so far: {n}.'
         },
