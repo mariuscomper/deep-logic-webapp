@@ -683,5 +683,7 @@
         } }
     ];
 
-    global.TIME_CARGO = { WEIGHTS, FALLOFF, DIMS, ERAS, ITEMS, AWARDS, RATERS, LANDMARKS, MANIFEST_ORDER, copy: {} };
+    const SENS = { draws: 5000, seed: 40 };
+
+    global.TIME_CARGO = { WEIGHTS, FALLOFF, DIMS, ERAS, ITEMS, AWARDS, RATERS, LANDMARKS, MANIFEST_ORDER, SENS, copy: {} };
 }(typeof window !== 'undefined' ? window : globalThis));

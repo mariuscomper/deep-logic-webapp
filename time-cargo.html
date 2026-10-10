@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What to take back in time: 20 objects and the era where each does the most good</title>
+    <meta name="description" content="Take one object back in time and choose where it lands: WD-40, potatoes, a slide rule, reading glasses and sixteen more. Ranked on need, copyability, trust and ripple, then re-scored by three blind raters.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b1220">
+    <meta name="color-scheme" content="dark light">
+    <link rel="canonical" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo.html">
+    <link rel="alternate" hreflang="en" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo.html">
+    <link rel="alternate" hreflang="ro" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-ro.html">
+    <link rel="alternate" hreflang="x-default" href="https://mariuscomper.github.io/deep-logic-webapp/time-cargo.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="What to take back">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="What to take back in time: 20 objects and the era where each does the most good">
+    <meta property="og:description" content="Take one object back in time and choose where it lands: WD-40, potatoes, a slide rule, reading glasses and sixteen more. Ranked on need, copyability, trust and ripple, then re-scored by three blind raters.">
+    <meta property="og:url" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo.html">
+    <meta property="og:image" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og.png">
+    <meta property="og:image:secure_url" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A grid of twenty objects by nine eras, each cell coloured by how much good that landing does.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What to take back in time: 20 objects and the era where each does the most good">
+    <meta name="twitter:description" content="Take one object back in time and choose where it lands: WD-40, potatoes, a slide rule, reading glasses and sixteen more. Ranked on need, copyability, trust and ripple, then re-scored by three blind raters.">
+    <meta name="twitter:image" content="https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Twenty things to take back in time, and the era where each does the most good","description":"Take one object back in time and choose where it lands: WD-40, potatoes, a slide rule, reading glasses and sixteen more. Ranked on need, copyability, trust and ripple, then re-scored by three blind raters.","inLanguage":"en","datePublished":"2026-10-10","mainEntityOfPage":"https://mariuscomper.github.io/deep-logic-webapp/time-cargo.html","image":"https://mariuscomper.github.io/deep-logic-webapp/time-cargo-og.png"}</script>
+
+    <link rel="stylesheet" href="./time-cargo.css">
+</head>
+<body>
+    <a class="skip" href="#play">Skip to the content</a>
+
+    <header class="topbar">
+        <a class="brand" href="#top">What to take back</a>
+        <nav aria-label="Sections">
+            <a class="nav-link" href="#play" data-target="play">Choose</a>
+            <a class="nav-link" href="#ranking" data-target="ranking">Ranking</a>
+            <a class="nav-link" href="#method" data-target="method">Method</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language">
+            <a href="#top" aria-current="true" lang="en" hreflang="en" >EN</a>
+            <a href="./time-cargo-ro.html"  lang="ro" hreflang="ro" id="lang-other" data-base="./time-cargo-ro.html">RO</a>
+        </div>
+        <button class="tb-btn" id="theme-btn" type="button" aria-label="Switch to the light theme">
+            <svg id="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg id="icon-moon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+        </button>
+    </header>
+
+    <main id="top">
+        <div class="workbench">
+            <aside class="terrain-col">
+                <div class="terrain-card">
+                    <div class="terrain-title" id="terrain-title">Delta by object and era</div>
+                    <div class="terrain-stage">
+                        <canvas id="terrain" role="img" aria-label="Heat map of {n} objects against {m} eras. Each cell is the Delta, from 0 to 100, of landing that object in that era. A row gets its name when you land that object."></canvas>
+                        <div id="terrain-tip" class="terrain-tip" hidden></div>
+                    </div>
+                    <div class="terrain-legend"><span id="legend-low">little good</span><span class="ramp" aria-hidden="true"></span><span id="legend-high">a lot of good</span></div>
+                    <div class="terrain-status" id="terrain-status" role="status">Each row is one object and each column an era. A row gets its name when you land it.</div>
+                    <button class="btn small quiet" id="clear-all" type="button" hidden>↺ Clear my landings</button>
+                </div>
+            </aside>
+
+            <div class="content-col">
+                <section class="hero">
+                    <div class="kicker">A thought experiment · 9500 BCE to 1914</div>
+                    <h1 id="h1">Twenty things to take back in time, and the era where each does the most good</h1>
+                    <p class="deck">You can carry one object through time. Choose it, choose the era where it lands, and see how much good it does there. Then see how I ranked all twenty, and where three blind raters disagreed with me.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" id="cta-choose" href="#play">Choose what to carry</a>
+                        <a class="btn quiet" id="cta-rank" href="#ranking">Read the ranking first</a>
+                    </div>
+                </section>
+                <section id="play" aria-labelledby="choose-h">
+                    <div class="step" id="step-choose">
+                        <h2 id="choose-h">Choose the one object you carry</h2>
+                        <p class="lede">Twenty objects, each small enough for a bag. You get one. Pick the one you think would change the most, then decide where in history to land it.</p>
+                        <div class="cargo-grid" id="cargo-grid"><ul class="ssr-list" style="list-style:none;display:contents"><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🔥</span><span class="nm">A box of BIC lighters</span><span class="sb">Fifty lighters · 1 kg</span><span class="tg">Fire in a flick. Every film’s first pick.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧂</span><span class="nm">Oral rehydration salts</span><span class="sb">Ten sachets · about 205 g</span><span class="tg">A pinch of salt, a pinch of sugar.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🛢️</span><span class="nm">WD-40</span><span class="sb">One 400 ml can · 350 g</span><span class="tg">You’ve used it. You’ve never wondered what it is.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">👓</span><span class="nm">A dozen reading glasses</span><span class="sb">+1.0 to +3.5 · 250 g</span><span class="tg">Cheap, ugly, and about 1,500 years early.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🪙</span><span class="nm">A kilo of gold</span><span class="sb">One bar</span><span class="tg">The oldest cheat code.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🥔</span><span class="nm">Ten sprouting potatoes</span><span class="sb">A mix of colours and varieties · about 1 kg</span><span class="tg">The most boring thing in your kitchen.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">📖</span><span class="nm">A rebuild-the-world paperback</span><span class="sb">Something like Lewis Dartnell’s The Knowledge · 1 kg</span><span class="tg">Paper. No battery. Written for exactly this.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧲</span><span class="nm">Neodymium magnets</span><span class="sb">Six N52 discs · 100 g</span><span class="tg">The party trick that beat the philosopher.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧪</span><span class="nm">A vial of ether</span><span class="sb">100 ml and a cloth · 150 g</span><span class="tg">Painless surgery, thirty-four years early.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🧭</span><span class="nm">A baseplate compass</span><span class="sb">40 g</span><span class="tg">A needle that always points at the same thing.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🔤</span><span class="nm">A child’s alphabet stamp set</span><span class="sb">26 letters and a pigment ink pad · 200 g</span><span class="tg">A toy, until you realise what it is.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">💊</span><span class="nm">A broad-spectrum antibiotic course</span><span class="sb">One ten-day course · 20 g</span><span class="tg">A life. Maybe a king’s.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">📱</span><span class="nm">A solar e-reader with offline Wikipedia</span><span class="sb">250 g plus a panel · about 100 GB</span><span class="tg">The one everyone picks first.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🍋</span><span class="nm">Vitamin C tablets</span><span class="sb">100 × 1,000 mg · 150 g</span><span class="tg">The pill that wasn’t there.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">⌚</span><span class="nm">A Casio F-91W</span><span class="sb">A £15 digital watch · 21 g</span><span class="tg">Cheaper than lunch. Good enough for the Longitude Prize.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🔬</span><span class="nm">A Foldscope</span><span class="sb">A paper microscope · about 8 g</span><span class="tg">A laboratory you can fold into your pocket.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">☕</span><span class="nm">A kilo of green coffee beans</span><span class="sb">1 kg and a hand grinder</span><span class="tg">Was the Enlightenment a caffeine side-effect?</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">💧</span><span class="nm">Water-purification tablets</span><span class="sb">100 chlorine tablets · 60 g</span><span class="tg">The pump handle, in your pocket.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">🦟</span><span class="nm">An insecticide-treated bed net</span><span class="sb">300 g</span><span class="tg">Rome already had mosquito nets. It didn’t know why they mattered.</span></li><li class="cargo" style="cursor:default"><span class="emoji" aria-hidden="true">📏</span><span class="nm">An aluminium slide rule</span><span class="sb">30 cm · 120 g</span><span class="tg">The computer that never needs charging.</span></li></ul></div>
+                    </div>
+
+                    <div class="step" id="step-brief" hidden>
+                        <button class="btn small quiet" id="back-choose" type="button">← Other objects</button>
+                        <div class="brief-head" style="margin-top:.9rem">
+                            <span class="emoji" id="brief-emoji" aria-hidden="true"></span>
+                            <div><h2 id="brief-name"></h2><div class="sb" id="brief-sub"></div></div>
+                        </div>
+                        <p class="briefing" id="brief-text"></p>
+                        <div class="tags" id="brief-tags"></div>
+                        <div class="hint"><button class="btn small quiet" id="hint-btn" type="button">Need a hint?</button><p class="hint-text" id="hint-text" hidden></p></div>
+                        <h3 class="section-h" style="font-size:1.3rem">Where in history does it land?</h3>
+                        <p class="lede">Nine windows of history, each with its own problem. The score depends on how well the object fits the problem.</p>
+                        <ul class="era-list" id="era-list"></ul>
+                    </div>
+
+                    <div class="step" id="step-journey" hidden>
+                        <div class="landing-head">
+                            <div class="when" id="journey-title" tabindex="-1"></div>
+                            <div class="where" id="journey-where"></div>
+                            <div class="where" id="journey-item"></div>
+                        </div>
+                        <div class="beats" id="beats" aria-live="polite"></div>
+                        <div class="next-row" id="next-row" hidden>
+                            <button class="btn primary" id="next-btn" type="button"></button>
+                            <button class="btn quiet" id="rest-btn" type="button"></button>
+                        </div>
+                        <div class="result" id="result" hidden>
+                            <div class="meter-row">
+                                <div class="big-num" id="res-num">0<small id="res-of"></small></div>
+                                <h3 class="verdict-line" id="res-heading" tabindex="-1"><span id="res-verdict"></span></h3>
+                                <div class="meter"><i id="meter-fill"></i><b id="meter-mark"></b></div>
+                                <div class="meter-key" id="meter-key"></div>
+                            </div>
+                            <p id="best-was" hidden></p>
+                            <h3 class="section-h" style="font-size:1.1rem;margin-top:1.2rem">This object in every era</h3>
+                            <div class="era-bars" id="era-bars"></div>
+                            <div class="era-bars-lab" id="era-bars-lab"></div>
+                            <p class="meter-key" style="margin-top:.4rem">Each bar is the Delta of landing in that window. Yours is outlined.</p>
+                            <div class="pass-wrap">
+                                <h3 class="section-h" style="font-size:1.1rem;margin-bottom:.6rem">Your boarding pass</h3>
+                                <canvas id="pass" width="1200" height="630" role="img"></canvas>
+                                <div class="share-row">
+                                    <span class="share-label">Send it</span>
+                                    <a class="icon-btn" id="sh-wa" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4-2-1-.8.7a4 4 0 0 1-1.6-1.6l.7-.8-1-2L9 8.5z" fill="currentColor"/></svg></a>
+                                    <a class="icon-btn" id="sh-fb" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V8.8c0-.5.2-.8.5-.8z" fill="currentColor"/></svg></a>
+                                    <a class="icon-btn" id="sh-x" href="#" target="_blank" rel="noopener" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a>
+                                    <button class="icon-btn" id="sh-copy" type="button" aria-label="Copy the link" title="Copy the link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                                    <button class="icon-btn" id="sh-save" type="button" aria-label="Save the card as an image" title="Save the card as an image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    <button class="icon-btn" id="sh-native" type="button" aria-label="Share the card" title="Share the card" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="2.4" fill="currentColor"/><circle cx="17" cy="6" r="2.4" fill="currentColor"/><circle cx="17" cy="18" r="2.4" fill="currentColor"/><path d="M8 11l7-4M8 13l7 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+                                    <span class="status" id="share-status" role="status"></span>
+                                </div>
+                            </div>
+                            <div class="after-actions">
+                                <button class="btn" id="again-btn" type="button">Try another era with this object</button>
+                                <button class="btn" id="other-btn" type="button">Choose another object</button>
+                                <button class="btn primary" id="rank-btn" type="button">See the full ranking</button>
+                                <button class="btn quiet" id="clear-all-2" type="button">↺ Clear my landings</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="ranking" class="section-band" aria-labelledby="ranking-h">
+                    <h2 class="section-h" id="ranking-h">How I ranked all twenty</h2>
+                    <div class="lock-card" id="ranking-lock">
+                        <p>The ranking shows the best landing for every object, which gives away the answers. You can read it now, or after your first landing.</p>
+                        <p style="margin-top:.8rem"><button class="btn" id="lock-btn" type="button">Show it anyway</button></p>
+                    </div>
+                    <div id="ranking-body" hidden>
+                        <h3 class="section-h" style="font-size:1.15rem">What the ranking shows</h3>
+                        <div class="finding" id="finding"></div>
+                        <h3 class="section-h" style="font-size:1.15rem">Six superlatives</h3>
+                        <div class="awards" id="awards"></div>
+                        <div class="scorer"><span id="scorer-label">Whose scores?</span>
+                            <span class="seg" id="scorer" role="group" aria-labelledby="scorer-label">
+                                <button type="button" data-mode="mine" aria-pressed="true">Mine</button><button type="button" data-mode="panel" aria-pressed="false">Blind raters</button><button type="button" data-mode="all" aria-pressed="false">All four</button>
+                            </span>
+                            <span id="scorer-note"></span>
+                        </div>
+                        <ol class="rank-list" id="rank-list" style="list-style:none"><li class="rank-row" style="padding:.65rem .9rem"><b>1. 🥔 Ten sprouting potatoes</b> — Delta 90. 1314, A village near Ypres, Flanders (The High Middle Ages).</li><li class="rank-row" style="padding:.65rem .9rem"><b>2. 🧂 Oral rehydration salts</b> — Delta 85. 1831, Sunderland, England (Revolutions and Napoleon).</li><li class="rank-row" style="padding:.65rem .9rem"><b>3. 🔤 A child’s alphabet stamp set</b> — Delta 85. 1285, Bologna, Italy (The High Middle Ages).</li><li class="rank-row" style="padding:.65rem .9rem"><b>4. 📏 An aluminium slide rule</b> — Delta 81. 1600, Bohemia (The Scientific Revolution).</li><li class="rank-row" style="padding:.65rem .9rem"><b>5. 👓 A dozen reading glasses</b> — Delta 79. 240 BCE, Alexandria, Egypt (The Classical world).</li><li class="rank-row" style="padding:.65rem .9rem"><b>6. 🍋 Vitamin C tablets</b> — Delta 76. 1498, The Indian Ocean, aboard Vasco da Gama’s fleet (Plague and Renaissance).</li><li class="rank-row" style="padding:.65rem .9rem"><b>7. 📖 A rebuild-the-world paperback</b> — Delta 74. 1665, London, England (The Scientific Revolution).</li><li class="rank-row" style="padding:.65rem .9rem"><b>8. 🧪 A vial of ether</b> — Delta 73. 1812, Borodino, Russia (Revolutions and Napoleon).</li><li class="rank-row" style="padding:.65rem .9rem"><b>9. 💧 Water-purification tablets</b> — Delta 71. 1854, Broad Street, Soho, London (The Victorian machine age).</li><li class="rank-row" style="padding:.65rem .9rem"><b>10. 🧭 A baseplate compass</b> — Delta 70. 30 BCE, Ostia, the port of Rome (The Classical world).</li><li class="rank-row" style="padding:.65rem .9rem"><b>11. 🔬 A Foldscope</b> — Delta 68. 1020, Persia, in the circle of Ibn Sina (Caliphates and castles).</li><li class="rank-row" style="padding:.65rem .9rem"><b>12. 🦟 An insecticide-treated bed net</b> — Delta 62. 110, The Pontine Marshes, south of Rome (The Classical world).</li><li class="rank-row" style="padding:.65rem .9rem"><b>13. ⌚ A Casio F-91W</b> — Delta 60. 1707, HMS Association, off the Isles of Scilly (Enlightenment and sail).</li><li class="rank-row" style="padding:.65rem .9rem"><b>14. 📱 A solar e-reader with offline Wikipedia</b> — Delta 59. 1750, Paris, France (Enlightenment and sail).</li><li class="rank-row" style="padding:.65rem .9rem"><b>15. 🛢️ WD-40</b> — Delta 51. 1862, The oil region of Pennsylvania (The Victorian machine age).</li><li class="rank-row" style="padding:.65rem .9rem"><b>16. 💊 A broad-spectrum antibiotic course</b> — Delta 46. 323 BCE, Babylon (The Classical world).</li><li class="rank-row" style="padding:.65rem .9rem"><b>17. ☕ A kilo of green coffee beans</b> — Delta 41. 1480, Venice (Plague and Renaissance).</li><li class="rank-row" style="padding:.65rem .9rem"><b>18. 🧲 Neodymium magnets</b> — Delta 40. 1600, London, England (The Scientific Revolution).</li><li class="rank-row" style="padding:.65rem .9rem"><b>19. 🪙 A kilo of gold</b> — Delta 36. 1450, Mainz, Germany (Plague and Renaissance).</li><li class="rank-row" style="padding:.65rem .9rem"><b>20. 🔥 A box of BIC lighters</b> — Delta 30. 1812, The Smolensk road, Russia (Revolutions and Napoleon).</li></ol>
+                    </div>
+                </section>
+
+                <section id="method" class="section-band method" aria-labelledby="method-h">
+                    <h2 class="section-h" id="method-h">How it was scored, and how far off it may be</h2>
+                    <div id="method-body"><p>Delta is a score from 0 to 100 for how much good an object does at its best landing. It combines four scores from 0 to 10, which I wrote: Need (30%), Copy (25%), Trust (20%) and Ripple (25%). I chose the weights too.</p></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Dates and figures come from the sources linked under each object. The scores are judgements, and the page shows how they held up.</p>
+        <p style="margin-top:.5rem"><a href="./index.html">← Back to the essay</a> · Released under the MIT licence.</p>
+    </footer>
+
+    <button class="totop" id="to-top" type="button" aria-label="Back to the top" hidden>Top</button>
+
+    <div class="warp" id="warp" role="dialog" aria-modal="true" aria-label="Travelling through time" hidden>
+        <canvas id="warp-canvas" aria-hidden="true"></canvas>
+        <div>
+            <div class="warp-year" id="warp-year" aria-live="off"></div>
+            <div class="warp-sub" id="warp-sub"></div>
+        </div>
+        <button class="btn warp-skip" id="warp-skip" type="button">Skip</button>
+    </div>
+
+    <script src="./time-cargo-data.js"></script>
+    <script src="./time-cargo-copy.en.js"></script>
+    <script src="./time-cargo-copy.ro.js"></script>
+    <script src="./time-cargo-model.js"></script>
+    <script src="./time-cargo.js"></script>
+</body>
+</html>
