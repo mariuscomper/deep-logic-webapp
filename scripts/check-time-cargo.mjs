@@ -193,7 +193,7 @@ roStrings.forEach(([where, s]) => {
     if (/\bnu\b[^.;:]{1,50}\bci\b/i.test(s)) warn(`RO ${where}: possible „nu X, ci Y”: ${s.slice(0, 80)}`);
     if (/\b(asta|ăsta|aceasta)\b/i.test(s) && where.includes('beats')) warn(`RO ${where}: demonstrative in narration`);
     // numerals ≥ 20 that need „de”: last two digits 00 or 20-99 followed by a noun
-    for (const m of s.matchAll(/(?<![\d.,])(\d{1,3}(?:\.\d{3})*|\d+)(?![\d.,])\s+(?!de\b)([a-zăâîșț]{3,})/gi)) {
+    for (const m of s.matchAll(/(?<![\d.,–])(\d{1,3}(?:\.\d{3})*|\d+)(?![\d.,])\s+(?!de\b)([a-zăâîșț]{3,})/gi)) {
         const n = Number(m[1].replace(/\./g, ''));
         const last2 = n % 100;
         const unit = /^(ml|mg|kg|cm|g|grade|°C|î|d|micrometri|micrometru|sau|până|și|vor|care|ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie)$/i.test(m[2]);
