@@ -12,10 +12,10 @@
     "title": "Ce duci înapoi în timp: 20 de obiecte și epoca în care fiecare face cel mai mult bine",
     "ogLine": "{n} de obiecte · {m} epoci · clasamentul, verificat cu {r} evaluatori",
     "ogAlt": "O grilă de 20 de obiecte pe nouă epoci, fiecare celulă colorată după cât bine face aterizarea respectivă.",
-    "description": "Duci un obiect în timp și vezi cât bine face: WD-40, cartofi, riglă de calcul, ochelari și alte 16. Clasate după patru criterii, apoi repunctate de trei evaluatori care nu mi-au văzut punctajele.",
+    "description": "Duci un obiect înapoi în timp și alegi unde aterizează: WD-40, cartofi, riglă de calcul și alte 17, clasate după patru criterii și repunctate de trei evaluatori care nu mi-au văzut punctajele.",
     "kicker": "Un experiment de gândire · 9500 î.Hr. – 1914",
     "h1": "20 de lucruri de dus înapoi în timp și epoca în care fiecare face cel mai mult bine",
-    "deck": "Poți duce prin timp un singur obiect. Alege-l, alege epoca în care ajunge și vezi cât bine face acolo. Apoi vezi cum le-am clasat pe toate cele 20 și unde trei evaluatori care nu mi-au văzut punctajele au fost de altă părere decât mine.",
+    "deck": "Poți duce prin timp un singur obiect. Alege-l, alege epoca în care aterizează și vezi cât bine face acolo. Apoi vezi cum le-am clasat pe toate cele 20 și unde trei evaluatori care nu mi-au văzut punctajele au fost de altă părere decât mine.",
     "ctaChoose": "Alege ce iei cu tine",
     "ctaRank": "Citește mai întâi clasamentul",
     "nav": {
@@ -116,7 +116,7 @@
         "ariaAll": "Hartă termică a {n} de obiecte pe {m} epoci. Fiecare celulă este Delta, de la 0 la 100, a aterizării acelui obiect în acea epocă.",
         "low": "puțin bine",
         "high": "mult bine",
-        "statusStart": "Rândurile sunt obiecte, coloanele sunt epoci, iar culoarea mai deschisă înseamnă mai mult bine. Un rând primește numele când aterizezi cu acel obiect.",
+        "statusStart": "Rândurile sunt obiecte, coloanele sunt epoci, iar culoarea mai luminoasă înseamnă mai mult bine. Un rând primește numele când aterizezi cu acel obiect.",
         "status": "Aterizări explorate: {n} din {total}",
         "statusAll": "Toate cele {total} de aterizări sunt afișate",
         "tipHidden": "{item} · {era}: neexplorat încă",
@@ -126,7 +126,7 @@
     },
     "choose": {
         "h": "Alege obiectul pe care îl duci cu tine",
-        "p": "Sunt 20 de obiecte, fiecare destul de mic cât să încapă într-o geantă. Ai dreptul la unul. Alege-l pe cel care crezi că ar schimba cel mai mult, apoi hotărăște unde în istorie îl aduci. Fiecare aterizare primește un punctaj de la 0 la 100; îl numesc Delta.",
+        "p": "Sunt 20 de obiecte, fiecare destul de mic ca să încapă într-o geantă. Ai dreptul la unul. Alege-l pe cel care crezi că ar schimba cel mai mult, apoi hotărăște unde în istorie îl aduci. Fiecare aterizare primește un punctaj de la 0 la 100; îl numesc Delta.",
         "delta": "Delta {n}",
         "doneAria": "Ai aterizat deja cu acest obiect. Cea mai bună Delta de până acum: {n}."
     },
@@ -195,7 +195,7 @@
         "lockP": "Clasamentul arată cea mai bună aterizare pentru fiecare obiect, deci dezvăluie răspunsurile. Îl poți citi acum sau după prima ta aterizare.",
         "lockBtn": "Arată-l oricum",
         "findingH": "Ce arată clasamentul",
-        "f1": "Obiectele care fac cel mai mult bine sunt cele pe care o epocă le poate copia, nu cele care o impresionează. Ordonate doar după Copiere, cele 20 de obiecte reproduc clasamentul complet (ρ = {copyPull}). Ordonarea doar după Încredere, care măsoară cât de repede te cred oamenii, nu face același lucru (ρ = {trustPull}).",
+        "f1": "Obiectele care fac cel mai mult bine sunt cele pe care o epocă le poate copia, nu cele care o impresionează. Dacă ordonăm cele 20 de obiecte doar după Copiere, obținem clasamentul complet (ρ = {copyPull}). Dacă le ordonăm doar după Încredere, care măsoară cât de repede te cred oamenii, nu îl obținem (ρ = {trustPull}).",
         "f2": "Trei evaluatori, cărora nu li s-au arătat punctajele mele, au punctat aceleași obiecte. Clasamentele lor concordă cu al meu, cu ρ între {rhoMin} și {rhoMax}. Și pe punctajele lor, Copierea urmărește cel mai bine clasamentul (ρ = {panelCopy} pe media lor), iar Încrederea merge în sens invers (ρ = {panelTrust}).",
         "f3": "Suntem de acord asupra capetelor clasamentului: {topShared} se află în ambele topuri de câte trei, iar cele două liste au în comun {bottomShared} dintre ultimele cinci locuri. Diferim cel mai mult în ce privește {gaps}.",
         "awardsH": "Șase superlative",
@@ -447,7 +447,7 @@
                     ],
                     [
                         "Limita",
-                        "Breslele de copiști, universitățile și Biserica aveau toate un interes în controlul copierii, iar tiparul răspândește propaganda la fel de repede ca Scriptura; Reforma s-a răspândit în mare parte prin tipar. Iar în istoria reală, se spune în mod tradițional că jefuirea Mainzului în 1462 i-a împrăștiat pe tipografi, deși istoricii se îndoiesc în ce măsură, iar tipăritul începuse deja să se răspândească. Răspândirea poate fi lentă fără un șoc."
+                        "Breslele de copiști, universitățile și Biserica aveau toate un interes în controlul copierii, iar tiparul răspândește propaganda la fel de repede ca Scriptura; Reforma s-a răspândit în mare parte prin tipar. Iar în istoria reală se spune în mod tradițional că jefuirea Mainzului în 1462 i-a împrăștiat pe tipografi, deși istoricii se îndoiesc de amploarea acestui efect, iar tipăritul începuse deja să se răspândească. Răspândirea poate fi lentă fără un șoc."
                     ]
                 ]
             },
@@ -523,7 +523,7 @@
             "early": "Înainte de lumea elenistică, sunt prea puțini cărturari care să resimtă lipsa cititului de aproape și prea puțină pricepere în lucrul sticlei ca să se copieze lentilele. Ochelarii rămân o curiozitate, iar când se sparg, darul s-a dus.",
             "late": "Până în anii 1290, ochelarii apar în Italia, iar într-o generație se vând pe scară largă. După aceea, ești doar încă un om cu o tavă cu lentile.",
             "alt": {
-                "w3": "Bagdad și Cairo, în jurul anului 1000. Ibn al-Haytham lucrează la Cartea de optică (mai vechile relatări o datează în 1011–21, cercetările recente în 1028–38), cea mai bună tratare a felului în care se refractă lumina în sticlă, iar sticlarii sunt pricepuți. Ochelarii încă nu se fac, așa că îi aduci cu aproape trei secole mai devreme. Este un avans real, dar cărturarii alexandrini pe care voiai cel mai mult să-i ajuți nu mai sunt de o mie de ani."
+                "w3": "Bagdad și Cairo, în jurul anului 1000. Ibn al-Haytham lucrează la Cartea de optică (mai vechile relatări o datează în 1011–21, cercetările recente în 1028–38), cea mai bună expunere despre felul în care se refractă lumina în sticlă, iar sticlarii sunt pricepuți. Ochelarii încă nu se fac, așa că îi aduci cu aproape trei secole mai devreme. Este un avans real, dar cărturarii alexandrini pe care voiai cel mai mult să-i ajuți au dispărut de o mie de ani."
             },
             "verdict": "Încredere {trust}: nimeni nu are obiecții la a putea citi din nou, iar aceasta este cea mai bună demonstrație pe loc de pe listă. Efect în lanț {ripple} vine din lentilele care duc la microscop și la telescop. Se află mai jos în clasament decât cartoful și sărurile pentru că o carieră mai lungă este o problemă mai blândă decât foametea sau holera, iar sticla epocii limitează copiile."
         },
@@ -545,7 +545,7 @@
                     ],
                     [
                         "Ce faci",
-                        "Calculul te readuce cu picioarele pe pământ. Cele 100 de tablete înseamnă 100 g, iar 170 de oameni, la minimul de 10 mg pe zi, pe parcursul unei traversări de până la 132 de zile, ar avea nevoie de mai mult decât dublul acestei cantități. Așadar flaconul este o trusă de salvare: celor mai bolnavi le dai de 30 până la 100 de ori minimul (300 până la 1.000 mg pe zi) și vezi cum gingiile se întăresc în câteva zile. Apoi predai lecția care nu costă nimic: fructe proaspete, citrice mai ales, și verdețuri, la fiecare escală."
+                        "Calculul te readuce cu picioarele pe pământ. Cele 100 de tablete înseamnă 100 g, iar 170 de oameni, la minimul de 10 mg pe zi, pe parcursul unei traversări de până la 132 de zile, ar avea nevoie de mai mult decât dublul. Așadar flaconul este o trusă de salvare: celor mai bolnavi le dai de 30 până la 100 de ori minimul (300 până la 1.000 mg pe zi) și vezi cum gingiile se întăresc în câteva zile. Apoi predai lecția care nu costă nimic: fructe proaspete, citrice mai ales, și verdețuri, la fiecare escală."
                     ],
                     [
                         "Urmările",
@@ -587,7 +587,7 @@
                     ],
                     [
                         "Limita",
-                        "Un manual presupune că știi ce lipsește, iar cunoștințele practice au nevoie în continuare de ateliere, de toleranțe și de metale pe care epoca încă nu le poate produce. În plus, a fi găsit cu o carte care descrie viitorul este periculos: ordinul de ardere pe rug al ereticilor nu este abolit până în 1677, iar o lege împotriva vrăjitoriei rămâne în vigoare. Nimeni nu are încredere deplină în străinul cu cartea."
+                        "Un manual presupune că știi ce lipsește, iar cunoștințele practice au nevoie în continuare de ateliere, de toleranțe și de metale pe care epoca încă nu le poate produce. În plus, a fi găsit cu o carte care descrie viitorul este periculos: ordinul privind arderea pe rug a ereticilor nu este abolit până în 1677, iar o lege împotriva vrăjitoriei rămâne în vigoare. Nimeni nu are încredere deplină în străinul cu cartea."
                     ]
                 ]
             },
@@ -643,7 +643,7 @@
                 "beats": [
                     [
                         "Sosirea",
-                        "3 septembrie 1854. Din noaptea de 31 august, relatările populare numără 127 de locuitori din Broad Street morți (numărul consemnat de registrator pentru primele zile este mai mic). În zece zile Snow numără peste 500 de cazuri mortale, iar totalurile variază între aproximativ 420 și 700, cel mai des citat fiind 616. Opinia medicală invocă miasmele. Un medic din zonă, pe nume John Snow, bănuiește apa de la pompa din Broad Street."
+                        "3 septembrie 1854. Din noaptea de 31 august, relatările populare numără 127 de locuitori din Broad Street morți (numărul consemnat de registrator pentru primele zile este mai mic). În 10 zile Snow numără peste 500 de cazuri mortale, iar totalurile variază între aproximativ 420 și 700, cel mai des citat fiind 616. Opinia medicală invocă miasmele. Un medic din zonă, pe nume John Snow, bănuiește apa de la pompa din Broad Street."
                     ],
                     [
                         "Ce faci",
@@ -651,7 +651,7 @@
                     ],
                     [
                         "Urmările",
-                        "Una dintre primele clorurări de urgență a unei surse publice de apă a avut loc la Maidstone în 1897, iar prima clorurare continuă din Statele Unite, la Jersey City, în 1908; până atunci holera și febra tifoidă ucideau în orașe de pretutindeni. Dacă „o otravă invizibilă din apă” este acceptată în 1854, în loc de anii 1880, canalizările (rețeaua londoneză a lui Bazalgette a fost începută în 1859) și tratarea apei se construiesc din motivul potrivit, cu 30 de ani mai devreme."
+                        "Una dintre primele clorurări de urgență a unei surse publice de apă a avut loc la Maidstone în 1897, iar prima clorurare continuă din Statele Unite, la Jersey City, în 1908; până atunci holera și febra tifoidă ucideau în orașe de pretutindeni. Dacă „o otravă invizibilă din apă” este acceptată în 1854, în loc de anii 1880, canalizările (rețeaua londoneză a lui Bazalgette a fost începută în 1859) și stațiile de tratare a apei se construiesc din motivul potrivit, cu 30 de ani mai devreme."
                     ],
                     [
                         "Limita",
@@ -661,7 +661,7 @@
             },
             "early": "Înainte ca holera să ajungă în Europa, în anii 1830, nu există nicio cerere publică pentru o cauză invizibilă, transmisă prin apă. Tabletele îți purifică propria apă, dar nu și pe a altcuiva.",
             "late": "După 1883, Koch a identificat bacteria holerei, iar clorurarea apare la sfârșitul anilor 1890. Dovada pe care o aduci a fost deja câștigată în laborator.",
-            "verdict": "Un caz rar în care obiectul este o dovadă, mai degrabă decât un medicament. La Încredere are doar {trust}, pentru că teoria miasmelor era adânc înrădăcinată; la Nevoie are {need}, iar la Copiere {copy}, de vreme ce clorura de var era deja un produs chimic industrial obișnuit în 1854. Este o accelerare a unei descoperiri inevitabile, de aceea este o alegere solidă, fără a fi excelentă. Evaluatorii l-ar plasa cu o fereastră mai devreme decât mine."
+            "verdict": "Un caz rar în care obiectul este o dovadă, mai degrabă decât un medicament. La Încredere are doar {trust}, pentru că teoria miasmelor era adânc înrădăcinată; la Nevoie are {need}, iar la Copiere {copy}, de vreme ce clorura de var era deja un produs chimic industrial obișnuit în 1854. Este o accelerare a unei descoperiri inevitabile, de aceea este o alegere solidă, fără a fi excelentă. Evaluatorii l-ar face să aterizeze cu o fereastră mai devreme decât mine."
         },
         "compass": {
             "name": "O busolă cu placă",
@@ -694,7 +694,7 @@
                 ]
             },
             "early": "Căpitanii fenicieni și greci își fac deja drum departe, călăuzindu-se după țărm și după stele, iar înainte de comerțul maritim pe scară largă direcția nu este piedica. Busola aduce un avantaj modest câtorva călătorii.",
-            "late": "Pe la 1190 Europa are deja busola, iar în 1300 e larg răspândită în navigația din Marea Mediterană. Ideea poate să fi călătorit deja din China.",
+            "late": "Pe la 1190 Europa are deja busola, iar în 1300 este larg răspândită în navigația din Marea Mediterană. Ideea poate să fi călătorit deja din China.",
             "verdict": "La Copiere are {copy}: un ac și o piatră de magnet. Dar la Nevoie are doar {need}, pentru că Marea Mediterană a funcționat în mod acceptabil fără ea timp de secole, iar o busolă nu-ți spune unde te afli. O alegere bună, o revoluție minoră și obiectul de pe listă care costă cel mai puțin dacă se pierde."
         },
         "foldscope": {
@@ -711,7 +711,7 @@
                 "beats": [
                     [
                         "Sosirea",
-                        "Persia, în jurul anului 1020. Ibn Sina (Avicenna), medic și filozof, scrie Canonul de medicină, din care vor învăța medicii timp de 600 de ani. El susține că unele boli, printre ele tuberculoza, se transmit de la om la om și că apa și solul pot transmite boli. La Cairo, Ibn al-Haytham lucrează la Cartea de optică (relatările mai vechi o datează în 1011–21, cercetările recente în 1028–1038), cea mai bună expunere despre lumină, vedere și refracție din lume."
+                        "Persia, în jurul anului 1020. Ibn Sina (Avicenna), medic și filozof, scrie Canonul de medicină, din care vor învăța medicii timp de 600 de ani. El susține că unele boli, printre ele tuberculoza, se transmit de la om la om și că apa și solul pot transmite boli. La Cairo, Ibn al-Haytham lucrează la Cartea de optică (relatările mai vechi o datează în 1011–21, cercetările recente în 1028–38), cea mai bună expunere despre lumină, vedere și refracție din lume."
                     ],
                     [
                         "Ce faci",
@@ -735,7 +735,7 @@
             "name": "O plasă de pat tratată cu insecticid",
             "sub": "300 g",
             "tagline": "Roma avea deja plase contra țânțarilor. Nu știa de ce contau.",
-            "briefing": "Malaria a fost unul dintre marii ucigași din istorie. Legătura cu țânțarii a fost lămurită abia în 1897–1898 (lucrările lui Ross despre malaria aviară în India, experimentele lui Grassi pe oameni în Italia), iar numele bolii este italian: mal aria, „aer rău”. Plasele sunt o tehnologie veche; noutatea este să știi la ce folosesc.",
+            "briefing": "Malaria a fost unul dintre marii ucigași din istorie. Legătura cu țânțarii a fost lămurită abia în 1897–98 (lucrările lui Ross despre malaria aviară în India, experimentele lui Grassi pe oameni în Italia), iar numele bolii este italian: mal aria, „aer rău”. Plasele sunt o tehnologie veche; noutatea este să știi la ce folosesc.",
             "hint": "Găsește imperiul al cărui nucleu era o mlaștină malarică.",
             "tags": [
                 "Cunoaștere în pânză"
@@ -762,7 +762,7 @@
                 ]
             },
             "early": "Într-o lume de vânători-culegători mobili, malaria este o povară mai mică: ea a crescut odată cu agricultura și cu satele sedentare de lângă ape stătătoare. Nevoia există și atunci, dar sunt puțini oameni de protejat.",
-            "late": "Până în 1897–1898 Ross și Grassi au lămurit rolul țânțarului, iar la începutul anilor 1900 desecările și plasele sunt politică publică (Canalul Panama a fost construit cu combaterea țânțarilor). Nu mai ești înaintea nimănui.",
+            "late": "Până în 1897–98 Ross și Grassi au lămurit rolul țânțarului, iar la începutul anilor 1900 desecările și plasele sunt politică publică (Canalul Panama a fost construit cu combaterea țânțarilor). Nu mai ești înaintea nimănui.",
             "verdict": "Nevoie mare și o Copiere acceptabilă ({copy}: pânză de in, flori și canale de desecare), dar la Încredere are {trust}, cel mai mic punctaj dintre primele 12: „o insectă minusculă ți-a dat frigurile” este greu de susținut în 110 d.Hr. Obiectul ilustrează o regulă generală a acestei liste: un obiect care poartă o idee greu de crezut valorează mai puțin decât unul care se dovedește singur."
         },
         "watch": {
@@ -787,7 +787,7 @@
                     ],
                     [
                         "Urmările",
-                        "Patru nave și între 1.400 și 2.000 de oameni (estimările variază) sunt salvate, într-unul dintre cele mai grave dezastre din istoria Marinei Regale. Și știi ce a urmat: Parlamentul a adoptat „Legea longitudinii” în 1714, oferind până la 20.000 de lire sterline pentru o metodă exactă până la jumătate de grad, adică aproximativ 3 secunde pe zi pe o călătorie de șase săptămâni (sume mai mici pentru o precizie mai mică). H4, ceasul lui Harrison, era gata pe la 1760 și și-a dovedit valoarea într-o probă pe mare în 1761–1762. Precizia cerută apare cu mai bine de 50 de ani mai devreme."
+                        "Patru nave și între 1.400 și 2.000 de oameni (estimările variază) sunt salvate, într-unul dintre cele mai grave dezastre din istoria Marinei Regale. Și știi ce a urmat: Parlamentul a adoptat „Legea longitudinii” în 1714, oferind până la 20.000 de lire sterline pentru o metodă exactă până la jumătate de grad, adică aproximativ 3 secunde pe zi pe o călătorie de șase săptămâni (sume mai mici pentru o precizie mai mică). H4, ceasul lui Harrison, era gata pe la 1760 și și-a dovedit valoarea într-o probă pe mare în 1761–62. Precizia cerută apare cu mai bine de 50 de ani mai devreme."
                     ],
                     [
                         "Limita",
@@ -910,7 +910,7 @@
             "name": "Un kilogram de boabe de cafea verde",
             "sub": "1 kg și o râșniță manuală",
             "tagline": "Iluminismul, un efect secundar al cafeinei?",
-            "briefing": "Europa medievală și cea din epoca modernă timpurie bea multă bere slabă și vin cu apă, iar povestea populară spune că apa era prea periculoasă de băut (istoricii se îndoiesc de acest lucru). Cafeaua și ceaiul au sosit în secolul al XVII-lea și au înlocuit alcoolul cu cafeină. Scriitori precum Tom Standage susțin că schimbarea a contribuit la avântul epocii rațiunii, o teză contestată. Cafenelele erau poreclite „universități de un penny”, o denumire tradițională, iar Lloyd’s din Londra a luat ființă într-una dintre ele.",
+            "briefing": "Europa medievală și cea din epoca modernă timpurie bea multă bere slabă și vin cu apă, iar povestea populară spune că apa era prea periculoasă de băut (istoricii se îndoiesc). Cafeaua și ceaiul au sosit în secolul al XVII-lea și au înlocuit alcoolul cu cafeină. Scriitori precum Tom Standage susțin că schimbarea a contribuit la avântul epocii rațiunii, o teză contestată. Cafenelele erau poreclite „universități de un penny”, o denumire tradițională, iar Lloyd’s din Londra a luat ființă într-una dintre ele.",
             "hint": "Planta nu poate crește în Europa. Unde se întâlneau rutele comerciale?",
             "tags": [
                 "Speculativ"
@@ -1030,7 +1030,7 @@
                     ],
                     [
                         "Urmările",
-                        "Câteva focuri de bivuac în plus se aprind la timp, iar câteva mii de oameni în plus supraviețuiesc unei nopți. Este un dar, însă și foarte mic față de proporții: o armată de aproximativ 100.000 până la 115.000 de oameni la plecarea din Moscova își pierde cea mai mare parte a oamenilor. Căldura nu a fost niciodată în principal o problemă de aprindere. Era vorba de mâncare, adăpost și încălțăminte."
+                        "Câteva focuri de bivuac în plus se aprind la timp, iar câteva mii de oameni în plus supraviețuiesc unei nopți. Este un dar, dar unul foarte mic în raport cu proporțiile: o armată de aproximativ 100.000–115.000 de oameni la plecarea din Moscova își pierde cea mai mare parte a oamenilor. Căldura nu a fost niciodată în principal o problemă de aprindere. Era vorba de mâncare, adăpost și încălțăminte."
                     ],
                     [
                         "Limita",

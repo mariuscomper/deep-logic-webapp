@@ -194,7 +194,9 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .terrain-legend { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.55rem; font-size: 0.74rem; color: var(--ink-3); }
 .ramp { flex: 1; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--t0), var(--t1), var(--t2), var(--t3), var(--t4)); border: 1px solid var(--line); }
-.terrain-status { margin-top: 0.4rem; font-size: 0.8rem; color: var(--ink-2); min-height: 1.3em; }
+.terrain-foot { display: flex; gap: 0.6rem; align-items: center; justify-content: space-between; margin-top: 0.4rem; }
+.terrain-status { flex: 1; font-size: 0.8rem; color: var(--ink-2); min-height: 1.3em; }
+.terrain-foot .btn { flex: none; }
 
 .content-col { min-width: 0; }
 .step { padding-top: 0.2rem; }
@@ -369,7 +371,8 @@ footer a { color: var(--ink-2); }
     .terrain-card { padding: 0.5rem 0.6rem 0.4rem; box-shadow: none; border-radius: 10px; }
     .terrain-title, .terrain-legend { display: none; }
     #terrain { height: clamp(120px, 19svh, 190px); }
-    .terrain-status { margin-top: 0.2rem; font-size: 0.72rem; line-height: 1.35; min-height: 1.2em; }
+    .terrain-foot { margin-top: 0.2rem; }
+    .terrain-status { font-size: 0.72rem; line-height: 1.35; min-height: 1.2em; }
     .content-col { position: relative; z-index: 1; }
     .era { grid-template-columns: 4.6rem minmax(0, 1fr); }
     .era .go { display: none; }
