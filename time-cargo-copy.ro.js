@@ -12,10 +12,10 @@
     "title": "Ce duci înapoi în timp: 20 de obiecte și epoca în care fiecare face cel mai mult bine",
     "ogLine": "{n} de obiecte · {m} epoci · clasamentul, verificat cu {r} evaluatori",
     "ogAlt": "O grilă de 20 de obiecte pe nouă epoci, fiecare celulă colorată după cât bine face aterizarea respectivă.",
-    "description": "Alegi un obiect, îl duci înapoi în timp și vezi cât bine face: WD-40, cartofi, riglă de calcul, ochelari și alte 16. Clasate după patru criterii, apoi repunctate de trei evaluatori în orb.",
+    "description": "Duci un obiect în timp și vezi cât bine face: WD-40, cartofi, riglă de calcul, ochelari și alte 16. Clasate după patru criterii, apoi repunctate de trei evaluatori care nu mi-au văzut punctajele.",
     "kicker": "Un experiment de gândire · 9500 î.Hr. – 1914",
     "h1": "20 de lucruri de dus înapoi în timp și epoca în care fiecare face cel mai mult bine",
-    "deck": "Poți duce prin timp un singur obiect. Alege-l, alege epoca în care ajunge și vezi cât bine face acolo. Apoi vezi cum le-am clasat pe toate cele 20 și unde trei evaluatori în orb nu au fost de acord cu mine.",
+    "deck": "Poți duce prin timp un singur obiect. Alege-l, alege epoca în care ajunge și vezi cât bine face acolo. Apoi vezi cum le-am clasat pe toate cele 20 și unde trei evaluatori care nu mi-au văzut punctajele au fost de altă părere decât mine.",
     "ctaChoose": "Alege ce iei cu tine",
     "ctaRank": "Citește mai întâi clasamentul",
     "nav": {
@@ -110,7 +110,7 @@
         "ariaAll": "Hartă termică a {n} de obiecte pe {m} epoci. Fiecare celulă este Delta, de la 0 la 100, a aterizării acelui obiect în acea epocă.",
         "low": "puțin bine",
         "high": "mult bine",
-        "statusStart": "Fiecare rând este un obiect, iar fiecare coloană o epocă. Un rând își primește numele după prima ta aterizare cu acel obiect.",
+        "statusStart": "Rândurile sunt obiecte, coloanele sunt epoci, iar culoarea mai deschisă înseamnă mai mult bine. Un rând primește numele când aterizezi cu acel obiect.",
         "status": "Aterizări explorate: {n} din {total}",
         "statusAll": "Toate cele {total} de aterizări sunt afișate",
         "tipHidden": "{item} · {era}: neexplorat încă",
@@ -120,9 +120,9 @@
     },
     "choose": {
         "h": "Alege obiectul pe care îl duci cu tine",
-        "p": "Sunt 20 de obiecte, fiecare destul de mic cât să încapă într-o geantă. Ai dreptul la unul. Alege-l pe cel care crezi că ar schimba cel mai mult, apoi hotărăște în ce moment al istoriei ajunge.",
+        "p": "Sunt 20 de obiecte, fiecare destul de mic cât să încapă într-o geantă. Ai dreptul la unul. Alege-l pe cel care crezi că ar schimba cel mai mult, apoi hotărăște unde în istorie îl aduci. Fiecare aterizare primește un punctaj de la 0 la 100; îl numesc Delta.",
         "delta": "Delta {n}",
-        "doneAria": "Ai trimis deja acest obiect în timp. Cea mai bună valoare Delta de până acum: {n}."
+        "doneAria": "Ai aterizat deja cu acest obiect. Cea mai bună Delta de până acum: {n}."
     },
     "brief": {
         "back": "← Alte obiecte",
@@ -130,7 +130,7 @@
         "eraH": "Unde în istorie aterizează?",
         "eraP": "Nouă ferestre de istorie, fiecare cu problema ei. Punctajul depinde de cât de bine se potrivește obiectul cu problema.",
         "go": "Aterizează aici →",
-        "visited": "Încercat: Delta {n}"
+        "visited": "Aterizat: Delta {n}"
     },
     "warp": {
         "label": "Călătorie prin timp",
@@ -178,7 +178,7 @@
     },
     "pass": {
         "head": "CARTE DE ÎMBARCARE · ÎNAPOI ÎN TIMP",
-        "carrying": "TRANSPORT",
+        "carrying": "ÎN BAGAJ",
         "landed": "ATERIZARE",
         "delta": "DELTA",
         "best": "Maximul posibil: {n}",
@@ -186,22 +186,22 @@
     },
     "ranking": {
         "h": "Cum le-am clasat pe toate cele 20",
-        "lockP": "Clasamentul arată cea mai bună aterizare pentru fiecare obiect, deci dă răspunsurile pe față. Îl poți citi acum sau după prima ta aterizare.",
+        "lockP": "Clasamentul arată cea mai bună aterizare pentru fiecare obiect, deci dezvăluie răspunsurile. Îl poți citi acum sau după prima ta aterizare.",
         "lockBtn": "Arată-l oricum",
         "findingH": "Ce arată clasamentul",
-        "f1": "Obiectele care fac cel mai mult bine sunt cele pe care o epocă știe să le copieze, mai puțin cele care o impresionează. Ordonate doar după Copiere, cele 20 de obiecte reproduc clasamentul complet la ρ = {copyPull}. Ordonarea doar după Încredere, care măsoară cât de repede te cred oamenii, nu face același lucru (ρ = {trustPull}).",
-        "f2": "Trei evaluatori în orb au punctat aceleași obiecte. Clasamentele lor se corelează cu al meu la ρ între {rhoMin} și {rhoMax}. Și pe punctajele lor, Copierea urmărește cel mai bine clasamentul (ρ = {panelCopy} pe media lor), iar Încrederea merge în sens invers (ρ = {panelTrust}).",
-        "f3": "Suntem de acord asupra capetelor clasamentului. În ambele topuri de câte trei: {topShared}. Numărul de obiecte comune din ultimele cinci locuri ale celor două liste este {bottomShared}. Diferim cel mai mult în ce privește {gaps}.",
+        "f1": "Obiectele care fac cel mai mult bine sunt cele pe care o epocă le poate copia, nu cele care o impresionează. Ordonate doar după Copiere, cele 20 de obiecte reproduc clasamentul complet (ρ = {copyPull}). Ordonarea doar după Încredere, care măsoară cât de repede te cred oamenii, nu face același lucru (ρ = {trustPull}).",
+        "f2": "Trei evaluatori, cărora nu li s-au arătat punctajele mele, au punctat aceleași obiecte. Clasamentele lor concordă cu al meu, cu ρ între {rhoMin} și {rhoMax}. Și pe punctajele lor, Copierea urmărește cel mai bine clasamentul (ρ = {panelCopy} pe media lor), iar Încrederea merge în sens invers (ρ = {panelTrust}).",
+        "f3": "Suntem de acord asupra capetelor clasamentului: {topShared} se află în ambele topuri de câte trei, iar cele două liste au în comun {bottomShared} dintre ultimele cinci locuri. Diferim cel mai mult în ce privește {gaps}.",
         "awardsH": "Șase superlative",
         "scorerLabel": "Ale cui punctaje?",
         "scorers": {
             "mine": "Ale mele",
-            "panel": "Evaluatorii în orb",
+            "panel": "Evaluatorii",
             "all": "Toți patru"
         },
         "scorerNote": {
             "mine": "Punctajele mele, scrise înainte ca evaluatorii să vadă ceva.",
-            "panel": "Media celor trei evaluatori în orb.",
+            "panel": "Media celor trei evaluatori.",
             "all": "Media punctajelor mele și a celor trei evaluatori, fiecare luat în calcul o singură dată."
         },
         "rank": "Loc",
@@ -213,10 +213,10 @@
         "panelH": "Ce au spus evaluatorii",
         "panelRank": "Loc după media evaluatorilor: {rank} din {total}.",
         "panelWindows": "Ferestrele de aterizare alese de ei: {w}.",
-        "flagRank": "Evaluatorii și cu mine suntem la {n} locuri distanță.",
-        "flagWindow": "Toți trei evaluatorii ar alege fereastra „{era}”, iar eu am ales „{mine}”.",
+        "flagRank": "Evaluatorii și cu mine diferim cu {n} locuri.",
+        "flagWindow": "Toți cei trei evaluatori ar alege fereastra „{era}”, iar eu am ales „{mine}”.",
         "sourcesH": "Surse",
-        "yours": "Ai încercat acest obiect în „{era}”: Delta {n}."
+        "yours": "Ai aterizat cu acest obiect în „{era}”: Delta {n}."
     },
     "method": {
         "h": "Cum a fost punctat și cât de mult poate greși",
@@ -232,7 +232,7 @@
             "În primele cinci"
         ],
         "t2H": "Testul 2: ar puncta altcineva la fel?",
-        "t2": "Trei evaluatori în orb au primit o descriere dintr-o singură linie a fiecărui obiect, cele nouă ferestre de aterizare și cele patru definiții, și nimic altceva. Au punctat toate cele 20 de obiecte și au ales câte o fereastră de aterizare pentru fiecare. Nu mi-am schimbat ulterior niciun punctaj, așa că diferența dintre noi rămâne vizibilă.",
+        "t2": "Trei evaluatori care nu mi-au văzut punctajele au primit o descriere de o singură linie a fiecărui obiect, cele nouă ferestre de aterizare și cele patru definiții, și nimic altceva. Au punctat toate cele 20 de obiecte și au ales câte o fereastră de aterizare pentru fiecare. Nu mi-am schimbat ulterior niciun punctaj, așa că diferența dintre noi rămâne vizibilă.",
         "t2Cols": [
             "Evaluator",
             "Corelație de rang cu clasamentul meu (ρ)",
@@ -247,9 +247,9 @@
             "Media evaluatorilor"
         ],
         "limitsH": "Limite",
-        "limits": "Evaluatorii sunt modele de limbaj, nu un grup de istorici, și se potrivesc mai bine între ei (ρ între {rrMin} și {rrMax}) decât cu mine, așa că acordul lor este o verificare de consecvență și nu o dovadă independentă. Punctajele descriu o istorie contrafactuală, pe care nu o poate lămuri niciun set de date. Corelația de rang folosește toate cele 20 de obiecte, așa că una sau două mutări o schimbă puțin.",
+        "limits": "Evaluatorii sunt modele de limbaj, nu un grup de istorici, și sunt mai de acord între ei (ρ între {rrMin} și {rrMax}) decât cu mine, așa că acordul lor este o verificare de consecvență și nu o dovadă independentă. Punctajele descriu o istorie contrafactuală, pe care nu o poate lămuri niciun set de date. Corelația de rang folosește toate cele 20 de obiecte, așa că una sau două mutări o schimbă puțin.",
         "failedH": "Ce nu a ieșit la iveală",
-        "failed": "Două lucruri pe care mă așteptam să le găsesc nu au apărut. Mersul mai departe în trecut nu ajută: pe cele 20 de obiecte, anul celei mai bune aterizări și Delta nu au nicio legătură (ρ = {rhoYear}). Iar obiectele care cuceresc cel mai repede o sală nu fac cel mai mult bine: Încrederea are o legătură aproape nulă cu Delta pe punctajele mele (ρ = {trustPull}) și una negativă pe ale fiecărui evaluator.",
+        "failed": "Două lucruri pe care mă așteptam să le găsesc nu au apărut. Întoarcerea tot mai departe în trecut nu ajută: pe cele 20 de obiecte, anul celei mai bune aterizări și Delta nu au nicio legătură (ρ = {rhoYear}). Iar obiectele care cuceresc cel mai repede o sală nu fac cel mai mult bine: Încrederea are o legătură aproape nulă cu Delta pe punctajele mele (ρ = {trustPull}) și una negativă pe ale fiecărui evaluator.",
         "dimCols": [
             "Dimensiune",
             "Singură, față de clasamentul complet: al meu",
@@ -258,7 +258,7 @@
         "dimCaption": "Corelația de rang a fiecărui punctaj, luat singur, cu clasamentul complet."
     },
     "footer": {
-        "note": "Datele și numerele provin din sursele indicate sub fiecare obiect. Punctajele sunt judecăți, iar pagina arată cât de bine au rezistat.",
+        "note": "Datele și valorile provin din sursele indicate sub fiecare obiect. Punctajele sunt judecăți, iar pagina arată cât de bine au rezistat.",
         "back": "← Înapoi la eseu",
         "licence": "Publicat sub licența MIT."
     },
@@ -291,27 +291,27 @@
     "awards": {
         "potato": [
             "Face cel mai mult cât dormi",
-            "Copiere {copy}, iar zece tuberculi devin un milion."
+            "Copiere {copy}, iar 10 tuberculi devin un milion."
         ],
         "ors": [
-            "Cel mai bun raport pe gram",
+            "Cel mai bun, gram pentru gram",
             "Cam 20 g de săruri la un litru, apoi o rețetă pe care o poate urma oricine."
         ],
         "stamps": [
             "Cel mai mare efect în lanț",
-            "Cel mai mare Efect în lanț din listă: {ripple}."
+            "Cel mai mare Efect în lanț de pe listă: {ripple}."
         ],
         "wd40": [
             "Cele mai bune cinci minute de început",
-            "Încredere {trust}; un șurub gripat se desface și o sală te crede."
+            "Încredere {trust}: un șurub gripat se desface și o sală te crede."
         ],
         "ereader": [
             "Cel mai supraevaluat",
-            "Toți evaluatorii în orb l-au numit. Copiere {copy}."
+            "Toți evaluatorii l-au numit. Copiere {copy}."
         ],
         "antibiotics": [
             "Varianța cea mai mare",
-            "O singură viață, iar nu poți vedea în ce sens taie."
+            "O singură viață, și nu poți vedea în ce sens taie."
         ]
     },
     "landmarks": {
@@ -326,7 +326,7 @@
         "1831": "Holera ajunge în Marea Britanie",
         "1812": "Borodino",
         "1761": "H4 al lui Harrison pe mare",
-        "1751": "Începe Encyclopédie",
+        "1751": "Începe Enciclopedia",
         "1707": "Dezastrul naval din Scilly",
         "1665": "Marea Ciumă din Londra",
         "1614": "Napier publică logaritmii",
@@ -350,7 +350,7 @@
             "name": "10 cartofi încolțiți",
             "sub": "Un amestec de culori și soiuri · aproximativ 1 kg",
             "tagline": "Cel mai banal lucru din bucătăria ta.",
-            "briefing": "Mai curând o mică fabrică vie decât un gadget. Cartofii au fost domesticiți în Anzi și au rămas necunoscuți în Lumea Veche până în secolul al XVI-lea. Cresc bine în veri răcoroase și ploioase și pe soluri sărace, iar la acru dau de aproximativ două până la patru ori mai multe calorii decât cerealele.",
+            "briefing": "Mai curând o mică fabrică vie decât un gadget. Cartofii au fost domesticiți în Anzi și au rămas necunoscuți în Lumea Veche până în secolul al XVI-lea. Cresc bine în veri răcoroase și ploioase și pe soluri sărace, iar pe acru dau de aproximativ două până la patru ori mai multe calorii decât cerealele.",
             "hint": "Caută o lume aflată la o singură vară proastă de foamete.",
             "tags": [
                 "Se copiază singur"
@@ -372,7 +372,7 @@
                     ],
                     [
                         "Limita",
-                        "Monocultura. În anii 1840, treimea cea mai săracă a populației Irlandei depindea de un singur clon de cartof, a venit mana și au murit aproximativ un milion de oameni. De aceea ai adus mai multe soiuri, nu doar unul. Coaja verde și mugurii sunt toxici, așa că trebuie să arăți ce este sigur de mâncat. Iar un străin care împarte mere de pământ în vreme de foamete va fi numit în fel și chip."
+                        "Monocultura. În anii 1840, treimea cea mai săracă a populației Irlandei depindea de un singur clon de cartof, a lovit mana cartofului și au murit aproximativ un milion de oameni. De aceea ai adus mai multe soiuri, nu doar unul. Coaja verde și mugurii sunt toxici, așa că trebuie să arăți ce este sigur de mâncat. Iar un străin care împarte mere de pământ în vreme de foamete va fi numit în fel și chip."
                     ]
                 ]
             },
@@ -388,14 +388,14 @@
             "hint": "Caută prima mare panică provocată de o boală transmisă prin apă, înainte ca cineva să-i știe cauza.",
             "tags": [
                 "Se copiază singur",
-                "Cel mai bun raport la gram"
+                "Cel mai bun, gram pentru gram"
             ],
             "best": {
                 "place": "Sunderland, Anglia",
                 "beats": [
                     [
                         "Sosirea",
-                        "Octombrie 1831, docurile din Sunderland. Holera a ajuns în Marea Britanie, iar un barcagiu tocmai a murit la câteva zile după ce s-a îmbolnăvit, vânăt și ofilit. Medicii fac sângerări, dau purgative și prescriu calomel, care golește de lichide bolnavi care se golesc deja."
+                        "Octombrie 1831, docurile din Sunderland. Holera a ajuns în Marea Britanie, iar un barcagiu tocmai a murit la câteva zile după ce s-a îmbolnăvit, vânăt și ofilit. Medicii recurg la sângerări, dau purgative și prescriu calomel, care golește de lichide bolnavi care se golesc deja."
                     ],
                     [
                         "Ce faci",
@@ -403,7 +403,7 @@
                     ],
                     [
                         "Urmările",
-                        "Netratată, holera gravă poate ucide până la jumătate dintre bolnavi; cu lichide, mortalitatea scade la aproximativ un bolnav din o sută sau mai puțin. Zeci de mii de oameni mor în Marea Britanie în 1831–32 (estimările merg de la aproximativ 32.000 la 52.000). Anul următor, Thomas Latta din Leith administrează apă sărată intravenos unor bolnavi pe moarte, cu unele însănătoșiri, și este în mare parte ignorat. Versiunea ta are nevoie doar de o mamă cu o lingură, fără chirurg și fără vreo autoritate."
+                        "Netratată, holera gravă poate ucide până la jumătate dintre bolnavi; cu lichide, mortalitatea scade la aproximativ un bolnav dintr-o sută sau mai puțin. Zeci de mii de oameni mor în Marea Britanie în 1831–32 (estimările merg de la aproximativ 32.000 la 52.000). Anul următor, Thomas Latta din Leith administrează apă sărată intravenos unor bolnavi pe moarte, cu unele însănătoșiri, și este în mare parte ignorat. Versiunea ta are nevoie doar de o mamă cu o lingură, fără chirurg și fără vreo autoritate."
                     ],
                     [
                         "Limita",
@@ -413,7 +413,7 @@
             },
             "early": "Fără pandemie, un plic cu săruri este o curiozitate. Bolile diareice sunt peste tot, dar rămân nenumite și trec neobservate, iar tu îi salvezi pe cei din jurul tău și pe nimeni în afară de ei.",
             "late": "Holera bântuie orașele și în anii 1850 și 1860, așa că tot salvezi vieți. Dar perfuzia lui Latta (1832), harta lui John Snow (1854) și constructorii de rețele de canalizare sunt deja în peisaj; ajungi după panica ce le schimbă oamenilor părerea.",
-            "verdict": "Cea mai bună alegere de pe listă la raportul gram pentru gram: plicurile sunt doar dovada, iar adevărata încărcătură este o rețetă pe care o poate urma și un copil. Are {copy} la Copiere și {trust} la Încredere, pentru că efectul se vede în câteva ore. Pierde în fața cartofului doar pentru că foamea este un dușman mai mare și mai vechi decât o singură pandemie. Evaluatorii i-au dat la Efect în lanț o notă mai mică decât i-am dat eu."
+            "verdict": "Cea mai bună alegere de pe listă, gram pentru gram: plicurile sunt doar dovada, iar adevărata încărcătură este o rețetă pe care o poate urma și un copil. Are {copy} la Copiere și {trust} la Încredere, pentru că efectul se vede în câteva ore. Pierde în fața cartofului doar pentru că foamea este un dușman mai mare și mai vechi decât o singură pandemie. Evaluatorii i-au dat la Efect în lanț un punctaj mai mic decât i-am dat eu."
         },
         "stamps": {
             "name": "Un set de ștampile cu alfabetul pentru copii",
@@ -480,8 +480,8 @@
                 ]
             },
             "early": "O scară logaritmică nu înseamnă nimic pentru o lume care nu a învățat încă fracțiile zecimale (Simon Stevin le-a publicat în 1585) și pentru care aritmetica nu este încă o piedică pentru nimic. Arăți o enigmă unor oameni care nu au ce face cu răspunsul.",
-            "late": "Napier a publicat (1614), Gunter a făcut scala (1620), iar Oughtred o face să alunece pe la 1622. Ai putea să te lauzi cu una din aluminiu, și cu prea puțin altceva.",
-            "verdict": "Cea mai pură „idee într-o cutie”: un dulgher o poate copia (Copiere {copy}) și nu are nevoie de curent. I-am dat Nevoie {need} și Efect în lanț {ripple} socotind că aritmetica a frânat Revoluția Științifică. Toți cei trei evaluatori au fost categoric în dezacord, notând Nevoia cu 3 sau 4, iar Tabelele rudolfine au fost întârziate de bani și de război la fel de mult ca de aritmetică. Dintre toate notele mele, acestea sunt cele în care am cea mai puțină încredere."
+            "late": "Napier a publicat (1614), Gunter a făcut scala (1620), iar Oughtred o face să alunece pe la 1622. Ai putea să te lauzi cu una din aluminiu și cu prea puțin altceva.",
+            "verdict": "Cea mai pură „idee într-o cutie”: un dulgher o poate copia (Copiere {copy}) și nu are nevoie de curent. I-am dat Nevoie {need} și Efect în lanț {ripple} socotind că aritmetica a frânat Revoluția științifică. Toți cei trei evaluatori au fost categoric în dezacord, punctându-i Nevoia cu 3 sau 4, iar Tabelele rudolfine au fost întârziate de bani și de război la fel de mult ca de aritmetică. Dintre toate notele mele, acestea sunt cele în care am cea mai puțină încredere."
         },
         "glasses": {
             "name": "O duzină de ochelari de citit",
@@ -519,7 +519,7 @@
             "alt": {
                 "w3": "Bagdad și Cairo, în jurul anului 1000. Ibn al-Haytham lucrează la Cartea de optică (mai vechile relatări o datează în 1021, cercetările recente în 1028–38), cea mai bună tratare a felului în care lentilele refractă lumina, iar sticlarii sunt pricepuți. Ochelarii încă nu se fac, așa că îi aduci cu aproape trei secole mai devreme. Este un avans real, dar cărturarii alexandrini pe care voiai cel mai mult să-i ajuți nu mai sunt de o mie de ani."
             },
-            "verdict": "Încredere {trust}: nimeni nu are obiecții la a putea citi din nou, iar aceasta este cea mai bună demonstrație pe loc de pe listă. Efect în lanț {ripple} vine din lentilele care se dezvoltă în microscop și telescop. Se află mai jos în clasament decât cartoful și sărurile pentru că o carieră mai lungă este o problemă mai blândă decât foametea sau holera, iar sticla epocii limitează copiile."
+            "verdict": "Încredere {trust}: nimeni nu are obiecții la a putea citi din nou, iar aceasta este cea mai bună demonstrație pe loc de pe listă. Efect în lanț {ripple} vine din lentilele care duc la microscop și la telescop. Se află mai jos în clasament decât cartoful și sărurile pentru că o carieră mai lungă este o problemă mai blândă decât foametea sau holera, iar sticla epocii limitează copiile."
         },
         "vitc": {
             "name": "Tablete de vitamina C",
@@ -528,7 +528,7 @@
             "briefing": "Timp de aproximativ trei secole de navigație oceanică, se estimează că o boală misterioasă a ucis mai mulți marinari decât furtunile, bătăliile și toate celelalte boli la un loc. Gingiile se umflau, rănile vechi se redeschideau, oamenii slăbeau și mureau. Cauza era lipsa vitaminei C: boala se previne cu aproximativ 10 mg pe zi, așa că o singură tabletă de 1.000 mg ajunge pentru 100 de zile.",
             "hint": "Cine a stat luni întregi fără hrană proaspătă?",
             "tags": [
-                "Contează cunoștința, nu pastilele"
+                "Cunoștința contează mai mult decât pastilele"
             ],
             "best": {
                 "place": "Oceanul Indian, la bordul flotei lui Vasco da Gama",
@@ -539,7 +539,7 @@
                     ],
                     [
                         "Ce faci",
-                        "Calculul este descurajant. Cele 100 de tablete înseamnă 100 g, iar 170 de oameni, la minimul de 10 mg pe zi, pe parcursul traversării de 132 de zile, ar avea nevoie de mai mult decât dublul acestei cantități. Așadar flaconul este o trusă de salvare: celor mai bolnavi 30 le dai de 30 până la 100 de ori minimul (300 până la 1.000 mg pe zi) și vezi cum gingiile se întăresc în câteva zile. Apoi predai lecția care nu costă nimic: fructe proaspete, citrice mai ales, și verdețuri, la fiecare escală."
+                        "Calculul te readuce cu picioarele pe pământ. Cele 100 de tablete înseamnă 100 g, iar 170 de oameni, la minimul de 10 mg pe zi, pe parcursul traversării de 132 de zile, ar avea nevoie de mai mult decât dublul acestei cantități. Așadar flaconul este o trusă de salvare: celor mai bolnavi le dai de 30 până la 100 de ori minimul (300 până la 1.000 mg pe zi) și vezi cum gingiile se întăresc în câteva zile. Apoi predai lecția care nu costă nimic: fructe proaspete, citrice mai ales, și verdețuri, la fiecare escală."
                     ],
                     [
                         "Urmările",
@@ -553,7 +553,7 @@
             },
             "early": "Înainte de călătoriile oceanice lungi, scorbutul rămâne o suferință sezonieră și nu ucide marinarii în masă, fiindcă de pe coaste și din escale se obține hrană proaspătă. Flaconul tău vindecă o mână de cazuri, atât.",
             "late": "Până în anii 1790, Marina Regală distribuie suc de lămâie, iar călătoriile lui Cook (1768–1779) au arătat deja valoarea hranei proaspete. Pastilele tale sunt doar o comoditate.",
-            "verdict": "Nevoia este spectaculoasă (la Nevoie are {need}: poate milioane de marinari morți), iar o însănătoșire vizibilă îi aduce o Încredere bună ({trust}). Dar flaconul se golește în câteva zile, așa că ceea ce salvează oameni este lecția. Evaluatorii i-au dat note mai mici la Nevoie și la Efect în lanț decât mine, socotind că lămâile sunt ușor de folosit odată ce cineva te învață."
+            "verdict": "Nevoia este spectaculoasă (la Nevoie are {need}: poate milioane de marinari morți), iar o însănătoșire vizibilă îi aduce o Încredere bună ({trust}). Dar flaconul se golește în câteva zile, așa că ceea ce salvează oameni este lecția. Evaluatorii i-au dat punctaje mai mici la Nevoie și la Efect în lanț decât mine, socotind că lămâile sunt ușor de folosit odată ce cineva te învață."
         },
         "manual": {
             "name": "O carte broșată pentru reconstruirea lumii",
@@ -573,7 +573,7 @@
                     ],
                     [
                         "Ce faci",
-                        "O lași să fie copiată, fără să o încredințezi unui singur geniu. Hooke citește capitolele despre sticlă, optică și ceasuri, Boyle chimia gazelor, iar Henry Oldenburg, secretarul Societății, scrie jumătății Europei. Împrumuți o hartă a ordinii descoperirilor: ce căi fără ieșire poți ocoli și de ce are nevoie fiecare pas următor."
+                        "O lași să fie copiată, fără să o încredințezi unui geniu. Hooke citește capitolele despre sticlă, optică și ceasuri, Boyle chimia gazelor, iar Henry Oldenburg, secretarul Societății, scrie jumătății Europei. Împrumuți o hartă a ordinii descoperirilor: ce căi fără ieșire poți ocoli și de ce are nevoie fiecare pas următor."
                     ],
                     [
                         "Urmările",
@@ -611,17 +611,17 @@
                     ],
                     [
                         "Urmările",
-                        "Anestezia permite chirurgiei să se desfășoare fără grabă și cu grijă, pune capăt țipetelor și deceselor prin șoc cauzat de durere și face de conceput operațiile care nu sunt de urgență. Humphry Davy sugerase protoxidul de azot pentru chirurgie în 1800, iar ideea s-ar putea impune în deceniile pe care lumea reală le-a pierdut."
+                        "Anestezia permite chirurgiei să se desfășoare fără grabă și cu grijă, pune capăt țipetelor și deceselor prin șoc cauzat de durere și face posibile operațiile programate. Humphry Davy sugerase protoxidul de azot pentru chirurgie în 1800, iar ideea s-ar putea impune în deceniile pe care lumea reală le-a pierdut."
                     ],
                     [
                         "Limita",
-                        "O întorsătură: în istoria reală, după 1846, eterul le-a dat chirurgilor curajul să încerce operații mai mari, iar până la metoda antiseptică a lui Lister (1867) se spune adesea că infecțiile au crescut. Chirurgia fără durere a venit prima; chirurgia sigură a venit mai târziu. Eterul este și inflamabil, vaporii lui sunt grei, iar dozarea fără pregătire poate ucide. Aduci ideea, fără rezervă de eter."
+                        "O întorsătură: în istoria reală, după 1846, eterul le-a dat chirurgilor curajul să încerce operații mai mari, iar până la metoda antiseptică a lui Lister (1867) se spune adesea că infecțiile au crescut. Chirurgia fără durere a venit mai întâi; chirurgia sigură, mai târziu. Eterul este și inflamabil, vaporii lui sunt grei, iar dozarea fără pregătire poate ucide. Aduci ideea, nu o rezervă."
                     ]
                 ]
             },
             "early": "Nu există eter documentat înainte de aproximativ 1540 și nici nu există o tradiție de chirurgi militari organizați care să răspândească lecția. Ajuți un pacient, iar un sat sceptic îl ține minte drept vrăjitorie.",
             "late": "În octombrie 1846, dentistul din Boston William Morton demonstrează public eterul, iar vestea traversează Atlanticul în câteva săptămâni. Ar trebui să fii în sală în ziua aceea ca să contezi.",
-            "verdict": "La Nevoie are {need}: fiecare operație din istorie a avut un pacient care țipa. La Copiere are {copy}: se distilează alcool cu un acid, iar apotecarii puteau face asta. La Efect în lanț are doar {ripple}, pentru că o chirurgie fără durere, dar fără chirurgie curată, a produs un interludiu neplăcut. Evaluatorii l-au notat mai sus decât mine și toți trei l-ar plasa mai devreme în timp."
+            "verdict": "La Nevoie are {need}: fiecare operație din istorie a avut un pacient care țipa. La Copiere are {copy}: se distilează alcool cu un acid, iar apotecarii puteau face asta. La Efect în lanț are doar {ripple}, pentru că o chirurgie fără durere, dar fără asepsie, a produs un interludiu neplăcut. Evaluatorii l-au notat mai sus decât mine și toți trei l-ar plasa mai devreme în timp."
         },
         "chlorine": {
             "name": "Tablete pentru purificarea apei",
@@ -671,7 +671,7 @@
                 "beats": [
                     [
                         "Sosirea",
-                        "Ostia, 30 î.Hr. Octavian tocmai a luat Egiptul, ale cărui hambare vor hrăni Roma aproximativ o treime din an (estimarea de mai târziu a lui Josephus Flavius). Navele cu grâne pleacă din Alexandria în lunile bune; scriitori de mai târziu vor numi marea închisă iarna, iar fie că aceasta este o regulă, fie că nu, cerul acoperit al iernii face din fiecare călătorie un pariu."
+                        "Ostia, 30 î.Hr. Octavian tocmai a luat Egiptul, ale cărui hambare vor hrăni Roma aproximativ o treime din an (estimarea de mai târziu a lui Josephus Flavius). Navele cu grâne pleacă din Alexandria în lunile bune; scriitori de mai târziu vor numi marea închisă iarna, iar fie că e o regulă, fie că nu, cerul acoperit al iernii face din fiecare călătorie un pariu."
                     ],
                     [
                         "Ce faci",
@@ -679,7 +679,7 @@
                     ],
                     [
                         "Urmările",
-                        "Navigație tot anul, mai puține naufragii și comerț mai rapid. Închiderea de iarnă, care bloca comerțul mediteranean luni în șir, se relaxează. Roma are deja cea mai mare rețea de porturi și de drumuri din lume, așa că efectul se amplifică într-un imperiu aflat în cel mai conectat moment al său. I-ai dat marinarului o direcție cu aproximativ 12 secole înainte ca Europa să o adopte."
+                        "Navigație tot anul, mai puține naufragii și comerț mai rapid. Închiderea de iarnă, care bloca comerțul mediteranean luni în șir, se relaxează. Roma are deja cea mai mare rețea de porturi și de drumuri din lume, așa că efectul se amplifică într-un imperiu aflat în cel mai conectat moment al său. Le-ai dat marinarilor o direcție cu aproximativ 12 secole înainte ca Europa să o adopte."
                     ],
                     [
                         "Limita",
@@ -688,7 +688,7 @@
                 ]
             },
             "early": "Căpitanii fenicieni și greci își fac deja drum departe, călăuzindu-se după țărm și după stele, iar înainte de comerțul maritim pe scară largă direcția nu este piedica. Busola aduce un avantaj modest câtorva călătorii.",
-            "late": "Pe la 1190 Europa are deja busola, iar în 1300 aceasta este larg răspândită în navigația din Marea Mediterană. Ideea a călătorit deja din China.",
+            "late": "Pe la 1190 Europa are deja busola, iar în 1300 e larg răspândită în navigația din Marea Mediterană. Ideea a călătorit deja din China.",
             "verdict": "La Copiere are {copy}: un ac și o piatră de magnet. Dar la Nevoie are doar {need}, pentru că Marea Mediterană a funcționat în mod acceptabil fără ea timp de secole, iar o busolă nu-ți spune unde te afli. O alegere bună, o revoluție minoră și obiectul de pe listă care costă cel mai puțin dacă se pierde."
         },
         "foldscope": {
@@ -922,7 +922,7 @@
                     ],
                     [
                         "Urmările",
-                        "Cafenelele apar cu aproximativ 170 de ani mai devreme (prima cafenea din Londra, din 1652, este bine documentată; data obișnuită pentru Veneția este 1645). Funcționarul treaz și stimulat de cafeină este un motor plauzibil al Iluminismului, iar știrile, asigurările și știința își aveau toate locul în cafenea. Aceasta este teoria; este la modă și contestată."
+                        "Cafenelele apar cu aproximativ 170 de ani mai devreme (prima cafenea din Londra, din 1652, este bine documentată; data obișnuită pentru Veneția este 1645). Funcționarul treaz și stimulat de cafeină este un motor plauzibil al Iluminismului, iar știrile, asigurările și știința își aveau toate locul în cafenea. Așa spune teoria, care este la modă și contestată."
                     ],
                     [
                         "Limita",
